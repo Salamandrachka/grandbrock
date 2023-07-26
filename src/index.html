@@ -24,11 +24,13 @@
       @@include('html/categories.html', {}) 
       @@include('html/swiper.html', {})
             @@include('html/shortCategories.html', {})
-            @@include('html/faq.html', {})
+            
       @@include('html/aboutUs.html', {})
       @@include('html/cars.html', {})
       @@include('html/whywe.html', {})
+      @@include('html/faq.html', {})
       @@include('html/reviews.html', {})
+      
 
     </main>
 @@include('html/footer.html', {})
@@ -102,7 +104,8 @@
   </script>
     <script>
     var swiper = new Swiper(".reviews-slider", {
-      direction: "vertical",
+      slidesPerView: 2,
+      centeredSlides: true,
        loop: true,
       pagination: {
         el: ".swiper-pagination",

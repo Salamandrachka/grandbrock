@@ -1,96 +1,173 @@
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   //   background: #fff;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+// .section {
+//   // .section__reviews
+
+//   &__reviews {
+//     position: relative;
+//     height: 500px;
+//   }
+
+//   // .section__reviews-title
+
+//   &__reviews-title {
+//     margin: 0 auto;
+//     color: #fff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding-bottom: 70px;
+//     text-align: center;
+
+//     h1 {
+//               @include fonts(700, 22px, 26px);
+//             @include breakpoint-mf("md") {
+//     @include fonts(700, 28px, 34px);
+//     }
+//         @include breakpoint-mf("xl") {
+//     @include fonts(700, 45px, 54px);
+//     }
+//     }
+//   }
+
 // }
 
+// .reviews-slider {
+//   // .reviews-slider__block
+//   //   width: 100%;
+//   //   height: 100%;
+//   width: 900px;
+//   height: 400px;
+
+//   &__block {
+//     background: #0d0d0d;
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     // width: 300px;
+//     // height: 300px;
+//   }
+//   // .reviews-slider__content
+
+//   &__content {
+//     width: 100%;
+//     height: 300px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
+
+//   // .reviews-slider__content-person
+
+//   &__content-person {
+//     display: flex;
+//     align-items: center;
+//     gap: 20px;
+//     color: #fff;
+
+//     img {
+//       border-radius: 100px;
+//       width: 150px;
+//       height: 150px;
+//     }
+//   }
+
+//   // .reviews-slider__content-text
+
+//   &__content-text {
+//     color: #fff;
+//   }
+// }
+
+
+// .swiper-wrapper {
+// }
+// .swiper-slide {
+
+// }
+// .swiper-pagination {
+// }
+
+// // .swiper-slide {
+// //   text-align: center;
+// //   font-size: 18px;
+// //   //   background: #fff;
+// //   display: flex;
+// //   justify-content: center;
+// //   align-items: center;
+// // }
+
+
+
+
+
+////////////
 .section {
-  // .section__reviews
 
-  &__reviews {
-    position: relative;
-    height: 500px;
-  }
+		// .section__reviews
 
-  // .section__reviews-title
-
-  &__reviews-title {
-    margin: 0 auto;
-    @include fonts(400, 30px, 23px);
-    color: #fff;
-    @include breakpoint-mf("my") {
-      @include fonts(400, 45px, 38px);
-      margin: 0;
+		&__reviews {
+      margin-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    @include breakpoint-mf("md") {
+      padding-right: 15px;
+      padding-left: 15px;
     }
-  }
-}
+		}
 
-.reviews-slider {
-  // .reviews-slider__block
-  //   width: 100%;
-  //   height: 100%;
-  width: 900px;
-  height: 400px;
+		// .section__reviews-title
 
-  &__block {
-    background: #0d0d0d;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // width: 300px;
-    // height: 300px;
-  }
-  // .reviews-slider__content
+		&__reviews-title {
+          display: flex;
 
-  &__content {
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  // .reviews-slider__content-person
-
-  &__content-person {
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-
-    img {
-      border-radius: 100px;
-      width: 150px;
-      height: 150px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+    // margin-bottom: 2rem;
+    
+    h1 {
+color: #fff;
+@include fonts(400, 20px, 23px);
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 32px, 38px);
     }
-  }
+    }
+		}
+}
+.swiper {
+}
+.reviews-slider {
+    margin: 0 auto;
+  display: flex;
+      gap: 20px;
+  max-width: 1200px;
+  height: 300px;
+      @include breakpoint-mf("my") {
+      height: 300px;
+      }
 
-  // .reviews-slider__content-text
+		// .reviews-slider__block
 
-  &__content-text {
-  }
+		&__block {
+      background: #0d0d0d;
+          margin-right: 30px;
+          width: 300px;
+		}
+
+		// .reviews-slider__block-person
+
+		&__block-person {
+		}
+
+		// .reviews-slider__block-text
+
+		&__block-text {
+		}
 }
 .swiper-wrapper {
 }
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
 }
 .swiper-pagination {
-}
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   //   background: #fff;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-.swiper-slide {
 }
