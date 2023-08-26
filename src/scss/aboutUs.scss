@@ -4,7 +4,7 @@
   &__about {
     padding-right: 10px;
     padding-left: 10px;
-    // position: relative;
+            padding-bottom: 100px;
     @include breakpoint-mf("md") {
       padding-right: 15px;
       padding-left: 15px;
@@ -34,64 +34,95 @@
   // .section__about-wrapper
 
   &__about-wrapper {
-    max-width: 1400px;
     margin: 0 auto;
+    max-width: 1400px;
+
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 53px;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+gap: 40px;
   }
 
   // .section__about-block
 
   &__about-block {
-    &:nth-child(1) {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-    &:nth-child(2) {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-  }
-
-  // .section__about-block-content
-
-  &__about-block-content {
     display: grid;
-    grid-row-gap: 53px;
-    grid-column-gap: 25px;
-    // @include breakpoint-mf("md") {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+     @include breakpoint-mf("md") {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    // }
+    justify-items: center;
+
+&:nth-child(1) {
+grid-area: 1 / 1 / 2 / 2; 
+}
+&:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+    }
   }
 
-  // .section__about-block-content-img
+  // .section__about-block-img
 
-  &__about-block-content-img {
-    background-image: url(../../dist/img/team.jpg);
-    width: 90%;
-    height: 110%;
-    background-size: cover;
-    margin: 0 auto;
-    border-radius: 40px;
-  }
+  &__about-block-img {
 
-  // .section__about-block-content-text
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-  &__about-block-content-text {
-    color: $secondary;
-    @include fonts(700, 16px, 22px);
-    @include breakpoint-mf("md") {
-      @include fonts(700, 18px, 21px);
-    }
-    @include breakpoint-mf("my") {
-      @include fonts(700, 20px, 27px);
-    }
-    @include breakpoint-mf("xl") {
-      @include fonts(700, 20px, 37px);
+    img {
+      width: 100%;
+          height: 100%;
+          border-radius: 40px;
+              @include breakpoint-mf("xs") {
+                      width: 100%;
+              }
     }
     &:nth-child(1) {
-      text-align: right;
+
+             @include breakpoint-mf("md") {
+
+       }
+    }
+    &:nth-child(2) {
+grid-area: 1 / 1 / 2 / 2;
+             @include breakpoint-mf("md") {
+        
+       }
+    }
+  }
+
+  // .section__about-block-text
+
+  &__about-block-text {
+    @include flex(column, center, center);
+    color: $secondary;
+    @include fonts(400, 16px, 24px);
+    @include breakpoint-mf("sm") {
+      @include fonts(400, 18px, 25px);
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(400, 20px, 30px);
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 20px, 37px);
+    }
+//for 2
+    &:nth-child(1) {
+      
+
+       @include breakpoint-mf("md") {
+grid-area: 1 / 2 / 2 / 3;
+       }
+    }
+    //for 1
+    &:nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2;
+       @include breakpoint-mf("md") {
+  grid-area: 1 / 1 / 2 / 2;
+       }
     }
   }
 }

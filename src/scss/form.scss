@@ -8,21 +8,22 @@
 }
 
 .form__wrapper {
-  padding: 40px;
+  padding: 30px;
+  @include breakpoint-mf("ma") {
+    padding: 40px;
+  }
 }
 .form__title {
-  // margin: 0 auto;
-  // text-align: center;
-  // color: #fff;
   padding-bottom: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
   text-align: center;
-  @include fonts(400, 20px, 23px);
+    @include fonts(500, 20px, 25px);
   color: #fff;
+  @include breakpoint-mf("ma") {
+    @include fonts(500, 20px, 22px);
+  }
   @include breakpoint-mf("xl") {
-    @include fonts(500, 30px, 30px);
+    @include fonts(500, 25px, 30px);
   }
 }
 
@@ -151,11 +152,14 @@ textarea {
 
   &__wrapper {
     margin: 0 auto;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(2, 476px);
-    grid-template-rows: 570px;
-    justify-content: center;
+    max-width: 952px;
+    display: block;
+    @include breakpoint-mf("xs") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 570px;
+      justify-content: center;
+    }
   }
 
   // .contacts__block
@@ -166,16 +170,29 @@ textarea {
       background: rgba(24, 20, 20, 0.987);
       box-sizing: border-box;
       border-radius: 40px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+
+      @include breakpoint-mf("xs") {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+              border-bottom-left-radius: 40px;
+      }
     }
     &:nth-child(2) {
       grid-area: 1 / 2 / 2 / 3;
       background: rgb(35 33 33 / 99%);
       box-sizing: border-box;
       border-radius: 40px;
+      border-top-right-radius: 0;
       border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-bottom-left-radius: 40px;
+
+      @include breakpoint-mf("xs") {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+              border-top-right-radius: 40px;
+      }
     }
   }
 }
@@ -184,7 +201,13 @@ textarea {
   // .info__wrapper
 
   &__wrapper {
-    padding: 40px;
+    padding: 36px;
+     @include breakpoint-mf("xs") {
+          padding: 25px;
+     }
+    @include breakpoint-mf("ma") {
+      padding: 40px;
+    }
   }
 }
 
@@ -197,19 +220,23 @@ textarea {
   // .info__title
 
   &__title {
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    font-weight: 500;
+        @include flex(column, normal, normal);
+
+    @include fonts(500, 15px, 25px);
     color: #fff;
-    // text-transform: uppercase;
+    @include breakpoint-mf("ma") {
+      @include fonts(500, 20px, 22px);
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(500, 22px, 25px);
+    }
   }
 
   // .info__title-span
 
-  &__title-span-free-consult{
-text-transform: uppercase;
-color: #ffab00;
+  &__title-span-free-consult {
+    text-transform: uppercase;
+    color: #ffab00;
   }
 
   &__title-span-second {
@@ -220,13 +247,16 @@ color: #ffab00;
   // .info__social-buttons
 
   &__social-buttons {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    // @include flex(column, space-evenly, normal);
+    @include flex(column, space-between, flex-start);
     height: 310px;
     padding-top: 50px;
-    justify-content: space-between;
 
+    @include breakpoint-mf("xs") {
+      // @include flex(column, space-between, flex-start);
+    }
+    @include breakpoint-mf("ma") {
+    }
     svg {
       transition: 0.3s;
       height: 20px;
@@ -249,16 +279,31 @@ color: #ffab00;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    // @include flex(column, space-evenly, center);
+    @include flex(column, center, center);
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0px 0px 4px #00000027;
     transition: 0.3s;
+
+    svg {
+      width: 20px;
+    }
+
     &:hover {
       // background-color: #f2f2f2;
       box-shadow: 0px 0px 6px 3px #00000027;
     }
+    //   @include breakpoint-mf("xs") {
+    //   width: 50px;
+    //   height: 50px;
+    // @include flex(column, center, center);
+    // }
+    // @include breakpoint-mf("ma") {
+
+    // }
   }
 
   // .info__social-buttons-block
@@ -298,6 +343,8 @@ color: #ffab00;
     background-color: #3b5998;
   }
 }
+
+
 .info-instagram {
   background-color: #000;
   svg {
@@ -305,5 +352,16 @@ color: #ffab00;
   }
   &:hover {
     background-color: #c13584;
+  }
+}
+
+
+.info-whatsapp {
+  background-color: #000;
+  svg {
+    fill: #f2f2f2;
+  }
+  &:hover {
+    background-color: #25D366;
   }
 }

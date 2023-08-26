@@ -17,19 +17,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     @@include('html/header.html', {})
     <main>
-      <!-- @@include('html/swiper.html', {}) -->
-      @@include('html/ourService.html', {})
-      <!-- @@include('html/shortCategories.html', {}) -->
-
+      @@include('html/hamster.html', {}) @@include('html/ourService.html', {})
       @@include('html/aboutUs.html', {}) @@include('html/whywe.html', {})
       @@include('html/faq.html', {}) @@include('html/cars.html', {})
     </main>
     @@include('html/footer.html', {})
     <script src="./dist/js/app.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".bg-slider", {
@@ -86,5 +88,16 @@
         },
       });
     </script>
+    <!-- <script>
+      ScrollReveal({ 
+    reset: true, 
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
+
+
+ScrollReveal().reveal(".section__service-title", { delay: 500 });
+    </script> -->
   </body>
 </html>

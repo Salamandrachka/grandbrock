@@ -36,5 +36,8 @@
     "webp-converter": "2.2.3",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "scrollreveal": "^4.0.9"
   }
 }

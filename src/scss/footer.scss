@@ -43,6 +43,10 @@
   background-color: #37aee2;
 }
 
+.whatsapp {
+   background-color: #25D366;
+}
+
 .github svg {
   width: 25px;
   height: 25px;
@@ -76,6 +80,15 @@
 .instagram:hover svg {
   fill: #c13584;
 }
+
+.whatsapp svg {
+  fill: #f2f2f2;
+}
+
+.whatsapp:hover svg {
+  fill: #25D366;
+}
+
 .footer {
   background: #1b1b1b;
   padding-right: 10px;
@@ -130,13 +143,11 @@
   // .footer__logo-img
 
   &__logo-img {
-    width: 135px;
-    height: 74px;
-
-    @include breakpoint-mf("md") {
-      // @include fonts(400, 32px, 38px);
-      width: 105px;
-      height: 63px;
+    width: 100px;
+    height: 58px;
+    @include breakpoint-mf("ma") {
+      width: 140px;
+      height: 73px;
     }
   }
 

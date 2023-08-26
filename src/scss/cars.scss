@@ -2,8 +2,7 @@
   // .section__reviews
 
   &__reviews {
-    margin-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     padding-right: 10px;
     padding-left: 10px;
     @include breakpoint-mf("md") {
@@ -49,13 +48,12 @@
 
   &__block {
     background: #1f2025;
-    height: 73%;
+    // height: 73%;
+        height: 80%;
     border-radius: 40px;
     display: flex;
-        @include flex(column, space-between, normal);
-transition: all 0.4s;
-width: calc(100% - 2px);
-
+    transition: all 0.4s;
+    width: calc(100% - 2px);
   }
   // .reviews-slider__block-date
 
@@ -65,10 +63,9 @@ width: calc(100% - 2px);
     position: relative;
     //for less 1400px
     // padding-top: 17px;
- @include flex(column, space-between, flex-end);
+    @include flex(column, space-between, flex-end);
     //for 1400px
-padding-top: 0;
-
+    padding-top: 0;
 
     // &::after {
     //   content: "";
@@ -90,13 +87,17 @@ padding-top: 0;
     padding: 21px;
     padding-bottom: 10px;
     img {
-    width: 110px;
-    height: 104px;
+      width: 110px;
+      height: 104px;
       border-radius: 50%;
 
+      // @include breakpoint-mf("ma") {
+      //   padding-bottom: 0;
+      // }
+
       @include breakpoint-mf("xl") {
-              width: 121px;
-      height: 115px;
+        width: 121px;
+        height: 115px;
       }
     }
     span {
@@ -113,18 +114,18 @@ padding-top: 0;
     @include fonts(400, 17px, 29px);
     color: #fff;
     padding-bottom: 0;
-              @include breakpoint-mf("xs") {
-    @include fonts(400, 17px, 36px);
-      }
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 36px);
+    }
     //       @include breakpoint-mf("xs") {
     // @include fonts(400, 17px, 43px);
     //   }
-          @include breakpoint-mf("xl") {
-            @include fonts(400, 19px, 43px);
-      }
-                @include breakpoint-mf("xll") {
-    @include fonts(400, 17px, 29px);
-      }
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 19px, 43px);
+    }
+    @include breakpoint-mf("xll") {
+      @include fonts(400, 17px, 29px);
+    }
   }
 }
 .swiper-wrapper {
@@ -135,22 +136,23 @@ padding-top: 0;
   &__wrapper {
   }
 }
-// .swiper-slide-active.reviews-slider__block-shadow {
-//           box-shadow: 0px 0px 6px 1px #3B03F8;
-//   border: 1px solid #3B03F8;
-//   border-radius: 40px;
-// }
+.reviews-slider__block-shadow {
+  @include flex(column, space-between, normal);
+}
 
-// .swiper-slide {
-//       width: 99%;
-// }
+.swiper-slide.swiper-slide-active .reviews-slider__block-shadow {
+  box-shadow: 0px 0px 6px 1px #3b03f8;
+  border: 1px solid #3b03f8;
+  border-radius: 40px;
+  height: 100%;
+}
 
 .swiper-pagination-bullet {
   padding: 1.5px;
-  background: #3B03F8;
+  background: #3b03f8;
 }
 .swiper-pagination-bullet-active {
   background: #131313;
-  border: 1px solid #3B03F8;
+  border: 1px solid #3b03f8;
   padding: 3px;
 }
