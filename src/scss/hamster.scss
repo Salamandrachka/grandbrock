@@ -22,31 +22,68 @@
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 1fr;
+    gap: 10px;
+          @include breakpoint-mf("md") {
+       gap: 15px;
+      }
   }
 
   // .content__text-wrapper
 
   &__text-wrapper {
-        padding-top: 80px;
+    // padding-top: 80px;
+    padding-top: 20px;
     @include flex(column, normal, stretch);
-    gap: 100px;
+    // gap: 100px;
+    gap: 25px;
+    @include breakpoint-mf("xs") {
+      padding-top: 60px;
+    }
+              @include breakpoint-mf("md") {
+       gap: 65px;
+      }
   }
-  
+
   // .content__text
 
   &__text {
     color: #ffab00;
     text-transform: uppercase;
-    font-family: 'Fira Mono', monospace;
+    font-family: "Fira Mono", monospace;
     &:nth-child(1) {
-      @include fonts(500, 60px, 38px);
+      @include fonts(500, 23px, 38px);
+      @include breakpoint-mf("xs") {
+        @include fonts(500, 30px, 38px);
+      }
+      @include breakpoint-mf("md") {
+        @include fonts(500, 40px, 38px);
+      }
+            @include breakpoint-mf("xl") {
+        padding-right: 30px;
+        @include fonts(500, 55px, 38px);
+      }
+      @include breakpoint-mf("xll") {
+        @include fonts(500, 60px, 38px);
+      }
     }
     &:nth-child(2) {
       @include flex(column, normal, flex-end);
-      padding-right: 30px;
-      @include fonts(500, 55px, 38px);
-    }
+      @include fonts(500, 16px, 38px);
+      @include breakpoint-mf("xs") {
+        @include fonts(500, 25px, 38px);
+      }
+      @include breakpoint-mf("md") {
+        @include fonts(500, 35px, 38px);
+      }
+      @include breakpoint-mf("xl") {
+        padding-right: 30px;
+        @include fonts(500, 50px, 38px);
+      }
 
+      @include breakpoint-mf("xll") {
+        @include fonts(500, 55px, 38px);
+      }
+    }
   }
 
   // .content__img
