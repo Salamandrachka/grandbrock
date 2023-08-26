@@ -93,7 +93,20 @@ overflow: hidden;
     img {
       // width: 600px;
       width: 100%;
+       &:nth-child(1) {
+        display: block;
+        @include breakpoint-mf("sa") {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        display: none;
+        @include breakpoint-mf("sa") {
+          display: block;
+        }
+      }
     }
+    
   }
 }
 
@@ -124,7 +137,7 @@ overflow: hidden;
 @keyframes moveWheel {
   from {
     // transform: translateX(25vw); /* 200px out of 100vw */
-    transform: translateX(60vw);
+    transform: translateX(40vw);
   }
 
   to {

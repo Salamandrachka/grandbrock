@@ -1911,6 +1911,22 @@ textarea {
 .content__img img {
   width: 100%;
 }
+.content__img img:nth-child(1) {
+  display: block;
+}
+@media (min-width: 700px) {
+  .content__img img:nth-child(1) {
+    display: none;
+  }
+}
+.content__img img:nth-child(2) {
+  display: none;
+}
+@media (min-width: 700px) {
+  .content__img img:nth-child(2) {
+    display: block;
+  }
+}
 
 /*HAMSTER*/
 .hamster__wrapper {
@@ -1936,7 +1952,7 @@ textarea {
 
 @keyframes moveWheel {
   from {
-    transform: translateX(60vw);
+    transform: translateX(40vw);
   }
   to {
     transform: translateX(-100vw); /* 1000px out of 100vw */
