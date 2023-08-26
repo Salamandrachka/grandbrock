@@ -38,6 +38,6 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    
+    "scrollreveal": "^4.0.9"
   }
 }

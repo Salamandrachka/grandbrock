@@ -1,120 +1,128 @@
-/**GRID**/
-
 .section {
-  
+  // .section__about
+
   &__about {
-    // background-color: #181818;
     padding-right: 10px;
     padding-left: 10px;
-    position: relative;
-    padding-bottom: 150px;
+            padding-bottom: 100px;
     @include breakpoint-mf("md") {
       padding-right: 15px;
       padding-left: 15px;
     }
-
-    //background-image: linear-gradient(0deg, #181818 80%, #212121 80%);
   }
-}
 
-.about {
-  // .about__wrapper
-  max-width: 1200px;
-  &__wrapper {
-    max-width: 1200px;
+  // .section__about-title
+
+  &__about-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+      @include fonts(400, 20px, 23px);
+      @include breakpoint-mf("xl") {
+        @include fonts(400, 32px, 38px);
+      }
+    }
+  }
+
+  // .section__about-wrapper
+
+  &__about-wrapper {
     margin: 0 auto;
+    max-width: 1400px;
+
+    display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+gap: 40px;
   }
 
-  // .about__wrapper-block
+  // .section__about-block
 
-  &__wrapper-block {
+  &__about-block {
     display: grid;
     grid-template-columns: 1fr;
-    // grid-template-rows: repeat(2, 1fr);
-    grid-template-rows: 350px 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-    padding-top: 100px;
+    gap: 40px;
 
-    @include breakpoint-mf("my") {
-      display: grid;
-      grid-template-columns: 350px 1fr;
-      grid-template-rows: repeat(1, 1fr);
-      grid-column-gap: 40px;
+     @include breakpoint-mf("md") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+
+&:nth-child(1) {
+grid-area: 1 / 1 / 2 / 2; 
+}
+&:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+}
     }
   }
 
-  // .about__wrapper-block-img
+  // .section__about-block-img
 
-  &__wrapper-block-img {
-    grid-area: 1 / 1 / 2 / 2;
-    width: 295px;
-    height: 295px;
-    margin: 0 auto;
-    //transform: translateY(-10px);
-    // position: absolute;
-    background-image: url(../../dist/img/team.jpg);
-    // bottom: 140px;
-    // background-repeat: no-repeat;
-    background-size: cover;
-    // background-attachment: fixed;
-//от и выше 
-    @include breakpoint-mf("xxs") {
-      width: 90%;
-      height: 100%;
-    }
-    @include breakpoint-mf("my") {
-      grid-area: 1 / 1 / 2 / 2;
-    width: 350px;
-    height: 350px;
-    }
+  &__about-block-img {
 
-
-  }
-
-  // .about__wrapper-block-wrapper
-
-  &__wrapper-block-wrapper {
-    grid-area: 2 / 1 / 3 / 2;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-    @include breakpoint-mf("my") {
-      grid-area: 1/2/2/3;
-          text-align: left;
 
+    img {
+      width: 100%;
+          height: 100%;
+          border-radius: 40px;
+              @include breakpoint-mf("xs") {
+                      width: 100%;
+              }
+    }
+    &:nth-child(1) {
+
+             @include breakpoint-mf("md") {
+
+       }
+    }
+    &:nth-child(2) {
+grid-area: 1 / 1 / 2 / 2;
+             @include breakpoint-mf("md") {
+        
+       }
     }
   }
 
-  // .about__wrapper-block-title
+  // .section__about-block-text
 
-  &__wrapper-block-title {
-    margin: 0 auto;
-    @include fonts(400, 30px, 23px);
-    color: #fff;
-    @include breakpoint-mf("my") {
-      @include fonts(400, 45px, 38px);
-      margin: 0;
+  &__about-block-text {
+    @include flex(column, center, center);
+    color: $secondary;
+    @include fonts(400, 16px, 24px);
+    @include breakpoint-mf("sm") {
+      @include fonts(400, 18px, 25px);
     }
-  }
-
-  // .about__wrapper-block-text
-
-  &__wrapper-block-text {
-    padding-top: 60px;
-    line-height: 30px;
-    // font-size: 20px;
-    color: #fff;
-    @include fonts(400, 16px, 35px);
-
-    @include breakpoint-mf("md") {
-      @include fonts(400, 18px, 35px);
+    @include breakpoint-mf("my") {
+      @include fonts(400, 20px, 30px);
     }
     @include breakpoint-mf("xl") {
-      @include fonts(400, 20px, 35px);
+      @include fonts(400, 20px, 37px);
+    }
+//for 2
+    &:nth-child(1) {
+      
+
+       @include breakpoint-mf("md") {
+grid-area: 1 / 2 / 2 / 3;
+       }
+    }
+    //for 1
+    &:nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2;
+       @include breakpoint-mf("md") {
+  grid-area: 1 / 1 / 2 / 2;
+       }
     }
   }
 }

@@ -17,22 +17,21 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     @@include('html/header.html', {})
     <main>
-      @@include('html/categories.html', {}) 
-      @@include('html/swiper.html', {})
-            @@include('html/shortCategories.html', {})
-            @@include('html/faq.html', {})
-      @@include('html/aboutUs.html', {})
-      @@include('html/cars.html', {})
-      @@include('html/whywe.html', {})
-      @@include('html/reviews.html', {})
-
+      @@include('html/hamster.html', {}) @@include('html/ourService.html', {})
+      @@include('html/aboutUs.html', {}) @@include('html/whywe.html', {})
+      @@include('html/faq.html', {}) @@include('html/cars.html', {})
     </main>
-@@include('html/footer.html', {})
+    @@include('html/footer.html', {})
     <script src="./dist/js/app.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".bg-slider", {
@@ -49,66 +48,56 @@
         },
       });
     </script>
-    <!-- <script>
-      var swiper = new Swiper(".mySwiper", {
+
+    <script>
+      var swiper = new Swiper(".reviews-slider", {
+        // effect: "fade",
         spaceBetween: 30,
-        effect: "fade",
+        slidesPerView: 1,
+        freemode: true,
         loop: true,
-        // navigation: {
-        //   nextEl: ".swiper-button-next",
-        //   prevEl: ".swiper-button-prev",
-        // },
+        centeredSlides: true,
+        grabCursor: true,
+        speed: 500,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+        breakpoints: {
+          // when window width is >= 500px
+          360: {
+            // width: 337,
+            // width: '99%',
+            slidesPerView: 1,
+          },
+          // // // when window width is >= 640px
+          690: {
+            // width: '100%',
+            slidesPerView: 1.5,
+          },
+          // when window width is >= 768px
+          1000: {
+            // width: 768,
+            slidesPerView: 2,
+          },
+          //when window width is >= 980px
+          1400: {
+            // width: 768,
+            slidesPerView: 3,
+          },
+        },
       });
+    </script>
+    <!-- <script>
+      ScrollReveal({ 
+    reset: true, 
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
+
+
+ScrollReveal().reveal(".section__service-title", { delay: 500 });
     </script> -->
-     <script>
-    var swiper = new Swiper(".car-slider", {
-      // effect: "fade",
-      spaceBetween: 30,
-      slidesPerView: 1,
-      freemode: true,
-      loop: true,
-      centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        // when window width is >= 500px
-  500: {
-      // width: 640,
-      slidesPerView: 1.5,
-    },
-// when window width is >= 640px
-    638: {
-      // width: 640,
-      slidesPerView: 2,
-    },
-    // when window width is >= 768px
-    800: {
-      // width: 768,
-      slidesPerView: 2.5,
-    },
-        // when window width is >= 980px
-    980: {
-      // width: 768,
-      slidesPerView: 3,
-    },
-      }
-    });
-  </script>
-    <script>
-    var swiper = new Swiper(".reviews-slider", {
-      direction: "vertical",
-       loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
   </body>
 </html>

@@ -7,7 +7,7 @@
 
   &__icons {
     // background: #212121;
-    background-image: url('../../dist/img/bg.png');
+    // background-image: url('../../dist/img/bg.png');
     padding-right: 10px;
     padding-left: 10px;
     padding-bottom: 200px;
@@ -135,6 +135,36 @@
     color: #fff;
     line-height: 30px;
   }
+
+  &__icons-block-btn {
+cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+    /* padding: 15px 25px; */
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin-top: 16px;
+    height: 40px;
+    margin-left: 25px;
+    border-radius: 10px;
+    gap: 5px;
+    transform: translateX(50px);
+
+    i {
+      font-size: 1.1em;
+      transition: 0.3s ease;
+    }
+
+    i:hover {
+      transform: translateX(5px);
+    }
+  }
+
 }
 
 #car-icon {

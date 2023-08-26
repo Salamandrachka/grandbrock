@@ -1,26 +1,32 @@
-    // Получаем все элементы с вопросами и ответами
-  const faqBlocks = document.querySelectorAll(".section__faq-block");
+  const accordionItemHeaders = document.querySelectorAll(
+    ".section__faq-block-question"
+  );
+  const answer = document.querySelector(".section__faq-block-answer-wrapper");
 
-  // Обрабатываем клик на каждый элемент с вопросом
-  faqBlocks.forEach((faqBlock) => {
-    const question = faqBlock.querySelector(".section__faq-block-question");
-    const answer = faqBlock.querySelector(".section__faq-block-answer");
-    const angleDown = question.querySelector(".fa-angle-down");
-    const angleUp = question.querySelector(".fa-angle-up");
+  accordionItemHeaders.forEach((accordionItemHeader) => {
+    accordionItemHeader.addEventListener("click", (event) => {
+      // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
 
-    angleUp.style.display = "none"; // Скрываем стрелку вверх при загрузке страницы
+      const currentlyActiveAccordionItemHeader = document.querySelector(
+        ".section__faq-block-question.active"
+      );
+      if (
+        currentlyActiveAccordionItemHeader &&
+        currentlyActiveAccordionItemHeader !== accordionItemHeader
+      ) {
+        currentlyActiveAccordionItemHeader.classList.toggle("active");
+        currentlyActiveAccordionItemHeader.nextElementSibling.classList.remove(
+          "open"
+        );
+      }
+      accordionItemHeader.classList.toggle("active");
+      const accordionItemBody = accordionItemHeader.nextElementSibling;
+      if (accordionItemHeader.classList.contains("active")) {
 
-    question.addEventListener("click", () => {
-      // Переключаем класс активности для ответа
-      answer.classList.toggle("active");
-
-      // Переключаем свойство display для стрелок
-      if (angleDown.style.display === "none") {
-        angleDown.style.display = "inline";
-        angleUp.style.display = "none";
+        accordionItemBody.classList.add("open");
       } else {
-        angleDown.style.display = "none";
-        angleUp.style.display = "inline";
+
+        accordionItemBody.classList.remove("open");
       }
     });
   });
