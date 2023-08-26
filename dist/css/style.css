@@ -1940,14 +1940,20 @@ textarea {
 .wheel-and-hamster {
   --dur: 1s;
   position: relative;
-  width: 12em;
-  height: 12em;
+  width: 9em;
+  height: 9em;
   font-size: 14px;
   animation-name: moveWheel;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: normal;
+}
+@media (min-width: 1024px) {
+  .wheel-and-hamster {
+    width: 12em;
+    height: 12em;
+  }
 }
 
 @keyframes moveWheel {
@@ -1996,10 +2002,15 @@ textarea {
   border-radius: 70% 30% 0 100%/40% 25% 25% 60%;
   box-shadow: 0 -0.25em 0 hsl(30, 90%, 80%) inset, 0.75em -1.55em 0 hsl(30, 90%, 90%) inset;
   top: 0;
-  left: -2em;
+  left: -1.6em;
   width: 2.75em;
   height: 2.5em;
   transform-origin: 100% 50%;
+}
+@media (min-width: 1024px) {
+  .hamster__head {
+    left: -2em;
+  }
 }
 
 .hamster__ear {
@@ -2038,12 +2049,20 @@ textarea {
   background: hsl(30, 90%, 90%);
   border-radius: 50% 30% 50% 30%/15% 60% 40% 40%;
   box-shadow: 0.1em 0.75em 0 hsl(30, 90%, 55%) inset, 0.15em -0.5em 0 hsl(30, 90%, 80%) inset;
-  top: 0.25em;
-  left: 2em;
-  width: 4.5em;
-  height: 3em;
+  top: -1.2em;
+  left: 2.4em;
+  width: 4.1em;
+  height: 2.7em;
   transform-origin: 17% 50%;
   transform-style: preserve-3d;
+}
+@media (min-width: 1024px) {
+  .hamster__body {
+    top: 0.25em;
+    left: 2em;
+    width: 4.5em;
+    height: 3em;
+  }
 }
 
 .hamster__limb--fr,
@@ -2073,10 +2092,19 @@ textarea {
   border-radius: 0.75em 0.75em 0 0;
   clip-path: polygon(0 0, 100% 0, 100% 30%, 70% 90%, 70% 100%, 30% 100%, 40% 90%, 0% 30%);
   top: 1em;
-  left: 2.8em;
+  left: 2.6em;
   width: 1.5em;
-  height: 2.5em;
+  height: 2.4em;
   transform-origin: 50% 30%;
+}
+@media (min-width: 1024px) {
+  .hamster__limb--br,
+  .hamster__limb--bl {
+    top: 1em;
+    left: 2.8em;
+    width: 1.5em;
+    height: 2.5em;
+  }
 }
 
 .hamster__limb--br {
@@ -2096,12 +2124,20 @@ textarea {
   background: hsl(0, 90%, 85%);
   border-radius: 0.25em 50% 50% 0.25em;
   box-shadow: 0 -0.2em 0 hsl(0, 90%, 75%) inset;
-  top: 1.5em;
+  top: 0.5em;
   right: -0.5em;
-  width: 1em;
+  width: 1.9em;
   height: 0.5em;
   transform: rotate(30deg) translateZ(-1px);
   transform-origin: 0.25em 0.25em;
+}
+@media (min-width: 1024px) {
+  .hamster__tail {
+    top: 1.5em;
+    right: -0.5em;
+    width: 1em;
+    height: 0.5em;
+  }
 }
 
 .spoke {
