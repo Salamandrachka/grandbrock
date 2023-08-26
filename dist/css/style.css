@@ -202,6 +202,8 @@ main {
   background-color: #444;
 }
 .nav__menu-dropdown-list {
+  margin: 0 auto;
+  max-width: 1400px;
   padding-top: 90px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1154,7 +1156,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 70px;
   padding-bottom: 70px;
   text-align: center;
 }
@@ -1778,9 +1780,8 @@ textarea {
 }
 
 .section-hamster {
-  width: 100vw;
-  height: 100vh;
   padding-top: 40px;
+  overflow: hidden;
 }
 .section-hamster__wrapper {
   padding-right: 10px;
@@ -1935,7 +1936,7 @@ textarea {
 
 @keyframes moveWheel {
   from {
-    transform: translateX(25vw); /* 200px out of 100vw */
+    transform: translateX(60vw);
   }
   to {
     transform: translateX(-100vw); /* 1000px out of 100vw */
