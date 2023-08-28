@@ -95,18 +95,18 @@
     img {
       // width: 600px;
       width: 100%;
-      // &:nth-child(1) {
-      //   display: block;
-      //   @include breakpoint-mf("sa") {
-      //     display: none;
-      //   }
-      // }
-      // &:nth-child(2) {
-      //   display: none;
-      //   @include breakpoint-mf("sa") {
-      //     display: block;
-      //   }
-      // }
+      &:nth-child(1) {
+        display: block;
+        @include breakpoint-mf("sm") {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        display: none;
+        @include breakpoint-mf("sm") {
+          display: block;
+        }
+      }
     }
   }
 }

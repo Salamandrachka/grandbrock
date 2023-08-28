@@ -1400,6 +1400,22 @@ main {
 .content__img img {
   width: 100%;
 }
+.content__img img:nth-child(1) {
+  display: block;
+}
+@media (min-width: 640px) {
+  .content__img img:nth-child(1) {
+    display: none;
+  }
+}
+.content__img img:nth-child(2) {
+  display: none;
+}
+@media (min-width: 640px) {
+  .content__img img:nth-child(2) {
+    display: block;
+  }
+}
 
 /*HAMSTER*/
 .hamster__wrapper {
