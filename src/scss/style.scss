@@ -3,14 +3,17 @@
 @import './mixins.scss';
 @import './global.scss';
 
+
 /*COMPONENTS*/
 @import './header.scss';
 @import './aboutUs.scss';
 @import './cars.scss';
 @import './whyWe.scss';
 @import './faq.scss';
-@import './reviews.scss';
 @import './footer.scss';
 @import './ourService.scss';
-@import './form.scss';
 @import './hamster.scss';
+@import './fixedBtn.scss';
+
+/*CONTACTS PAGE*/
+@import './form.scss';

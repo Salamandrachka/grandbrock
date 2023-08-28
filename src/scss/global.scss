@@ -15,25 +15,41 @@ main {
 }
 
 .container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding-right: 10px;
-  padding-left: 10px;
-  @include breakpoint-mf("md") {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+ padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    @include breakpoint-mf("md") {
+      padding-right: 15px;
+      padding-left: 15px;
+     
+    }
+    @include breakpoint-mf("xl") {
+ padding-bottom: 70px;
+    }
 }
 
-.section-title {
-  @include fonts(700, 22px, 26px);
-  color: $primary;
-  text-align: center;
-  @include breakpoint-mf("md") {
-    @include fonts(700, 28px, 34px);
-  }
-  @include breakpoint-mf("xl") {
-    @include fonts(700, 45px, 54px);
-  }
+.wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+
+.title {
+    text-align: center;
+    @include flex(column, center, center);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+    @include breakpoint-mf("xl") {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+    h1 {
+      color: #fff;
+      @include fonts(400, 20px, 23px);
+
+      @include breakpoint-mf("xl") {
+        @include fonts(400, 32px, 38px);
+      }
+    }
 }

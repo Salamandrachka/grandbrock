@@ -1,44 +1,12 @@
 .section {
-  // .section__faq
-
-  &__faq {
-            padding-bottom: 100px;
-    padding-right: 10px;
-    padding-left: 10px;
-    @include breakpoint-mf("md") {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-  }
-
   // .section__faq-wrapper
-
-  &__faq-wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-  }
 
   &__faq-block-wrapper {
     background: rgba(24, 20, 20, 0.987);
     border-radius: 40px;
-    padding: 5px 57px;
-  }
-  // .section__faq-title
-
-  &__faq-title {
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-
-    h1 {
-      color: #fff;
-      @include fonts(400, 20px, 23px);
-      @include breakpoint-mf("xl") {
-        @include fonts(400, 32px, 38px);
-      }
+    padding: 5px 15px;
+    @include breakpoint-mf("xs") {
+      padding: 5px 50px;
     }
   }
 
@@ -94,7 +62,6 @@
     visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    // padding-top: 15px;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
 

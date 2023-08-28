@@ -1,47 +1,10 @@
-.section {
-  // .section__reviews
 
-  &__reviews {
-    padding-bottom: 100px;
-    padding-right: 10px;
-    padding-left: 10px;
-    @include breakpoint-mf("md") {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-  }
-
-  &__reviews-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    text-align: center;
-    // margin-bottom: 2rem;
-
-    h1 {
-      color: #fff;
-      @include fonts(400, 20px, 23px);
-      @include breakpoint-mf("xl") {
-        @include fonts(400, 32px, 38px);
-      }
-    }
-  }
-}
 
 .reviews-slider {
-  margin: 0 auto;
   display: flex;
-  max-width: 1400px;
   height: 500px;
-
   @include breakpoint-mf("my") {
     height: 500px;
-  }
-  // .reviews-slider__wrapper
-
-  &__wrapper {
   }
 
   // .reviews-slider__block
@@ -67,15 +30,6 @@
     //for 1400px
     padding-top: 0;
 
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   left: 302px;
-    //   right: 20px;
-    //   bottom: 12px;
-    //   height: 1px;
-    //   background-color: #444;
-    // }
   }
 
   // .reviews-slider__block-person
@@ -90,10 +44,6 @@
       width: 110px;
       height: 104px;
       border-radius: 50%;
-
-      // @include breakpoint-mf("ma") {
-      //   padding-bottom: 0;
-      // }
 
       @include breakpoint-mf("xl") {
         width: 121px;
@@ -111,15 +61,13 @@
   &__block-text {
     padding: 21px;
     padding-top: 0;
-    @include fonts(400, 17px, 29px);
+    @include fonts(400, 16px, 29px);
     color: #fff;
     padding-bottom: 0;
     @include breakpoint-mf("xs") {
-      @include fonts(400, 17px, 36px);
+      @include fonts(400, 15px, 36px);
     }
-    //       @include breakpoint-mf("xs") {
-    // @include fonts(400, 17px, 43px);
-    //   }
+
     @include breakpoint-mf("xl") {
       @include fonts(400, 19px, 43px);
     }
@@ -133,8 +81,6 @@
 .card-slider {
   // .card-slider__wrapper
 
-  &__wrapper {
-  }
 }
 .reviews-slider__block-shadow {
   @include flex(column, space-between, normal);
