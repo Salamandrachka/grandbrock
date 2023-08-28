@@ -142,3 +142,17 @@ svg:hover + .btn-phone__number {
   opacity: 1; /* Прозрачность становится 1 */
   transform: translateX(0); /* Возвращаем на место */
 }
+
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *{
+        border-bottom: 0 !important;
+        cursor: default !important;
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
