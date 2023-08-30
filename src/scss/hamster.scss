@@ -1,6 +1,8 @@
 .section-hamster {
-  padding-top: 40px;
+  
   // .section-hamster__wrapper
+
+  padding-top: 40px;
   overflow: hidden;
   &__wrapper {
     padding-right: 10px;
@@ -12,6 +14,7 @@
   }
 }
 .content {
+
   // .content__wrapper
 
   &__wrapper {
@@ -52,7 +55,7 @@
     text-transform: uppercase;
     font-family: "Fira Mono", monospace;
     &:nth-child(1) {
-      @include fonts(500, 17px, 38px);
+      @include fonts(500, 19px, 38px);
       @include breakpoint-mf("xs") {
         @include fonts(500, 28px, 38px);
       }
@@ -60,7 +63,6 @@
         @include fonts(500, 37px, 38px);
       }
       @include breakpoint-mf("my") {
-        // padding-right: 30px;
         @include fonts(500, 48px, 38px);
       }
       @include breakpoint-mf("xll") {
@@ -91,9 +93,10 @@
   // .content__img
 
   &__img {
+
     @include flex(column, normal, flex-end);
+
     img {
-      // width: 600px;
       width: 100%;
       &:nth-child(1) {
         display: block;
@@ -125,9 +128,6 @@
 .wheel-and-hamster {
   --dur: 1s;
   position: relative;
-
-  //   width: 9em;
-  // height: 9em;
   width: 6em;
   height: 6em;
   font-size: 14px;

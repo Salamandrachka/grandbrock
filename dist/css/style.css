@@ -1329,7 +1329,7 @@ main {
 }
 .content__text:nth-child(1) {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 38px;
 }
 @media (min-width: 568px) {
@@ -1879,6 +1879,99 @@ svg:hover + .btn-phone__number {
   line-height: inherit !important;
 }
 
+.section-gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  box-sizing: border-box;
+}
+.section-gallery__card {
+  margin: 0;
+  box-sizing: content-box;
+  margin: 10px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+.section-gallery__card:nth-child(1) {
+  border-top-left-radius: 40px;
+  margin: 0;
+}
+.section-gallery__card:nth-child(2) {
+  margin: 0;
+}
+.section-gallery__card:nth-child(3) {
+  margin: 0;
+  border-top-right-radius: 40px;
+}
+.section-gallery__card:nth-child(4) {
+  margin: 0;
+}
+.section-gallery__card:nth-child(5) {
+  margin: 0;
+}
+.section-gallery__card:nth-child(6) {
+  margin: 0;
+}
+.section-gallery__card:nth-child(7) {
+  margin: 0;
+  border-bottom-left-radius: 40px;
+}
+.section-gallery__card:nth-child(8) {
+  margin: 0;
+}
+.section-gallery__card:nth-child(9) {
+  margin: 0;
+  border-bottom-right-radius: 40px;
+}
+.section-gallery__card img {
+  height: 100%;
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+.section-gallery__card_transparent-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+.section-gallery__card_caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.section-gallery__card_opacity-low {
+  opacity: 0.5;
+}
+
+.section-gallery__card:hover img {
+  transform: scale(1.1);
+}
+
+.section-gallery__card:hover .section-gallery__card_transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-gallery__card:hover .section-gallery__card_caption {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.section-gallery__card_caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
 /*CONTACTS PAGE*/
 .back-img {
   background-image: url(../../dist/img/grand-contact4.png);
@@ -1953,16 +2046,15 @@ textarea {
   transition: 0.5s;
 }
 
-.form__wrapper .form__input input:focus ~ label,
-.form__wrapper .form__input input:valid ~ label {
+.form__wrapper .form__input textarea:focus ~ label {
   top: -20px;
   left: 0;
   color: #bdb8b8;
   font-size: 12px;
 }
 
-.form__wrapper .form__input textarea:focus ~ label,
-.form__wrapper .form__input textarea:valid ~ label {
+.form__wrapper .form__input input:focus ~ label,
+.form__wrapper .form__input input:valid ~ label {
   top: -20px;
   left: 0;
   color: #bdb8b8;
@@ -2037,13 +2129,8 @@ textarea {
 /*error messages fix*/
 /**/
 .section__contacts {
-  padding: 150px 10px;
-}
-@media (min-width: 768px) {
-  .section__contacts {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .contacts__wrapper {

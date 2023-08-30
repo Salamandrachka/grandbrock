@@ -1,0 +1,130 @@
+.section-gallery {
+  // .section-gallery__title
+
+  &__title {
+  }
+
+  // .section-gallery__wrapper
+
+  &__wrapper {
+    display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: repeat(6 1fr);
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    // gap: 30px;
+
+    // height: 900px;
+    box-sizing: border-box;
+
+    //    grid-gap: 27px;
+    //    grid-template-columns: 2fr 1fr 1fr 2fr;
+    //    grid-template-rows: repeat(2, 468px);
+    //    grid-template-areas:
+    //    "item1 item2 item2 item3"
+    //    "item4 item4 item5 item5";
+  }
+
+  // .section-gallery__card
+
+  &__card {
+    // border-radius: 40px;
+    margin: 0;
+    box-sizing: content-box;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+
+    &:nth-child(1) {
+        border-top-left-radius: 40px;
+        margin: 0;
+        
+    }
+    &:nth-child(2) {
+        margin: 0;
+    }
+    &:nth-child(3) {
+        margin: 0;
+        border-top-right-radius: 40px;
+    }
+    &:nth-child(4) {
+        margin: 0;
+    }
+    &:nth-child(5) {
+        margin: 0;
+    }
+    &:nth-child(6) {
+        margin: 0;
+    }
+    &:nth-child(7) {
+        margin: 0;
+        border-bottom-left-radius: 40px;
+    }
+    &:nth-child(8) {
+        margin: 0;
+    }
+    &:nth-child(9) {
+        margin: 0;
+        border-bottom-right-radius: 40px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      transform: scale(1);
+      transition: transform 0.4s ease;
+    }
+
+    // .section-gallery__card_transparent-box
+
+    &_transparent-box {
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background-color 0.3s ease;
+    }
+
+    // .section-gallery__card_caption
+
+    &_caption {
+      position: absolute;
+      bottom: 5px;
+      left: 20px;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    // .section-gallery__card_opacity-low
+
+    &_opacity-low {
+      opacity: 0.5;
+    }
+  }
+}
+
+.section-gallery__card:hover img {
+  transform: scale(1.1);
+}
+
+.section-gallery__card:hover .section-gallery__card_transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.section-gallery__card:hover .section-gallery__card_caption {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+
+.section-gallery__card_caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
