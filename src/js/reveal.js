@@ -10,7 +10,7 @@ ScrollReveal({
 
 ScrollReveal().reveal(".title", {
   delay: 400,
-  origin: 'left',
+  origin: "left",
 });
 ScrollReveal().reveal(".section__service-block-wrapper", {
   delay: 500,
@@ -40,4 +40,31 @@ ScrollReveal().reveal(".content__text-wrapper", {
 });
 ScrollReveal().reveal(".content__img", {
   delay: 500,
+});
+
+
+ScrollReveal().reveal(".section-transportation__links", {
+  delay: 500,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".reveal-text", {
+  delay: 500,
+});
+
+// section - transportation__subtitle
+ScrollReveal().reveal(".flex-end", {
+  delay: 300,
+  origin: "left",
+});
+
+ScrollReveal().reveal(".flex-start", {
+  delay: 300,
+  origin: "right",
+});
+
+
+ScrollReveal().reveal(".section-transportation__img", {
+  delay: 400,
+  origin: "top",
 });

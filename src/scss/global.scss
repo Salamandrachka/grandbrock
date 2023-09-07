@@ -1,4 +1,16 @@
+@font-face {
+    font-family: 'Undounded-Regular'; /* Имя шрифта */
+    src: url(../../dist/files/Unbounded-Regular.woff2); 
+    
+}
+
+@font-face {
+    font-family: 'NeutralFace'; /* Имя шрифта */
+    src: url(../../dist/files/NeutralFace.otf); 
+    
+}
 body {
+  // font-family: 'Undounded-Regular'; 
 	font-family: 'Poppins', sans-serif;
   background-color: #131313;
 
