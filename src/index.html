@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="body">
     @@include('html/header.html', {})
     <main>
       @@include('html/hamster.html', {}) 
@@ -31,7 +31,7 @@
       @@include('html/aboutUs.html', {}) 
       @@include('html/whywe.html', {})
       @@include('html/faq.html', {}) 
-      @@include('html/cars.html', {})
+      @@include('html/reviews.html', {})
       @@include('html/fixedBtn.html', {})
     </main>
     @@include('html/footer.html', {})
@@ -55,7 +55,7 @@
     </script>
 
     <script>
-      var swiper = new Swiper(".reviews-slider", {
+      var swiper = new Swiper(".section-reviews__slider", {
         // effect: "fade",
         spaceBetween: 30,
         slidesPerView: 1,
@@ -97,174 +97,8 @@
         },
       });
     </script>
-<!-- <script> 
-      var swiper = new Swiper(".international-slider", {
-        // spaceBetween: 30,
-        // effect: "fade",
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script> -->
   </body>
 </html>
 
 
 
-
-  <!-- <div class="nav-mobile__wrapper">
-    <nav class="nav-mobile">
-      <ul class="nav-mobile__list">
-        <li class="nav-mobile__list-item">
-          <a class="nav-mobile__list-item-link" href="#"
-            ><span>Послуги</span><i class="fa fa-angle-down"></i
-            ><i class="fa fa-angle-up"></i
-          ></a>
-
-          <div class="nav-mobile__menu-dropdown">
-            <ul class="nav-mobile__menu-dropdown-list">
-              <li class="nav-mobile__menu-dropdown-list-item">
-                <a href="" class="nav-mobile__menu-dropdown-list-item-link"
-                  >Розмитнення посилок</a
-                >
-                <ul class="nav-mobile__menu-dropdown-sub-list">
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок DHL</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок FEDEX</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок UPS</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок EMS</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок із США</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення посилок з Китаю</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-mobile__menu-dropdown-list-item">
-                <a href="" class="nav-mobile__menu-dropdown-list-item-link"
-                  >Розмитнення авто</a
-                >
-                <ul class="nav-mobile__menu-dropdown-sub-list">
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення вантажівок</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення авто з Кореї</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення авто з США</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення авто з Європи</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення авто з Грузії</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-mobile__menu-dropdown-list-item">
-                <a href="" class="nav-mobile__menu-dropdown-list-item-link"
-                  >Митне оформлення</a
-                >
-                <ul class="nav-mobile__menu-dropdown-sub-list">
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Митне оформлення вантажів</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Акредитація на митниці</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Оформлення інпуту</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Оформлення експорту</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-mobile__menu-dropdown-list-item">
-                <a href="" class="nav-mobile__menu-dropdown-list-item-link"
-                  >Розмитнення особистих речей</a
-                >
-                <ul class="nav-mobile__menu-dropdown-sub-list">
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення речей</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення взуття</a
-                    >
-                  </li>
-                  <li class="nav-mobile__menu-dropdown-sub-list-item">
-                    <a href="" class="nav-mobile__menu-dropdown-sub-list-link"
-                      >Розмитнення меблів</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-mobile__list-item">
-          <a class="nav-mobile__list-item-link" href="#">О нас </a>
-        </li>
-        <li class="nav-mobile__list-item">
-          <a class="nav-mobile__list-item-link" href="#">Услуги </a>
-        </li>
-      </ul>
-    </nav>
-
-
-
-    
-    <a href="../contacts.html"
-      ><button class="nav-mobile__button_consult">
-        <span>Консультація</span>
-      </button></a
-    >
-  </div> -->

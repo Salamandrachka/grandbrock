@@ -1,14 +1,13 @@
   const accordionItemHeaders = document.querySelectorAll(
-    ".section__faq-block-question"
+    ".section-faq__question"
   );
-  const answer = document.querySelector(".section__faq-block-answer-wrapper");
 
   accordionItemHeaders.forEach((accordionItemHeader) => {
     accordionItemHeader.addEventListener("click", (event) => {
       // Uncomment in case you only want to allow for the display of only one collapsed item at a time!
 
       const currentlyActiveAccordionItemHeader = document.querySelector(
-        ".section__faq-block-question.active"
+        ".section-faq__question.active"
       );
       if (
         currentlyActiveAccordionItemHeader &&

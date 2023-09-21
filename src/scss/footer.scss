@@ -90,7 +90,8 @@
 }
 
 .footer {
-  background: #1b1b1b;
+  // background: #1b1b1b;
+    background-color: #141414;
   padding-right: 10px;
   padding-left: 10px;
   @include breakpoint-mf("md") {
@@ -126,6 +127,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 0;
       }
     }
   }

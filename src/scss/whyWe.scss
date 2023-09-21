@@ -1,69 +1,124 @@
-.con {
-  margin: 0 auto;
-}
+// .section {
 
-.section {
+//   // .section__whywe-wrapper
 
+//   &__whywe-wrapper {
 
+//     gap: 10px;
+//     display: flex;
+//     justify-content: space-between;
 
-  // .section__whywe-wrapper
+//   }
 
-  &__whywe-wrapper {
+//   // .section__whywe-block
 
+//   &__whywe-block {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     gap: 10px;
+//   }
+
+//   // .section__whywe-block-img
+
+//   &__whywe-block-img {
+//     display: flex;
+//     justify-content: center;
+//     transition: all 0.4s;
+//   }
+
+//   // .section__whywe-block-img-icon
+
+//   &__whywe-block-img-icon {
+//     padding: 1em;
+//     width: 50%;
+//     @include breakpoint-mf("ma") {
+//       height: 130px;
+//       width: 130px;
+//     }
+//   }
+
+//   &__whywe-block-text {
+//     text-align: center;
+//         color: #fff;
+//     @include fonts(400, 14px, 20px);
+//         @include breakpoint-mf("md") {
+//     @include fonts(400, 16px, 20px);
+//         }
+//                 @include breakpoint-mf("xl") {
+//     @include fonts(400, 20px, 25px);
+//         }
+//   }
+// }
+
+// .section__whywe-block:hover {
+//   cursor: pointer;
+// }
+
+// .section__whywe-block-img:hover {
+//   cursor: pointer;
+//   transform: scale(1.2);
+// }
+
+.section-whywe {
+  // .section-whywe__title
+
+  &__title {
+  }
+
+  // .section-whywe__wrapper
+
+  &__wrapper {
     gap: 10px;
     display: flex;
     justify-content: space-between;
-
   }
 
-  // .section__whywe-block
+  // .section-whywe__block
 
-  &__whywe-block {
+  &__block {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 10px;
   }
 
-  // .section__whywe-block-img
+  // .section-whywe__img
 
-  &__whywe-block-img {
+  &__img {
     display: flex;
     justify-content: center;
     transition: all 0.4s;
-  }
-
-  // .section__whywe-block-img-icon
-
-  &__whywe-block-img-icon {
-    padding: 1em;
-    width: 50%;
-    @include breakpoint-mf("ma") {
-      height: 130px;
-      width: 130px;
+    img {
+      padding: 1em;
+      width: 50%;
+      @include breakpoint-mf("ma") {
+        height: 130px;
+        width: 130px;
+      }
     }
   }
 
-  &__whywe-block-text {
+  // .section-whywe__text
+
+  &__text {
     text-align: center;
-        color: #fff;
+    color: #fff;
     @include fonts(400, 14px, 20px);
-        @include breakpoint-mf("md") {
-    @include fonts(400, 16px, 20px);
-        }
-                @include breakpoint-mf("xl") {
-    @include fonts(400, 20px, 25px);
-        }
+    @include breakpoint-mf("md") {
+      @include fonts(400, 16px, 20px);
+    }
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 20px, 25px);
+    }
   }
 }
-
-.section__whywe-block:hover {
+.section-whywe__block:hover {
   cursor: pointer;
 }
 
-.section__whywe-block-img:hover {
+.section-whywe__img:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
-
-
+  

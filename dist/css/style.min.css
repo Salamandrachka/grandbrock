@@ -66,9 +66,13 @@ button {
   font-family: "NeutralFace"; /* Имя шрифта */
   src: url(../../dist/files/NeutralFace.otf);
 }
+@font-face {
+  font-family: "FixelText-Black"; /* Имя шрифта */
+  src: url(../../dist/files/FixelText-Black.ttf);
+}
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #131313;
+  background-color: #222222;
 }
 
 #root {
@@ -105,13 +109,8 @@ main {
 
 .title {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-top: 30px;
   padding-bottom: 50px;
-  text-align: center;
 }
 @media (min-width: 1200px) {
   .title {
@@ -133,6 +132,17 @@ main {
   }
 }
 
+b {
+  font-weight: 800;
+  color: #fff;
+}
+
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 /*COMPONENTS*/
 .menu-active {
   overflow: hidden; /* Запрет прокрутки фона */
@@ -141,6 +151,7 @@ main {
 .header {
   padding-right: 10px;
   padding-left: 10px;
+  margin-bottom: 18px;
 }
 @media (min-width: 768px) {
   .header {
@@ -316,7 +327,7 @@ main {
 .nav-dropdown-sub__link {
   color: #fff;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 32px;
 }
 
@@ -572,49 +583,49 @@ main {
   transform: translate3d(100%, 0, 0);
 }
 
-.section__about-wrapper {
+.section-about__wrapper {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 }
-.section__about-block {
+.section-about__block {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
 }
 @media (min-width: 768px) {
-  .section__about-block {
+  .section-about__block {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     justify-items: center;
   }
-  .section__about-block:nth-child(1) {
+  .section-about__block:nth-child(1) {
     grid-area: 1/1/2/2;
   }
-  .section__about-block:nth-child(2) {
+  .section-about__block:nth-child(2) {
     grid-area: 2/1/3/2;
   }
 }
-.section__about-block-img {
+.section-about__img {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.section__about-block-img img {
+.section-about__img img {
   width: 100%;
   height: 100%;
   border-radius: 40px;
 }
 @media (min-width: 568px) {
-  .section__about-block-img img {
+  .section-about__img img {
     width: 100%;
   }
 }
-.section__about-block-img:nth-child(2) {
+.section-about__img:nth-child(2) {
   grid-area: 1/1/2/2;
 }
-.section__about-block-text {
+.section-about__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -625,58 +636,60 @@ main {
   line-height: 24px;
 }
 @media (min-width: 640px) {
-  .section__about-block-text {
+  .section-about__text {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
   }
 }
 @media (min-width: 1024px) {
-  .section__about-block-text {
+  .section-about__text {
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
   }
 }
 @media (min-width: 1200px) {
-  .section__about-block-text {
+  .section-about__text {
     font-weight: 400;
     font-size: 20px;
     line-height: 37px;
   }
 }
 @media (min-width: 768px) {
-  .section__about-block-text:nth-child(1) {
+  .section-about__text:nth-child(1) {
     grid-area: 1/2/2/3;
   }
 }
-.section__about-block-text:nth-child(2) {
+.section-about__text:nth-child(2) {
   grid-area: 2/1/3/2;
 }
 @media (min-width: 768px) {
-  .section__about-block-text:nth-child(2) {
+  .section-about__text:nth-child(2) {
     grid-area: 1/1/2/2;
   }
 }
 
-.reviews-slider {
+.section-reviews {
+  padding-bottom: 50px;
+}
+.section-reviews__slider {
   display: flex;
   height: 500px;
 }
 @media (min-width: 1024px) {
-  .reviews-slider {
+  .section-reviews__slider {
     height: 500px;
   }
 }
-.reviews-slider__block {
-  background: #1f2025;
+.section-reviews__block {
+  background: #1a1b21;
   height: 80%;
   border-radius: 40px;
   display: flex;
   transition: all 0.4s;
-  width: calc(100% - 2px);
 }
-.reviews-slider__block-date {
+.section-reviews__block-date {
   padding: 21px;
   color: #797a7a;
   position: relative;
@@ -686,29 +699,29 @@ main {
   align-items: flex-end;
   padding-top: 0;
 }
-.reviews-slider__block-person {
+.section-reviews__block-person {
   display: flex;
   align-items: center;
   gap: 2em;
   padding: 21px;
   padding-bottom: 10px;
 }
-.reviews-slider__block-person img {
+.section-reviews__block-person img {
   width: 110px;
   height: 104px;
   border-radius: 50%;
 }
 @media (min-width: 1200px) {
-  .reviews-slider__block-person img {
+  .section-reviews__block-person img {
     width: 121px;
     height: 115px;
   }
 }
-.reviews-slider__block-person span {
+.section-reviews__block-person span {
   color: #fff;
   font-size: 20px;
 }
-.reviews-slider__block-text {
+.section-reviews__block-text {
   padding: 21px;
   padding-top: 0;
   font-weight: 400;
@@ -718,35 +731,35 @@ main {
   padding-bottom: 0;
 }
 @media (min-width: 568px) {
-  .reviews-slider__block-text {
+  .section-reviews__block-text {
     font-weight: 400;
     font-size: 15px;
     line-height: 36px;
   }
 }
 @media (min-width: 1200px) {
-  .reviews-slider__block-text {
+  .section-reviews__block-text {
     font-weight: 400;
     font-size: 19px;
     line-height: 43px;
   }
 }
 @media (min-width: 1400px) {
-  .reviews-slider__block-text {
+  .section-reviews__block-text {
     font-weight: 400;
     font-size: 17px;
     line-height: 29px;
   }
 }
 
-.reviews-slider__block-shadow {
+.section-reviews__block-shadow {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: normal;
 }
 
-.swiper-slide.swiper-slide-active .reviews-slider__block-shadow {
+.swiper-slide.swiper-slide-active .section-reviews__block-shadow {
   box-shadow: 0px 0px 6px 1px #3b03f8;
   border: 1px solid #3b03f8;
   border-radius: 40px;
@@ -764,37 +777,33 @@ main {
   padding: 3px;
 }
 
-.con {
-  margin: 0 auto;
-}
-
-.section__whywe-wrapper {
+.section-whywe__wrapper {
   gap: 10px;
   display: flex;
   justify-content: space-between;
 }
-.section__whywe-block {
+.section-whywe__block {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
 }
-.section__whywe-block-img {
+.section-whywe__img {
   display: flex;
   justify-content: center;
   transition: all 0.4s;
 }
-.section__whywe-block-img-icon {
+.section-whywe__img img {
   padding: 1em;
   width: 50%;
 }
 @media (min-width: 840px) {
-  .section__whywe-block-img-icon {
+  .section-whywe__img img {
     height: 130px;
     width: 130px;
   }
 }
-.section__whywe-block-text {
+.section-whywe__text {
   text-align: center;
   color: #fff;
   font-weight: 400;
@@ -802,54 +811,54 @@ main {
   line-height: 20px;
 }
 @media (min-width: 768px) {
-  .section__whywe-block-text {
+  .section-whywe__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
 }
 @media (min-width: 1200px) {
-  .section__whywe-block-text {
+  .section-whywe__text {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
   }
 }
 
-.section__whywe-block:hover {
+.section-whywe__block:hover {
   cursor: pointer;
 }
 
-.section__whywe-block-img:hover {
+.section-whywe__img:hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
-.section__faq-block-wrapper {
+.section-faq__wrapper {
   background: rgba(24, 20, 20, 0.987);
   border-radius: 40px;
   padding: 5px 15px;
 }
 @media (min-width: 568px) {
-  .section__faq-block-wrapper {
+  .section-faq__wrapper {
     padding: 5px 50px;
   }
 }
-.section__faq-block {
+.section-faq__block {
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #fff;
   line-height: 30px;
 }
-.section__faq-block:nth-child(1) {
+.section-faq__block:nth-child(1) {
   padding-top: 3px;
 }
-.section__faq-block:nth-child(6) div {
+.section-faq__block:nth-child(6) div {
   border-top: 1px solid #414141;
   border-bottom: 0;
 }
-.section__faq-block-question {
+.section-faq__question {
   position: relative;
   text-align: left;
   width: 100%;
@@ -864,20 +873,20 @@ main {
   padding-bottom: 22px;
   padding-top: 20px;
 }
-.section__faq-block-question::after {
+.section-faq__question::after {
   content: "+";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
 }
-.section__faq-block-answer {
+.section-faq__answer {
   opacity: 0;
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
-.section__faq-block-answer.open {
+.section-faq__answer.open {
   opacity: 1;
   visibility: visible;
   max-height: 9em;
@@ -887,7 +896,7 @@ main {
   border: 0;
 }
 
-.section__faq-block-question.active::after {
+.section-faq__question.active::after {
   content: "−";
 }
 
@@ -983,7 +992,7 @@ main {
 }
 
 .footer {
-  background: #1b1b1b;
+  background-color: #141414;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -1027,6 +1036,7 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 0;
   }
 }
 .footer__logo-img {
@@ -1088,7 +1098,7 @@ main {
   color: #fff;
 }
 
-.section__service-block-wrapper {
+.section-service__wrapper {
   max-width: 1300px;
   display: grid;
   justify-items: center;
@@ -1098,13 +1108,13 @@ main {
   grid-template-rows: repeat(3, 1fr);
 }
 @media (min-width: 568px) {
-  .section__service-block-wrapper {
+  .section-service__wrapper {
     grid-column-gap: 2em;
     grid-row-gap: 1.8em;
   }
 }
 @media (min-width: 700px) {
-  .section__service-block-wrapper {
+  .section-service__wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2em;
@@ -1112,11 +1122,11 @@ main {
   }
 }
 @media (min-width: 1200px) {
-  .section__service-block-wrapper {
+  .section-service__wrapper {
     grid-column-gap: 4em;
   }
 }
-.section__service-block {
+.section-service__block {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1125,85 +1135,115 @@ main {
   width: 100%;
 }
 @media (min-width: 568px) {
-  .section__service-block {
+  .section-service__block {
     cursor: pointer;
     transition: all 0.4s;
     height: 230px;
   }
-  .section__service-block:hover {
+  .section-service__block:hover {
     transform: scale(1.05);
   }
 }
 @media (min-width: 840px) {
-  .section__service-block {
+  .section-service__block {
     height: 300px;
   }
 }
-.section__service-block__service-block:nth-child(1) {
+.section-service__block:nth-child(1) {
   background: #3b03f8;
 }
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(1) {
+@media (min-width: 568px) {
+  .section-service__block:nth-child(1) {
     grid-area: 1/1/2/2;
   }
 }
-.section__service-block__service-block:nth-child(2) {
+@media (min-width: 700px) {
+  .section-service__block:nth-child(1) {
+    grid-area: 1/1/2/2;
+  }
+}
+.section-service__block:nth-child(2) {
   background: #ffab00;
 }
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(2) {
+@media (min-width: 568px) {
+  .section-service__block:nth-child(2) {
     grid-area: 1/2/2/3;
   }
 }
-.section__service-block__service-block:nth-child(3) {
-  background: #3b03f8;
-}
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(3) {
-    grid-area: 1/3/2/4;
+@media (min-width: 700px) {
+  .section-service__block:nth-child(2) {
+    grid-area: 1/2/2/3;
   }
 }
-.section__service-block__service-block:nth-child(4) {
-  background: #ffab00;
-}
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(4) {
-    grid-area: 2/1/3/2;
-  }
-}
-.section__service-block__service-block:nth-child(5) {
+.section-service__block:nth-child(3) {
   background: #3b03f8;
 }
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(5) {
+@media (min-width: 568px) {
+  .section-service__block:nth-child(3) {
     grid-area: 2/2/3/3;
   }
 }
-.section__service-block__service-block:nth-child(6) {
+@media (min-width: 700px) {
+  .section-service__block:nth-child(3) {
+    grid-area: 1/3/2/4;
+  }
+}
+.section-service__block:nth-child(4) {
   background: #ffab00;
 }
-@media (min-width: 1230px) {
-  .section__service-block__service-block:nth-child(6) {
+@media (min-width: 568px) {
+  .section-service__block:nth-child(4) {
+    grid-area: 2/1/3/2;
+  }
+}
+@media (min-width: 700px) {
+  .section-service__block:nth-child(4) {
+    grid-area: 2/1/3/2;
+  }
+}
+.section-service__block:nth-child(5) {
+  background: #3b03f8;
+}
+@media (min-width: 568px) {
+  .section-service__block:nth-child(5) {
+    grid-area: 3/1/4/2;
+  }
+}
+@media (min-width: 700px) {
+  .section-service__block:nth-child(5) {
+    grid-area: 2/2/3/3;
+  }
+}
+.section-service__block:nth-child(6) {
+  background: #ffab00;
+}
+@media (min-width: 568px) {
+  .section-service__block:nth-child(6) {
+    grid-area: 3/2/4/3;
+  }
+}
+@media (min-width: 700px) {
+  .section-service__block:nth-child(6) {
     grid-area: 2/3/3/4;
   }
 }
-.section__service-block-img {
+.section-service__img {
   display: flex;
   justify-content: center;
   height: 40%;
 }
-.section__service-block-img-icon {
+.section-service__img img {
   padding: 1em;
   width: 30%;
   height: 93%;
 }
 @media (min-width: 1200px) {
-  .section__service-block-img-icon {
+  .section-service__img img {
     height: 92px;
     width: 119px;
   }
 }
-.section__service-block-text {
+.section-service__text {
   text-align: center;
   color: #fff;
   padding: 0 5px;
@@ -1214,133 +1254,18 @@ main {
   line-height: 22px;
 }
 @media (min-width: 768px) {
-  .section__service-block-text {
+  .section-service__text {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
   }
 }
 @media (min-width: 1200px) {
-  .section__service-block-text {
+  .section-service__text {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
   }
-}
-.section__service-block:nth-child(1) {
-  background: #3b03f8;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(1) {
-    grid-area: 1/1/2/2;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(1) {
-    grid-area: 1/1/2/2;
-  }
-}
-
-.section__service-block:nth-child(2) {
-  background: #ffab00;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(2) {
-    grid-area: 1/2/2/3;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(2) {
-    grid-area: 1/2/2/3;
-  }
-}
-
-.section__service-block:nth-child(3) {
-  background: #3b03f8;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(3) {
-    grid-area: 2/2/3/3;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(3) {
-    grid-area: 1/3/2/4;
-  }
-}
-
-.section__service-block:nth-child(4) {
-  background: #ffab00;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(4) {
-    grid-area: 2/1/3/2;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(4) {
-    grid-area: 2/1/3/2;
-  }
-}
-
-.section__service-block:nth-child(5) {
-  background: #3b03f8;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(5) {
-    grid-area: 3/1/4/2;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(5) {
-    grid-area: 2/2/3/3;
-  }
-}
-
-.section__service-block:nth-child(6) {
-  background: #ffab00;
-}
-@media (min-width: 568px) {
-  .section__service-block:nth-child(6) {
-    grid-area: 3/2/4/3;
-  }
-}
-@media (min-width: 700px) {
-  .section__service-block:nth-child(6) {
-    grid-area: 2/3/3/4;
-  }
-}
-
-.parent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-
-.div1 {
-  grid-area: 1/1/2/2;
-}
-
-.div2 {
-  grid-area: 1/2/2/3;
-}
-
-.div3 {
-  grid-area: 2/1/3/2;
-}
-
-.div4 {
-  grid-area: 2/2/3/3;
-}
-
-.div5 {
-  grid-area: 3/1/4/2;
-}
-
-.div6 {
-  grid-area: 3/2/4/3;
 }
 
 .section-hamster {
@@ -2169,7 +2094,7 @@ textarea {
   border-radius: 500px;
 }
 
-.form__btn-input {
+.form__btn_input {
   font-size: 16px;
   font-weight: 700;
   color: white;
@@ -2198,28 +2123,24 @@ textarea {
   border: 3px solid #3b03f8;
 }
 
-/*change btn*/
-/*error messages fix*/
-/**/
-.section__contacts {
+.section-contacts {
   padding-top: 150px;
   padding-bottom: 150px;
 }
-
-.contacts__wrapper {
+.section-contacts__wrapper {
   margin: 0 auto;
   max-width: 952px;
   display: block;
 }
-@media (min-width: 568px) {
-  .contacts__wrapper {
+@media (min-width: 640px) {
+  .section-contacts__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 570px;
     justify-content: center;
   }
 }
-.contacts__block:nth-child(1) {
+.section-contacts__block:nth-child(1) {
   grid-area: 1/1/2/2;
   background: rgba(24, 20, 20, 0.987);
   box-sizing: border-box;
@@ -2227,14 +2148,14 @@ textarea {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-@media (min-width: 568px) {
-  .contacts__block:nth-child(1) {
+@media (min-width: 640px) {
+  .section-contacts__block:nth-child(1) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 40px;
   }
 }
-.contacts__block:nth-child(2) {
+.section-contacts__block:nth-child(2) {
   grid-area: 1/2/2/3;
   background: rgba(35, 33, 33, 0.99);
   box-sizing: border-box;
@@ -2243,101 +2164,14 @@ textarea {
   border-top-left-radius: 0;
   border-bottom-left-radius: 40px;
 }
-@media (min-width: 568px) {
-  .contacts__block:nth-child(2) {
+@media (min-width: 640px) {
+  .section-contacts__block:nth-child(2) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 40px;
   }
 }
 
-.info__wrapper {
-  padding: 36px;
-}
-@media (min-width: 568px) {
-  .info__wrapper {
-    padding: 25px;
-  }
-}
-@media (min-width: 840px) {
-  .info__wrapper {
-    padding: 40px;
-  }
-}
-
-.info__title {
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-  color: #fff;
-}
-@media (min-width: 840px) {
-  .info__title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 22px;
-  }
-}
-@media (min-width: 1200px) {
-  .info__title {
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 25px;
-  }
-}
-.info__title-span-free-consult {
-  text-transform: uppercase;
-  color: #ffab00;
-}
-.info__title-span-second {
-  display: flex;
-  justify-content: flex-end;
-}
-.info__social-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 310px;
-  padding-top: 50px;
-}
-.info__social-buttons svg {
-  transition: 0.3s;
-  height: 20px;
-}
-.info__social-buttons-block {
-  display: flex;
-  align-items: center;
-  gap: 1.5em;
-}
-.info__social-button-text {
-  color: #c3c3c3;
-}
-.info__social-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1529411765);
-  transition: 0.3s;
-}
-.info__social-button svg {
-  width: 20px;
-}
-.info__social-button:hover {
-  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1529411765);
-}
 .info-telegram {
   background-color: #000;
 }
@@ -2387,21 +2221,151 @@ textarea {
   fill: #f2f2f2;
 }
 .info-whatsapp:hover {
-  background-color: #25D366;
+  background-color: #25d366;
+}
+
+.info-social_telegram {
+  background-color: #000;
+}
+.info-social_telegram svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+.info-social_telegram:hover {
+  background-color: #37aee2;
+}
+.info-social_viber {
+  background-color: #000;
+}
+.info-social_viber svg {
+  fill: #f2f2f2;
+}
+.info-social_viber:hover {
+  background-color: #9069ae;
+}
+.info-social_facebook {
+  background-color: #000;
+}
+.info-social_facebook svg {
+  fill: #f2f2f2;
+}
+.info-social_facebook:hover {
+  background-color: #3b5998;
+}
+.info-social_instagram {
+  background-color: #000;
+}
+.info-social_instagram svg {
+  fill: #f2f2f2;
+}
+.info-social_instagram:hover {
+  background-color: #c13584;
+}
+.info-social_whatsapp {
+  background-color: #000;
+}
+.info-social_whatsapp svg {
+  fill: #f2f2f2;
+}
+.info-social_whatsapp:hover {
+  background-color: #25d366;
+}
+.info-social__wrapper {
+  padding: 36px;
+}
+@media (min-width: 568px) {
+  .info-social__wrapper {
+    padding: 25px;
+  }
+}
+@media (min-width: 840px) {
+  .info-social__wrapper {
+    padding: 40px;
+  }
+}
+.info-social__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  color: #fff;
+}
+@media (min-width: 840px) {
+  .info-social__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (min-width: 1200px) {
+  .info-social__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+.info-social__title span:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+.info-social__span:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+}
+.info-social__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 310px;
+  padding-top: 50px;
+}
+.info-social__buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+.info-social__buttons_block {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.info-social__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1529411765);
+  transition: 0.3s;
+}
+.info-social__button svg {
+  width: 20px;
+}
+.info-social__button:hover {
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1529411765);
+}
+.info-social__text {
+  color: #c3c3c3;
+}
+
+#free-consult_btn {
+  text-transform: uppercase;
+  color: #ffab00;
 }
 
 /*Vantage PAGE*/
-.bg-van {
-  background-image: url(../../dist/img/bg-van.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
-.section-transportation__header {
-  padding-top: 80px;
-  height: 100vh;
+.section-transportation__header img {
+  width: 100vw;
+  height: 80vh;
 }
 .section-transportation__title-wrapper {
   display: flex;
@@ -2472,47 +2436,43 @@ textarea {
     padding-top: 2.5rem;
   }
 }
-.section-transportation__link {
-  font-family: "Undounded-Regular";
-  color: #fff;
-  padding-left: 50px;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 33px;
-}
-@media (min-width: 768px) {
-  .section-transportation__link {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
-  }
-}
-.section-transportation__link span {
-  border-bottom: 1px solid #ffab00;
-}
-.section-transportation__article_block {
+.section-transportation__block {
   padding: 80px 0;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
 .section-transportation__subtitle {
-  font-family: "Rubik", sans-serif;
+  font-family: "FixelText-Black";
   font-weight: 900;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 38px;
 }
-.section-transportation__subtitle b {
-  background-color: #ffab00;
-  padding: 10px 10px;
-  border-radius: 10px;
+.section-transportation__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
-.section-transportation__article {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+.section-transportation__content {
+  gap: 60px;
   padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 840px) {
+  .section-transportation__content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
 }
 .section-transportation__text {
   display: flex;
@@ -2524,6 +2484,7 @@ textarea {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
+  color: rgb(202, 202, 202);
 }
 @media (min-width: 568px) {
   .section-transportation__text p {
@@ -2536,6 +2497,10 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  padding-top: 20px;
+}
+.section-transportation__text_list-item span {
+  color: #fff;
 }
 .section-transportation__text_list-item::before {
   content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -2545,135 +2510,542 @@ textarea {
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
+.section-transportation__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-transportation__img {
+    min-width: 43%;
+  }
+}
 .section-transportation__img img {
   width: 100%;
   height: 100%;
   border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
 }
-
-.img-right {
-  float: right;
-}
-
-.img-left {
-  float: left;
-}
-
-.swift-up-text {
-  display: flex;
-}
-
-.reveal-letter {
-  color: #d0cdcd;
-}
-
-/* DEMO-SPECIFIC STYLES */
-.typewriter {
-  width: fit-content; /* Установка ширины под содержимое */
-}
-
-.section-transportation__title_typping {
-  font-family: "Undounded-Regular";
-  padding: 10px 0;
-  height: 50px;
-  color: #fefefe;
-  font-size: 12px;
-  font-weight: 700;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-.section-transportation__title_typping span {
-  color: #000;
-  padding: 8px 10px;
-  background-color: #ffab00;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
+@media (min-width: 840px) {
+  .section-transportation__img img {
+    min-height: 385px;
   }
 }
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
-}
-/*photos*/
-.gallery {
-  --g: 8px; /* the gap */
-  --s: 400px; /* the size */
-  display: grid;
-  border-radius: 50%;
+
+#aviaperevezennia {
+  object-position: left; /* Позиционируем изображение на правой стороне контейнера */
 }
 
-.gallery > img {
-  grid-area: 1/1;
-  width: 70%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  transform: translate(var(--_x, 0), var(--_y, 0));
-  cursor: pointer;
-  z-index: 0;
-  transition: 0.3s, z-index 0s 0.3s;
+/*PARCELS PAGE*/
+.section-parcels__header img {
+  width: 100vw;
+  height: 80vh;
 }
-
-.gallery img:hover {
-  --_i: 1;
-  z-index: 1;
-  transition: transform 0.2s, clip-path 0.3s 0.2s, z-index 0s;
-}
-
-.gallery:hover img {
-  transform: translate(0, 0);
-}
-
-.gallery > img:nth-child(1) {
-  clip-path: polygon(50% 50%, calc(50% * var(--_i, 0)) calc(120% * var(--_i, 0)), 0 calc(100% * var(--_i, 0)), 0 0, 100% 0, 100% calc(100% * var(--_i, 0)), calc(100% - 50% * var(--_i, 0)) calc(120% * var(--_i, 0)));
-  --_y: calc(-1 * var(--g));
-}
-
-.gallery > img:nth-child(2) {
-  clip-path: polygon(50% 50%, calc(100% - 120% * var(--_i, 0)) calc(50% * var(--_i, 0)), calc(100% - 100% * var(--_i, 0)) 0, 100% 0, 100% 100%, calc(100% - 100% * var(--_i, 0)) 100%, calc(100% - 120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0)));
-  --_x: var(--g);
-}
-
-.gallery > img:nth-child(3) {
-  clip-path: polygon(50% 50%, calc(100% - 50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0)), 100% calc(100% - 120% * var(--_i, 0)), 100% 100%, 0 100%, 0 calc(100% - 100% * var(--_i, 0)), calc(50% * var(--_i, 0)) calc(100% - 120% * var(--_i, 0)));
-  --_y: var(--g);
-}
-
-.gallery > img:nth-child(4) {
-  clip-path: polygon(50% 50%, calc(120% * var(--_i, 0)) calc(50% * var(--_i, 0)), calc(100% * var(--_i, 0)) 0, 0 0, 0 100%, calc(100% * var(--_i, 0)) 100%, calc(120% * var(--_i, 0)) calc(100% - 50% * var(--_i, 0)));
-  --_x: calc(-1 * var(--g));
-}
-
-.gallery__wrapper {
+.section-parcels__list {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 50px;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 15px;
 }
-
-b {
-  font-weight: 700;
+.section-parcels__list_item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
 }
-
-.flex-end {
+@media (min-width: 568px) {
+  .section-parcels__list_item {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-parcels__list_item::before {
+  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #3b03f8; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.section-parcels__article {
+  padding-top: 70px;
+}
+.section-parcels__article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-parcels__article p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-parcels__title {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  padding-top: 30px;
+}
+@media (min-width: 840px) {
+  .section-parcels__title {
+    padding-top: 50px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+  }
+}
+.section-parcels__title span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-parcels__subtitle {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+.section-parcels__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-parcels__content {
+  gap: 60px;
+  padding-top: 20px;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+@media (min-width: 840px) {
+  .section-parcels__content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+}
+.section-parcels__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
+}
+.section-parcels__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-parcels__text p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-parcels__text_list {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 20px;
+}
+.section-parcels__text_list-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+  list-style-type: decimal;
+  color: rgb(202, 202, 202);
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  list-style: none;
+}
+@media (min-width: 568px) {
+  .section-parcels__text_list-item {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-parcels__text_list-item::before, .section-parcels__text_list-item::after {
+  position: absolute;
+  display: flex;
+  opacity: 0.35;
+}
+.section-parcels__text_list-item::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+}
+.section-parcels__example {
+  color: rgb(202, 202, 202);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 2em;
+  border: 1px solid #fff;
+  padding: 2em;
+}
+@media (min-width: 568px) {
+  .section-parcels__example {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 2em;
+  }
+}
+.section-parcels__border {
+  width: 1px; /* Ширина полосы */
+  background-color: #fff; /* Цвет полосы */
+  flex: 0 0 auto; /* Убираем возможность полосе увеличивать свою ширину */
+  height: 100%;
+}
+.section-parcels__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-parcels__img {
+    min-width: 43%;
+  }
+}
+.section-parcels__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+}
+@media (min-width: 840px) {
+  .section-parcels__img img {
+    min-height: 385px;
+  }
 }
 
-/*SLIDER*/
+/*PAYMENTS PAGE*/
+.section-payments__paraghraf p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-payments__paraghraf p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-payments__article {
+  padding-top: 30px;
+}
+.section-payments__article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-payments__article p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-payments__article {
+    padding-top: 70px;
+  }
+}
+.section-payments__subtitle {
+  font-family: "FixelText-Black";
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+@media (min-width: 568px) {
+  .section-payments__subtitle {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+.section-payments__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-payments__item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-payments__item {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-payments__item span {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 31px;
+  color: #fff;
+}
+@media (min-width: 568px) {
+  .section-payments__item span {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 31px;
+  }
+}
+.section-payments__table {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+@media (min-width: 568px) {
+  .section-payments__table {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-payments__columns {
+  text-align: center;
+}
+.section-payments__columns th {
+  border-left: 1px solid #000000;
+}
+.section-payments__columns td {
+  border: 1px solid #000000;
+  font-size: 14px;
+}
+@media (min-width: 568px) {
+  .section-payments__columns td {
+    font-size: 16px;
+  }
+}
+/*ANIMALS PAGE*/
+.section-animals__title {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  padding-top: 30px;
+}
+@media (min-width: 840px) {
+  .section-animals__title {
+    padding-top: 50px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+  }
+}
+.section-animals__title span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-animals__subtitle {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+.section-animals__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-animals__article {
+  padding-top: 30px;
+}
+.section-animals__article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-animals__article p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-animals__article {
+    padding-top: 70px;
+  }
+}
+.section-animals__content {
+  gap: 60px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+@media (min-width: 840px) {
+  .section-animals__content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+}
+.section-animals__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-animals__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-animals__text p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-animals__text_list {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 20px;
+}
+.section-animals__text_list-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+  list-style-type: decimal;
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  list-style: none;
+}
+@media (min-width: 568px) {
+  .section-animals__text_list-item {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-animals__text_list-item::before, .section-animals__text_list-item::after {
+  position: absolute;
+  display: flex;
+  opacity: 0.35;
+}
+.section-animals__text_list-item::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+}
+.section-animals__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-animals__img {
+    min-width: 43%;
+  }
+}
+.section-animals__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+}
+@media (min-width: 840px) {
+  .section-animals__img img {
+    min-height: 385px;
+  }
+}
+
+#border {
+  border-top: 1px solid #5d5d5d;
+  padding-top: 20px;
+}

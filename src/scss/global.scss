@@ -1,19 +1,23 @@
 @font-face {
-    font-family: 'Undounded-Regular'; /* Имя шрифта */
-    src: url(../../dist/files/Unbounded-Regular.woff2); 
-    
+  font-family: "Undounded-Regular"; /* Имя шрифта */
+  src: url(../../dist/files/Unbounded-Regular.woff2);
 }
 
 @font-face {
-    font-family: 'NeutralFace'; /* Имя шрифта */
-    src: url(../../dist/files/NeutralFace.otf); 
-    
+  font-family: "NeutralFace"; /* Имя шрифта */
+  src: url(../../dist/files/NeutralFace.otf);
 }
-body {
-  // font-family: 'Undounded-Regular'; 
-	font-family: 'Poppins', sans-serif;
-  background-color: #131313;
 
+@font-face {
+  font-family: "FixelText-Black"; /* Имя шрифта */
+  src: url(../../dist/files/FixelText-Black.ttf);
+}
+
+body {
+  // font-family: 'Undounded-Regular';
+  font-family: "Poppins", sans-serif;
+  // background-color: #131313;
+  background-color: #222222;
 }
 
 #root {
@@ -27,17 +31,16 @@ main {
 }
 
 .container {
- padding-bottom: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    @include breakpoint-mf("md") {
-      padding-right: 15px;
-      padding-left: 15px;
-     
-    }
-    @include breakpoint-mf("xl") {
- padding-bottom: 70px;
-    }
+  padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  @include breakpoint-mf("md") {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @include breakpoint-mf("xl") {
+    padding-bottom: 70px;
+  }
 }
 
 .wrapper {
@@ -45,23 +48,31 @@ main {
   max-width: 1400px;
 }
 
-
 .title {
-    text-align: center;
-    @include flex(column, center, center);
-    padding-top: 30px;
-    padding-bottom: 50px;
-    text-align: center;
-    @include breakpoint-mf("xl") {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-    h1 {
-      color: #fff;
-      @include fonts(400, 20px, 23px);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  @include breakpoint-mf("xl") {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  h1 {
+    color: #fff;
+    @include fonts(400, 20px, 23px);
 
-      @include breakpoint-mf("xl") {
-        @include fonts(400, 32px, 38px);
-      }
+    @include breakpoint-mf("xl") {
+      @include fonts(400, 32px, 38px);
     }
+  }
+}
+
+b {
+  font-weight: 800;
+  color: #fff;
+}
+
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

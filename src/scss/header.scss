@@ -4,9 +4,11 @@
 
 .header {
   // .header__wrapper
+  //  position: relative;
   padding-right: 10px;
   padding-left: 10px;
-
+    margin-bottom: 18px;
+    
   @include breakpoint-mf("md") {
     padding-right: 15px;
     padding-left: 15px;
@@ -206,7 +208,7 @@
 
   &__link {
     color: #fff;
-    @include fonts(500, 18px, 32px);
+    @include fonts(500, 17px, 32px);
   }
 }
 .nav-menu__item:hover .nav-dropdown {

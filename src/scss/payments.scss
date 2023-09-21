@@ -1,0 +1,136 @@
+.section-payments {
+  // .section-payments__header
+
+  &__header {
+  }
+
+  // .section-payments__block
+
+  &__block {
+  }
+
+  // .section-payments__paraghraf
+
+  &__paraghraf {
+    p {
+      @include fonts(400, 16px, 31px);
+      color: rgba(202, 202, 202);
+
+      @include breakpoint-mf("xs") {
+        @include fonts(400, 17px, 31px);
+      }
+    }
+  }
+
+  // .section-payments__article
+
+  &__article {
+        padding-top: 30px;
+    p {
+      @include fonts(400, 16px, 31px);
+      color: rgba(202, 202, 202);
+
+      @include breakpoint-mf("xs") {
+        @include fonts(400, 17px, 31px);
+      }
+    }
+    @include breakpoint-mf("my") {
+      padding-top: 70px;
+    }
+  }
+
+  // .section-payments__subtitle
+
+  &__subtitle {
+    font-family: "FixelText-Black";
+    padding-bottom: 20px;
+    padding-top: 20px;
+    @include fonts(900, 30px, 38px);
+
+    @include breakpoint-mf("xs") {
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+
+    span {
+      background-color: #3b03f8;
+      background-image: linear-gradient(
+        45deg,
+        #ffab00,
+        #ffb623,
+        #3061ebfa,
+        #3b03f8
+      );
+
+      /* Set the background size and repeat properties. */
+      background-size: 100%;
+      background-repeat: repeat;
+
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg. */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+
+    }
+  }
+
+  // .section-payments__list
+
+  &__list {
+  }
+
+  // .section-payments__item
+
+  &__item {
+    @include fonts(400, 16px, 31px);
+    color: rgba(202, 202, 202);
+
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 31px);
+    }
+    span {
+      @include fonts(700, 17px, 31px);
+      color: #fff;
+      @include breakpoint-mf("xs") {
+        @include fonts(700, 18px, 31px);
+      }
+    }
+  }
+
+  // .section-payments__table
+
+  &__table {
+    margin-top: 30px;
+    @include fonts(400, 16px, 31px);
+    background-color: rgb(255 255 255);
+
+    width: 100%;
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 31px);
+    }
+  }
+
+  // .section-payments__columns
+
+  &__columns {
+    text-align: center;
+
+    th {
+      border-left: 1px solid #000000;
+    }
+    td {
+      border: 1px solid #000000;
+      font-size: 14px;
+      @include breakpoint-mf("xs") {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // .section-payments__headlines
+
+  &__headlines {
+  }
+}

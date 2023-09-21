@@ -19,34 +19,13 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-van">
+  <body class="body bg-van">
     @@include('html/header.html', {})
 
-    <main>@@include('html/transportation-page.html', {})</main>
+    <main>@@include('html/transportation.html', {})</main>
+    @@include('html/fixedBtn.html', {}) @@include('html/footer.html', {})
 
-    @@include('html/footer.html', {})
-    <!-- <script src="./dist/js/app.min.js"></script>
-      <script>
-    var swiper = new Swiper(".international-slider", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script> -->
-      <!-- <script> 
-      var swiper = new Swiper(".international-slider", {
-        // spaceBetween: 30,
-        // effect: "fade",
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script> -->
+    <script src="./dist/js/app.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </body>
 </html>

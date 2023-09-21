@@ -1,9 +1,9 @@
-.section {
+.section-about {
 
 
   // .section__about-wrapper
 
-  &__about-wrapper {
+  &__wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -12,7 +12,7 @@
 
   // .section__about-block
 
-  &__about-block {
+  &__block {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
@@ -33,7 +33,7 @@
 
   // .section__about-block-img
 
-  &__about-block-img {
+  &__img {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -59,7 +59,7 @@
 
   // .section__about-block-text
 
-  &__about-block-text {
+  &__text {
     @include flex(column, center, center);
     color: $secondary;
     @include fonts(400, 16px, 24px);

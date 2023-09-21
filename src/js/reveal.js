@@ -15,10 +15,10 @@ ScrollReveal().reveal(".title", {
 ScrollReveal().reveal(".section__service-block-wrapper", {
   delay: 500,
 });
-ScrollReveal().reveal(".section__whywe-block", {
+ScrollReveal().reveal(".section-whywe__block", {
   delay: 500,
 });
-ScrollReveal().reveal(".section__faq-wrapper", {
+ScrollReveal().reveal(".section-faq__wrapper", {
   delay: 500,
 });
 ScrollReveal().reveal(".reviews-slider", {
@@ -53,18 +53,18 @@ ScrollReveal().reveal(".reveal-text", {
 });
 
 // section - transportation__subtitle
-ScrollReveal().reveal(".flex-end", {
-  delay: 300,
-  origin: "left",
-});
+// ScrollReveal().reveal(".flex-end", {
+//   delay: 300,
+//   origin: "left",
+// });
 
-ScrollReveal().reveal(".flex-start", {
-  delay: 300,
-  origin: "right",
-});
+// ScrollReveal().reveal(".flex-start", {
+//   delay: 300,
+//   origin: "right",
+// });
 
 
-ScrollReveal().reveal(".section-transportation__img", {
-  delay: 400,
-  origin: "top",
-});
+// ScrollReveal().reveal(".section-transportation__img", {
+//   delay: 400,
+//   origin: "top",
+// });

@@ -1,7 +1,12 @@
-.section {
-  // .section__faq-wrapper
+.section-faq {
+  // .section-faq__title
 
-  &__faq-block-wrapper {
+  &__title {
+  }
+
+  // .section-faq__wrapper
+
+  &__wrapper {
     background: rgba(24, 20, 20, 0.987);
     border-radius: 40px;
     padding: 5px 15px;
@@ -10,9 +15,9 @@
     }
   }
 
-  // .section__faq-block
+  // .section-faq__block
 
-  &__faq-block {
+  &__block {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -29,9 +34,9 @@
     }
   }
 
-  // .section__faq-block-question
+  // .section-faq__question
 
-  &__faq-block-question {
+  &__question {
     position: relative;
     text-align: left;
     width: 100%;
@@ -55,9 +60,9 @@
     }
   }
 
-  // .section__faq-block-answer
+  // .section-faq__answer
 
-  &__faq-block-answer {
+  &__answer {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
@@ -65,7 +70,7 @@
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  &__faq-block-answer.open {
+  &__answer.open {
     opacity: 1;
     visibility: visible;
     max-height: 9em;
@@ -74,11 +79,12 @@
     // top: 10px;
   }
 }
-
 #question-last {
   border: 0;
 }
 
-.section__faq-block-question.active::after {
+.section-faq__question.active::after {
   content: "\2212";
 }
+
+
