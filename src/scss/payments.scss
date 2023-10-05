@@ -25,7 +25,7 @@
   // .section-payments__article
 
   &__article {
-        padding-top: 30px;
+    padding-top: 30px;
     p {
       @include fonts(400, 16px, 31px);
       color: rgba(202, 202, 202);
@@ -72,7 +72,6 @@
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
-
     }
   }
 
@@ -123,8 +122,11 @@
     td {
       border: 1px solid #000000;
       font-size: 14px;
+      padding: 1px 0;
+
       @include breakpoint-mf("xs") {
         font-size: 16px;
+        padding: 3px 0;
       }
     }
   }
@@ -132,5 +134,7 @@
   // .section-payments__headlines
 
   &__headlines {
+    padding: 5px 0;
+    font-weight: 700;
   }
 }

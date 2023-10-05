@@ -4,7 +4,7 @@
 
 .header {
   // .header__wrapper
-  //  position: relative;
+
   padding-right: 10px;
   padding-left: 10px;
     margin-bottom: 18px;
@@ -15,9 +15,7 @@
   }
 
   &__wrapper {
-    // position: absolute;
     max-width: 1400px;
-    //consulttion goes too right
     width: 100%;
     margin: 0 auto;
     @include flex(row, space-between, center);
@@ -136,7 +134,8 @@
   overflow: hidden;
   transition: 550ms height ease-in-out;
   background-color: rgb(0, 0, 0);
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   height: 0;
   position: absolute;
   left: 0;
@@ -338,7 +337,8 @@
     z-index: 2;
     overflow: hidden;
     transition: 550ms height ease-in-out;
-    width: 100vw;
+    // width: 100vw;
+    width: 100%;
     height: 0;
     left: 0;
   }
@@ -346,11 +346,6 @@
   // .mobile-dropdown__list
 
   &__list {
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
-    // grid-column-gap: 0px;
-    // grid-row-gap: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -409,7 +404,6 @@
 .nav-mobile__item:hover .mobile-dropdown__wrapper {
   opacity: 1;
   visibility: visible;
-
   height: 100%;
   // height: auto; /* Убираем жестко заданную высоту */
   transition: 550ms height ease-in-out, 550ms opacity ease-in-out,
@@ -421,7 +415,7 @@
   visibility: hidden;
   height: 0;
   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
-    400ms visibility ease-in-out;
+  400ms visibility ease-in-out;
 }
 
 ////////////////
