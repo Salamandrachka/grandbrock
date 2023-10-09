@@ -102,7 +102,8 @@ section {
 }
 body {
   line-height: 1;
-  overflow: scroll;
+  // overflow: scroll;
+  overflow: auto;
 }
 ol,
 ul {
@@ -131,23 +132,26 @@ button {
 }
 
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
-//   * {
-//     scrollbar-width: auto;
-//     scrollbar-color: #c2c2c2 #ffffff;
-//   }
+// ::-webkit-scrollbar {
+//   -webkit-appearance: none;
+//   width: 7px;
+// }
 
-//   /* Chrome, Edge, and Safari */
-//   *::-webkit-scrollbar {
-//     width: 14px;
-//   }
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 4px;
+//   background-color: rgba(220, 18, 18, 0.5);
+//   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+// }
 
-// //   *::-webkit-scrollbar-track {
-// //     background: #ffffff;
-// //   }
+// ::-webkit-scrollbar {
+//     -webkit-appearance: none;
+//     width: 7px;
+  
+// }
 
-//   *::-webkit-scrollbar-thumb {
-//     background-color: #c2c2c2;
-//     border-radius: 10px;
-//     border: 3px solid #ffffff;
-//   }
+// ::-webkit-scrollbar-thumb {
+  
+//     border-radius: 4px;
+//     background-color: rgba(0,0,0,.5);
+//     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+// }

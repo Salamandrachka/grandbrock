@@ -105,7 +105,7 @@ section {
 
 body {
   line-height: 1;
-  overflow: scroll;
+  overflow: auto;
 }
 
 ol,
@@ -140,7 +140,6 @@ button {
 }
 
 /* ===== Scrollbar CSS ===== */
-/* Firefox */
 @font-face {
   font-family: "Undounded-Regular"; /* Имя шрифта */
   src: url(../../dist/files/Unbounded-Regular.woff2);
@@ -666,91 +665,185 @@ b {
   transform: translate3d(100%, 0, 0);
 }
 
-.section-about__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 40px;
+.section-about__title {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  padding-top: 30px;
 }
-.section-about__block {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-}
-@media (min-width: 768px) {
-  .section-about__block {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    justify-items: center;
-  }
-  .section-about__block:nth-child(1) {
-    grid-area: 1/1/2/2;
-  }
-  .section-about__block:nth-child(2) {
-    grid-area: 2/1/3/2;
+@media (min-width: 840px) {
+  .section-about__title {
+    padding-top: 50px;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
   }
 }
-.section-about__img {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.section-about__title span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
-.section-about__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 40px;
+.section-about__article {
+  padding-top: 30px;
+}
+.section-about__article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
 }
 @media (min-width: 568px) {
-  .section-about__img img {
-    width: 100%;
+  .section-about__article p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
   }
 }
-.section-about__img:nth-child(2) {
-  grid-area: 1/1/2/2;
+@media (min-width: 1024px) {
+  .section-about__article {
+    padding-top: 70px;
+  }
+}
+.section-about__content {
+  gap: 60px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+@media (min-width: 840px) {
+  .section-about__content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+}
+.section-about__block {
+  gap: 30px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+@media (min-width: 840px) {
+  .section-about__block {
+    padding-top: 40px;
+  }
 }
 .section-about__text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  color: #e0dcdc;
+}
+.section-about__text p {
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
 }
-@media (min-width: 640px) {
-  .section-about__text {
+@media (min-width: 568px) {
+  .section-about__text p {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 17px;
+    line-height: 31px;
   }
 }
-@media (min-width: 1024px) {
-  .section-about__text {
+.section-about__text_list {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 20px;
+}
+.section-about__text_list-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+  list-style-type: decimal;
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  list-style: none;
+}
+@media (min-width: 568px) {
+  .section-about__text_list-item {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 17px;
+    line-height: 31px;
   }
 }
-@media (min-width: 1200px) {
-  .section-about__text {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 37px;
+.section-about__text_list-item::before, .section-about__text_list-item::after {
+  position: absolute;
+  display: flex;
+  opacity: 0.35;
+}
+.section-about__text_list-item::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+}
+.section-about__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-about__img {
+    min-width: 43%;
   }
 }
-@media (min-width: 768px) {
-  .section-about__text:nth-child(1) {
-    grid-area: 1/2/2/3;
+.section-about__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+}
+@media (min-width: 840px) {
+  .section-about__img img {
+    min-height: 385px;
   }
 }
-.section-about__text:nth-child(2) {
-  grid-area: 2/1/3/2;
+.section-about__subtitle {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
 }
-@media (min-width: 768px) {
-  .section-about__text:nth-child(2) {
-    grid-area: 1/1/2/2;
-  }
+.section-about__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .section-reviews {
