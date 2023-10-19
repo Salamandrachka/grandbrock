@@ -105,7 +105,7 @@ section {
 
 body {
   line-height: 1;
-  overflow: auto;
+  overflow: scroll;
 }
 
 ol,
@@ -140,6 +140,17 @@ button {
 }
 
 /* ===== Scrollbar CSS ===== */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
 @font-face {
   font-family: "Undounded-Regular"; /* Имя шрифта */
   src: url(../../dist/files/Unbounded-Regular.woff2);
@@ -379,7 +390,7 @@ b {
 }
 .nav-dropdown__item {
   cursor: pointer;
-  padding: 60px 40px 0px;
+  padding: 60px 40px 70px;
 }
 .nav-dropdown__item:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -2536,6 +2547,183 @@ textarea {
   color: #ffab00;
 }
 
+/*Vantage PAGE*/
+.section-transportation__header img {
+  width: 100%;
+  height: 80vh;
+}
+.section-transportation__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-transportation__title {
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #d0cdcd;
+}
+@media (min-width: 568px) {
+  .section-transportation__title {
+    font-weight: 500;
+    font-size: 4.5vw;
+    line-height: 38px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-transportation__title {
+    font-weight: 500;
+    font-size: 4vw;
+    line-height: 38px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-transportation__title {
+    font-weight: 500;
+    font-size: 3.6vw;
+    line-height: 38px;
+  }
+}
+@media (min-width: 1400px) {
+  .section-transportation__title {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 38px;
+  }
+}
+.section-transportation__item {
+  counter-increment: li;
+  min-height: 2rem;
+  padding-top: 0.5rem;
+  list-style: none;
+}
+.section-transportation__item::before, .section-transportation__item::after {
+  position: absolute;
+  display: flex;
+}
+.section-transportation__item::before {
+  content: counter(li);
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ffab00;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .section-transportation__item {
+    padding-top: 2.5rem;
+  }
+}
+.section-transportation__block {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.section-transportation__subtitle {
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+.section-transportation__subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.section-transportation__content {
+  gap: 60px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 840px) {
+  .section-transportation__content {
+    flex-direction: row;
+    padding-top: 40px;
+  }
+}
+.section-transportation__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-transportation__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: rgb(202, 202, 202);
+}
+@media (min-width: 568px) {
+  .section-transportation__text p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-transportation__text_list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 20px;
+}
+.section-transportation__text_list-item span {
+  color: #fff;
+}
+.section-transportation__text_list-item::before {
+  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #3b03f8; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.section-transportation__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-transportation__img {
+    min-width: 43%;
+  }
+}
+.section-transportation__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+}
+@media (min-width: 840px) {
+  .section-transportation__img img {
+    min-height: 385px;
+  }
+}
+
+#aviaperevezennia {
+  object-position: left; /* Позиционируем изображение на правой стороне контейнера */
+}
+
 /*PARCELS PAGE*/
 .section-parcels__header img {
   width: 100vw;
@@ -3067,377 +3255,4 @@ textarea {
 #border {
   border-top: 1px solid #5d5d5d;
   padding-top: 20px;
-}
-
-/*International Transportation PAGE*/
-.section-transportation__header img {
-  width: 100%;
-  height: 80vh;
-}
-.section-transportation__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.section-transportation__title {
-  font-weight: 500;
-  font-size: 5vw;
-  line-height: 38px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #d0cdcd;
-}
-@media (min-width: 568px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 4.5vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1024px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 4vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 3.6vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1400px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 38px;
-  }
-}
-.section-transportation__item {
-  counter-increment: li;
-  min-height: 2rem;
-  padding-top: 0.5rem;
-  list-style: none;
-}
-.section-transportation__item::before, .section-transportation__item::after {
-  position: absolute;
-  display: flex;
-}
-.section-transportation__item::before {
-  content: counter(li);
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid #ffab00;
-  color: #fff;
-}
-@media (min-width: 768px) {
-  .section-transportation__item {
-    padding-top: 2.5rem;
-  }
-}
-.section-transportation__block {
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-.section-transportation__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-transportation__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportation__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-@media (min-width: 840px) {
-  .section-transportation__content {
-    flex-direction: row;
-    padding-top: 40px;
-  }
-}
-.section-transportation__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.section-transportation__text p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportation__text p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportation__text_list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-transportation__text_list-item span {
-  color: #fff;
-}
-.section-transportation__text_list-item::before {
-  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #3b03f8; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.section-transportation__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportation__img {
-    min-width: 43%;
-  }
-}
-.section-transportation__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportation__img img {
-    min-height: 385px;
-  }
-}
-
-#aviaperevezennia {
-  object-position: left; /* Позиционируем изображение на правой стороне контейнера */
-}
-
-/*Transportation Methods PAGE*/
-.section-transportMethods__article {
-  padding-top: 70px;
-}
-.section-transportMethods__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportMethods__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__title {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  padding-top: 30px;
-}
-@media (min-width: 840px) {
-  .section-transportMethods__title {
-    padding-top: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 38px;
-  }
-}
-.section-transportMethods__title span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportMethods__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-transportMethods__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportMethods__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  align-items: flex-start;
-}
-@media (min-width: 840px) {
-  .section-transportMethods__content {
-    flex-direction: row;
-    padding-top: 40px;
-    align-items: center;
-  }
-}
-.section-transportMethods__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 20px;
-  padding-left: 15px;
-}
-.section-transportMethods__list_item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportMethods__list_item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__list_item::before {
-  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #3b03f8; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.section-transportMethods__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
-}
-.section-transportMethods__text p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportMethods__text p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__text_list {
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-transportMethods__text_list-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-  list-style-type: decimal;
-  color: rgb(202, 202, 202);
-  position: relative;
-  counter-increment: li;
-  min-height: 2rem;
-  list-style: none;
-}
-@media (min-width: 568px) {
-  .section-transportMethods__text_list-item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__text_list-item::before, .section-transportMethods__text_list-item::after {
-  position: absolute;
-  display: flex;
-  opacity: 0.35;
-}
-.section-transportMethods__text_list-item::before {
-  content: counter(li);
-  left: -2.75rem;
-  top: 0;
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid currentcolor;
-}
-.section-transportMethods__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportMethods__img {
-    min-width: 43%;
-  }
-}
-.section-transportMethods__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportMethods__img img {
-    min-height: 385px;
-  }
 }

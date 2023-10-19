@@ -167,7 +167,8 @@
 
   &__item {
     cursor: pointer;
-    padding: 60px 40px 70px;
+    // padding: 60px 40px 70px;
+    padding: 60px 40px 0px;
 
     &:nth-child(1) {
       grid-area: 1 / 1 / 2 / 2;
