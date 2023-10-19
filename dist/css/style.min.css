@@ -1442,6 +1442,7 @@ b {
   }
 }
 
+/*do the map on the background parallax + sign over it / or on top of it */
 .section-hamster {
   padding-top: 40px;
   overflow: hidden;
@@ -1471,28 +1472,11 @@ b {
   }
 }
 .content__text-wrapper {
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: normal;
   align-items: stretch;
   gap: 72px;
-}
-@media (min-width: 568px) {
-  .content__text-wrapper {
-    padding-top: 60px;
-  }
-}
-@media (min-width: 768px) {
-  .content__text-wrapper {
-    gap: 100px;
-  }
-}
-@media (min-width: 1024px) {
-  .content__text-wrapper {
-    padding-top: 100px;
-    gap: 60px;
-  }
 }
 .content__text {
   color: #ffab00;
@@ -1500,6 +1484,9 @@ b {
   font-family: "Fira Mono", monospace;
 }
 .content__text:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   font-weight: 500;
   font-size: 19px;
   line-height: 38px;
@@ -1509,6 +1496,7 @@ b {
     font-weight: 500;
     font-size: 28px;
     line-height: 38px;
+    gap: 10px;
   }
 }
 @media (min-width: 768px) {
@@ -1522,14 +1510,14 @@ b {
   .content__text:nth-child(1) {
     font-weight: 500;
     font-size: 48px;
-    line-height: 38px;
+    line-height: 59px;
   }
 }
 @media (min-width: 1400px) {
   .content__text:nth-child(1) {
     font-weight: 500;
     font-size: 60px;
-    line-height: 38px;
+    line-height: 67px;
   }
 }
 .content__text:nth-child(2) {
@@ -3441,3 +3429,8 @@ textarea {
     min-height: 385px;
   }
 }
+
+/*Transportation Methods PAGE*/
+/*Styles*/
+/*Transportation Methods PAGE*/
+/*STYLES*/
