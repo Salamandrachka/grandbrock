@@ -190,7 +190,7 @@
 
   &__link {
     color: $primaryLight;
-    @include fonts(500, 16px, 22px);
+    @include fonts(500, 18px, 22px);
   }
 }
 .nav-dropdown-sub {
@@ -203,7 +203,7 @@
   // .nav-dropdown-sub__item
 
   &__item {
-    margin-bottom: 31px;
+    margin-bottom: 15px;
   }
 
   // .nav-dropdown-sub__link

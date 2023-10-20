@@ -58,7 +58,7 @@
   // .content__text-wrapper
 
   &__text-wrapper {
-    @include flex(column, space-between, stretch);
+    @include flex(column, space-between, flex-start);
     gap: 72px;
     //
     // padding-top: 20px;
