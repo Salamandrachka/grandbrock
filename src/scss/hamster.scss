@@ -13,6 +13,32 @@
       padding-left: 15px;
     }
   }
+  h1 {
+    color: #ffab00;
+    text-transform: uppercase;
+    font-family: "Fira Mono", monospace;
+    @include fonts(500, 19px, 30px);
+    @include breakpoint-mf("xs") {
+      @include fonts(500, 28px, 38px);
+      gap: 10px;
+    }
+    @include breakpoint-mf("md") {
+      @include fonts(500, 37px, 38px);
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(500, 48px, 59px);
+    }
+    @include breakpoint-mf("xll") {
+      @include fonts(500, 60px, 67px);
+    }
+  }
+
+  &__header {
+    img {
+      width: 100%;
+      height: 80vh;
+    }
+  }
 }
 .content {
   // .content__wrapper
@@ -71,9 +97,11 @@
       }
       @include breakpoint-mf("my") {
         @include fonts(500, 48px, 59px);
+            padding-top: 30px;
       }
       @include breakpoint-mf("xll") {
         @include fonts(500, 60px, 67px);
+            padding-top: 70px;
       }
     }
     // &:nth-child(2) {
@@ -86,19 +114,13 @@
     //   }
     // }
     &:nth-child(2) {
-      @include fonts(500, 17px, 38px);
+      @include fonts(500, 13px, 38px);
       @include breakpoint-mf("xs") {
-        @include fonts(500, 20px, 38px);
+        @include fonts(500, 17px, 38px);
       }
 
       @include breakpoint-mf("md") {
         @include fonts(500, 25px, 38px);
-      }
-      @include breakpoint-mf("my") {
-        @include fonts(500, 30px, 59px);
-      }
-      @include breakpoint-mf("xll") {
-        @include fonts(500, 40px, 67px);
       }
     }
   }
@@ -128,19 +150,19 @@
 
 #ta {
   font-size: 16px;
-        @include breakpoint-mf("xs") {
-        @include fonts(500, 20px, 38px);
-      }
+  @include breakpoint-mf("xs") {
+    @include fonts(500, 20px, 38px);
+  }
 
-      @include breakpoint-mf("md") {
-        @include fonts(500, 25px, 38px);
-      }
-      @include breakpoint-mf("my") {
-        @include fonts(500, 30px, 59px);
-      }
-      @include breakpoint-mf("xll") {
-        @include fonts(500, 40px, 67px);
-      }
+  @include breakpoint-mf("md") {
+    @include fonts(500, 25px, 38px);
+  }
+  @include breakpoint-mf("my") {
+    @include fonts(500, 30px, 59px);
+  }
+  @include breakpoint-mf("xll") {
+    @include fonts(500, 40px, 67px);
+  }
 }
 /*HAMSTER*/
 
