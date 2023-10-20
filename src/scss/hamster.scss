@@ -1,6 +1,5 @@
 /*do the map on the background parallax + sign over it / or on top of it */
 
-
 .section-hamster {
   // .section-hamster__wrapper
 
@@ -33,7 +32,7 @@
   // .content__text-wrapper
 
   &__text-wrapper {
-    @include flex(column, normal, stretch);
+    @include flex(column, space-between, stretch);
     gap: 72px;
     //
     // padding-top: 20px;
@@ -60,9 +59,9 @@
       //
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      align-items: center;
       //
-      @include fonts(500, 19px, 38px);
+      @include fonts(500, 19px, 30px);
       @include breakpoint-mf("xs") {
         @include fonts(500, 28px, 38px);
         gap: 10px;
@@ -77,23 +76,29 @@
         @include fonts(500, 60px, 67px);
       }
     }
-    &:nth-child(2) {
-      display: none;
+    // &:nth-child(2) {
+    //   display: none;
 
-      @include breakpoint-mf("my") {
-        display: block;
-        padding-top: 60px;
-        @include fonts(500, 30px, 38px);
-      }
-    }
-    &:nth-child(3) {
-      @include fonts(500, 16px, 38px);
+    //   @include breakpoint-mf("my") {
+    //     display: block;
+    //     padding-top: 60px;
+    //     @include fonts(500, 30px, 38px);
+    //   }
+    // }
+    &:nth-child(2) {
+      @include fonts(500, 17px, 38px);
       @include breakpoint-mf("xs") {
         @include fonts(500, 20px, 38px);
       }
 
+      @include breakpoint-mf("md") {
+        @include fonts(500, 25px, 38px);
+      }
+      @include breakpoint-mf("my") {
+        @include fonts(500, 30px, 59px);
+      }
       @include breakpoint-mf("xll") {
-        @include fonts(500, 23px, 38px);
+        @include fonts(500, 40px, 67px);
       }
     }
   }
@@ -121,6 +126,22 @@
   }
 }
 
+#ta {
+  font-size: 16px;
+        @include breakpoint-mf("xs") {
+        @include fonts(500, 20px, 38px);
+      }
+
+      @include breakpoint-mf("md") {
+        @include fonts(500, 25px, 38px);
+      }
+      @include breakpoint-mf("my") {
+        @include fonts(500, 30px, 59px);
+      }
+      @include breakpoint-mf("xll") {
+        @include fonts(500, 40px, 67px);
+      }
+}
 /*HAMSTER*/
 
 .hamster {

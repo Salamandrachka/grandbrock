@@ -1474,7 +1474,7 @@ b {
 .content__text-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: normal;
+  justify-content: space-between;
   align-items: stretch;
   gap: 72px;
 }
@@ -1486,10 +1486,10 @@ b {
 .content__text:nth-child(1) {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  align-items: center;
   font-weight: 500;
   font-size: 19px;
-  line-height: 38px;
+  line-height: 30px;
 }
 @media (min-width: 568px) {
   .content__text:nth-child(1) {
@@ -1521,34 +1521,36 @@ b {
   }
 }
 .content__text:nth-child(2) {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .content__text:nth-child(2) {
-    display: block;
-    padding-top: 60px;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 38px;
-  }
-}
-.content__text:nth-child(3) {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 38px;
 }
 @media (min-width: 568px) {
-  .content__text:nth-child(3) {
+  .content__text:nth-child(2) {
     font-weight: 500;
     font-size: 20px;
     line-height: 38px;
   }
 }
-@media (min-width: 1400px) {
-  .content__text:nth-child(3) {
+@media (min-width: 768px) {
+  .content__text:nth-child(2) {
     font-weight: 500;
-    font-size: 23px;
+    font-size: 25px;
     line-height: 38px;
+  }
+}
+@media (min-width: 1024px) {
+  .content__text:nth-child(2) {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 59px;
+  }
+}
+@media (min-width: 1400px) {
+  .content__text:nth-child(2) {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 67px;
   }
 }
 .content__img {
@@ -1574,6 +1576,38 @@ b {
 @media (min-width: 640px) {
   .content__img img:nth-child(2) {
     display: block;
+  }
+}
+
+#ta {
+  font-size: 16px;
+}
+@media (min-width: 568px) {
+  #ta {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 768px) {
+  #ta {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+  }
+}
+@media (min-width: 1024px) {
+  #ta {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 59px;
+  }
+}
+@media (min-width: 1400px) {
+  #ta {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 67px;
   }
 }
 
