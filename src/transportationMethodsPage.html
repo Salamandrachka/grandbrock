@@ -22,8 +22,12 @@
   <body class="body bg-van">
     @@include('html/header.html', {})
 
-    <main>@@include('html/transportationMethods.html', {})</main>
-    @@include('html/fixedBtn.html', {}) @@include('html/footer.html', {})
+    <main>
+      @@include('html/transportationMethods.html', {})
+      @@include('html/genericForm.html', {}) 
+      @@include('html/fixedBtn.html', {})
+    </main>
+    @@include('html/footer.html', {})
 
     <script src="./dist/js/app.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -130,7 +130,10 @@ a {
 button {
   border: 0;
 }
-
+input, textarea {
+      outline: none;
+    resize: none;
+}
 /* ===== Scrollbar CSS ===== */
 // ::-webkit-scrollbar {
 //   -webkit-appearance: none;

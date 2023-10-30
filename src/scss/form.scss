@@ -32,7 +32,7 @@
 }
 
 .form__wrapper .form__input input,
-textarea {
+.form__textarea {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -40,9 +40,8 @@ textarea {
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
-  outline: none;
   background: transparent;
-  resize: none;
+
 }
 
 .form__wrapper .form__input label {
