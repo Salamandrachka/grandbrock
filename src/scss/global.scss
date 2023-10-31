@@ -78,5 +78,28 @@ b {
 }
 
 
+/* total width */
+.body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+}
+/* background of the scrollbar except button or resizer */
+.body::-webkit-scrollbar-track {
+  background-color: #222222;
+}
 
-//add style for all text in global 
+/* scrollbar itself */
+.body::-webkit-scrollbar-thumb {
+  background-color: #bebdbd;
+  border-radius: 16px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.overflow {
+  min-height: 100vh;
+}
+

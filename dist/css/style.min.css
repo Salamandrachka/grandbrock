@@ -230,6 +230,32 @@ b {
   justify-content: flex-end;
 }
 
+/* total width */
+.body::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+}
+
+/* background of the scrollbar except button or resizer */
+.body::-webkit-scrollbar-track {
+  background-color: #222222;
+}
+
+/* scrollbar itself */
+.body::-webkit-scrollbar-thumb {
+  background-color: #bebdbd;
+  border-radius: 16px;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.overflow {
+  min-height: 100vh;
+}
+
 /*COMPONENTS*/
 .menu-active {
   overflow: hidden; /* Запрет прокрутки фона */
@@ -399,20 +425,20 @@ b {
   grid-area: 1/4/2/5;
 }
 .nav-dropdown__link {
-  color: #797a7a;
+  color: #fff;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
 
 .nav-dropdown-sub__list {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .nav-dropdown-sub__item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .nav-dropdown-sub__link {
-  color: #fff;
+  color: #797a7a;
   font-weight: 500;
   font-size: 17px;
   line-height: 32px;
@@ -421,7 +447,7 @@ b {
 .nav-menu__item:hover .nav-dropdown {
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  height: 93%;
   transition: 550ms height ease-in-out, 550ms opacity ease-in-out, 550ms visibility ease-in-out;
 }
 
@@ -539,7 +565,7 @@ b {
 }
 .mobile-dropdown__item {
   cursor: pointer;
-  padding: 20px 28px 0px 0px;
+  padding: 25px 28px 0px 0px;
 }
 .mobile-dropdown__item:nth-child(1) {
   grid-area: 1/1/2/2;
@@ -554,20 +580,20 @@ b {
   grid-area: 2/2/3/3;
 }
 .mobile-dropdown__link {
-  color: #797a7a;
+  color: #fff;
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
 }
 
 .mobile-dropdown-sub__list {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .mobile-dropdown-sub__item {
-  margin-bottom: 31px;
+  margin-bottom: 8px;
 }
 .mobile-dropdown-sub__link {
-  color: #fff;
+  color: #797a7a;
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
@@ -905,7 +931,7 @@ b {
   font-weight: 400;
   font-size: 16px;
   line-height: 29px;
-  color: #fff;
+  color: rgb(202, 202, 202);
   padding-bottom: 0;
 }
 @media (min-width: 568px) {
@@ -983,7 +1009,7 @@ b {
 }
 .section-whywe__text {
   text-align: center;
-  color: #fff;
+  color: rgb(202, 202, 202);
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1026,7 +1052,7 @@ b {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #fff;
+  color: rgb(202, 202, 202);
   line-height: 30px;
 }
 .section-faq__block:nth-child(1) {
@@ -1088,13 +1114,20 @@ b {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0 5px;
   background-color: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1529411765);
   transition: 0.3s;
+}
+@media (min-width: 840px) {
+  .social-button {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+  }
 }
 
 .social-button:hover {
@@ -1124,7 +1157,7 @@ b {
 }
 
 .whatsapp {
-  background-color: #25D366;
+  background-color: #25d366;
 }
 
 .github svg {
@@ -1166,7 +1199,19 @@ b {
 }
 
 .whatsapp:hover svg {
-  fill: #25D366;
+  fill: #25d366;
+}
+
+.gmail {
+  background-color: #f81515;
+}
+
+.gmail svg {
+  fill: #f2f2f2;
+}
+
+.gmail:hover svg {
+  fill: #f81515;
 }
 
 .footer {
@@ -2885,6 +2930,15 @@ svg:hover + .btn-phone__number {
 }
 .info-social_whatsapp:hover {
   background-color: #25d366;
+}
+.info-social_gmail {
+  background-color: #000;
+}
+.info-social_gmail svg {
+  fill: #f2f2f2;
+}
+.info-social_gmail:hover {
+  background-color: #f81515;
 }
 .info-social__wrapper {
   padding: 36px;

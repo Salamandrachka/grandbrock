@@ -19,16 +19,17 @@
       rel="stylesheet"
     />
   </head>
-  <body class="body bg-van">
-    @@include('html/header.html', {})
+  <body class="body">
+    <div class="overflow">
+      @@include('html/header.html', {})
 
-    <main>
-      @@include('html/transportationMethods.html', {})
-      @@include('html/genericForm.html', {}) 
-      @@include('html/fixedBtn.html', {})
-    </main>
-    @@include('html/footer.html', {})
-
+      <main>
+        @@include('html/transportationMethods.html', {})
+        @@include('html/genericForm.html', {}) @@include('html/fixedBtn.html',
+        {})
+      </main>
+      @@include('html/footer.html', {})
+    </div>
     <script src="./dist/js/app.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
   </body>

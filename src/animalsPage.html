@@ -15,15 +15,17 @@
     />
   </head>
   <body class="body">
-    @@include('html/header.html', {})
+    <div class="overflow">
+      @@include('html/header.html', {})
 
-    <main>
-      @@include('html/animals.html', {}) 
-      @@include('html/genericForm.html', {}) 
-      @@include('html/fixedBtn.html', {})
-    </main>
+      <main>
+        @@include('html/animals.html', {}) @@include('html/genericForm.html',
+        {}) @@include('html/fixedBtn.html', {})
+      </main>
 
-    @@include('html/footer.html', {})
+      @@include('html/footer.html', {})
+    </div>
+
     <script src="./dist/js/app.min.js"></script>
   </body>
 </html>

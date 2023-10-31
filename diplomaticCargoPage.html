@@ -15,7 +15,8 @@
     />
   </head>
   <body class="body">
-    <header class="header">
+    <div class="overflow">
+      <header class="header">
   <div class="header__wrapper">
     <a class="logo" href="./index.html"
       ><img class="logo__img" src="./dist/img/grandbrok.png" alt=""
@@ -377,9 +378,8 @@
   </div>
 </header>
 
-
-    <main>
-      <section class="section-transportMethods">
+      <main>
+        <section class="section-transportMethods">
   <div class="section-transportMethods__block container wrapper">
     <h1 class="section-transportMethods__title">
       <span
@@ -443,91 +443,62 @@
   </div>
 </section>
 
-      <section class="section-cargoForm container">
-  <div class="section-cargoForm__wrapper wrapper">
-    <div class="section-cargoForm__block">
-      <div class="cargoForm__container">
-        <form class="cargoForm__form" action="#">
-          <div class="cargoForm__block">
-            <label class="cargoForm__label"
-              >Звідки та куди плануєте доставку вантажу?</label
+        <section class="section-genericForm container">
+  <div class="section-genericForm__wrapper wrapper">
+    <div class="section-genericForm__block">
+      <div class="genericForm__container">
+        <form class="genericForm__form" action="#">
+          <div class="genericForm__block">
+            <label class="genericForm__label"
+              >Опис вантажу</label
             >
             <textarea
-              class="cargoForm__input"
+              class="genericForm__input"
               name=""
               id=""
               rows="2"
+              required
             ></textarea>
           </div>
-          <div class="cargoForm__block">
-            <label class="cargoForm__label">Вага та об’єм вантажу</label>
-            <textarea
-              class="cargoForm__input"
-              name=""
-              id=""
-              rows="2"
-            ></textarea>
-          </div>
-          <div class="cargoForm__block">
-            <label class="cargoForm__label"
-              >Короткий опис товару (що плануєте перевозити)</label
-            >
-            <textarea
-              class="cargoForm__input"
-              name=""
-              id=""
-              rows="2"
-            ></textarea>
-          </div> 
-          <div class="cargoForm__block">
-            <label class="cargoForm__label"
-              >Орієнтована дата завантаження</label
-            >
+
+          <div class="genericForm__block">
+            <label class="genericForm__label">Ім'я</label>
             <input
-              class="cargoForm__input"
-              type="date"
-              id="date-input"
-              name="date"
-            />
-          </div>
-          <div class="cargoForm__block">
-            <label class="cargoForm__label">Ім'я</label>
-            <input
-              class="cargoForm__input"
+              class="genericForm__input"
               type="text"
               name=""
-              required=""
+              required
               id="username"
             />
           </div>
-          <div class="cargoForm__block">
-            <label class="cargoForm__label">Пошта</label>
-            <input class="cargoForm__input" type="email" name="" id="email" />
+          <div class="genericForm__block">
+            <label class="genericForm__label">Пошта</label>
+            <input class="genericForm__input" type="email" name="" id="email" />
           </div>
-          <div class="cargoForm__block">
-            <label class="cargoForm__label">Номер телефону</label>
+          <div class="genericForm__block">
+            <label class="genericForm__label">Номер телефону</label>
             <input
-              class="cargoForm__input"
+              class="genericForm__input"
               type="phone"
               name=""
-              required=""
+              required
               id="phone"
             />
           </div>
-          <!-- <div class="cargoForm__btn"> -->
-          <button class="cargoForm__btn" type="submit">Відправити</button>
+          <!-- <div class="genericForm__btn"> -->
+          <button class="genericForm__btn" type="submit">Відправити</button>
           <!-- </div> -->
         </form>
       </div>
     </div>
-    <div class="section-cargoForm__block">
-      <div class="section-cargoForm__title">
+    <div class="section-genericForm__block">
+      <div class="section-genericForm__title">
         <h2>
           <span>ЗАЛИШИТИ</span>
         </h2>
         <h2><span>ЗАЯВКУ</span></h2>
       </div>
-      <div class="section-cargoForm__subtitle">
+      <div class="section-genericForm__subtitle">
         <p>Отримайте спецальну пропозицію заповнивши анкету</p>
       </div>
     </div>
@@ -580,9 +551,8 @@
   </div>
 </div>
 
-    </main>
-
-    <footer class="footer">
+      </main>
+      <footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__content">
             <div class="footer__logo-wrapper">
@@ -789,7 +759,28 @@
                 </g>
               </svg>
             </a>
-
+            <a href="#" class="social-button gmail">
+              <svg
+                fill="#ffffff"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>gmail</title>
+                  <path
+                    d="M30.996 7.824v17.381c0 0 0 0 0 0.001 0 1.129-0.915 2.044-2.044 2.044-0 0-0 0-0.001 0h-4.772v-11.587l-8.179 6.136-8.179-6.136v11.588h-4.772c0 0 0 0-0 0-1.129 0-2.044-0.915-2.044-2.044 0-0 0-0.001 0-0.001v0-17.381c0-0 0-0.001 0-0.001 0-1.694 1.373-3.067 3.067-3.067 0.694 0 1.334 0.231 1.848 0.619l-0.008-0.006 10.088 7.567 10.088-7.567c0.506-0.383 1.146-0.613 1.84-0.613 1.694 0 3.067 1.373 3.067 3.067v0z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
 </div>
 
 
@@ -799,6 +790,7 @@
        
     </div>
 </footer>
+    </div>
     <script src="./dist/js/app.min.js"></script>
   </body>
 </html>

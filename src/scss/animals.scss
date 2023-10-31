@@ -13,7 +13,7 @@
 
     @include breakpoint-mf("ma") {
       padding-top: 50px;
-       @include fonts(900, 40px, 38px);
+      @include fonts(900, 40px, 38px);
     }
     span {
       background-color: #3b03f8;
@@ -64,9 +64,9 @@
       -webkit-text-fill-color: transparent;
       -moz-background-clip: text;
       -moz-text-fill-color: transparent;
-    //   @include breakpoint-mf("md") {
-    //     @include fonts(900, 50px, 38px);
-    //   }
+      //   @include breakpoint-mf("md") {
+      //     @include fonts(900, 50px, 38px);
+      //   }
     }
   }
 
@@ -191,18 +191,9 @@
     }
   }
 }
-// .title-article {
-//   text-align: center;
-//   text-transform: uppercase;
-//   padding-top: 30px;
-//   @include fonts(900, 20px, 38px);
-
-//   @include breakpoint-mf("ma") {
-//     padding-top: 50px;
-//   }
-// }
-
 #border {
   border-top: 1px solid #5d5d5d;
   padding-top: 20px;
 }
+
+

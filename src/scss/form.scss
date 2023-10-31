@@ -302,6 +302,18 @@
     }
   }
 
+  // .info-social_gmail
+
+  &_gmail {
+    background-color: #000;
+    svg {
+      fill: #f2f2f2;
+    }
+    &:hover {
+      background-color: #f81515;
+    }
+  }
+
   // .info-social__wrapper
 
   &__wrapper {
