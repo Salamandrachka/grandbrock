@@ -1489,7 +1489,6 @@ b {
   }
 }
 
-/*do the map on the background parallax + sign over it / or on top of it */
 .section-hamster {
   padding-top: 40px;
   overflow: hidden;
@@ -2015,6 +2014,11 @@ b {
     transform: rotate(-1turn);
   }
 }
+/*STOPS HAMSTER*/
+.wheel-and-hamster:hover, .wheel-and-hamster:hover .spoke, .wheel-and-hamster:hover .hamster__head, .wheel-and-hamster:hover .hamster__ear, .wheel-and-hamster:hover .hamster__body, .wheel-and-hamster:hover .hamster__limb--fr, .wheel-and-hamster:hover .hamster__limb--fl, .wheel-and-hamster:hover .hamster__limb--br, .wheel-and-hamster:hover .hamster__limb--bl, .wheel-and-hamster:hover .hamster__tail, .wheel-and-hamster:hover .hamster {
+  animation-play-state: paused;
+}
+
 .btn-phone__circle {
   background: #64bcff;
   border: 2px solid #64bcff;
@@ -3735,10 +3739,6 @@ svg:hover + .btn-phone__number {
   .section-transportation__img img {
     min-height: 385px;
   }
-}
-
-#aviaperevezennia {
-  object-position: left; /* Позиционируем изображение на правой стороне контейнера */
 }
 
 /*Transportation Methods PAGE*/

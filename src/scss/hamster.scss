@@ -1,5 +1,3 @@
-/*do the map on the background parallax + sign over it / or on top of it */
-
 .section-hamster {
   // .section-hamster__wrapper
 
@@ -202,6 +200,8 @@
     transform: translateX(-100vw); /* 1000px out of 100vw */
   }
 }
+
+
 
 .wheel,
 .hamster,
@@ -593,3 +593,11 @@
     transform: rotate(-1turn);
   }
 }
+
+/*STOPS HAMSTER*/
+
+.wheel-and-hamster:hover, .wheel-and-hamster:hover .spoke, .wheel-and-hamster:hover .hamster__head , .wheel-and-hamster:hover .hamster__ear, .wheel-and-hamster:hover .hamster__body , .wheel-and-hamster:hover .hamster__limb--fr, .wheel-and-hamster:hover .hamster__limb--fl, .wheel-and-hamster:hover .hamster__limb--br, .wheel-and-hamster:hover .hamster__limb--bl, .wheel-and-hamster:hover .hamster__tail, .wheel-and-hamster:hover .hamster {
+  animation-play-state: paused;
+}
+
+//////////////////////// 
