@@ -14,7 +14,7 @@
   h1 {
     color: #ffab00;
     text-transform: uppercase;
-    font-family: "Fira Mono", monospace;
+    font-family: "FixelText-Black";
     @include fonts(500, 19px, 30px);
     @include breakpoint-mf("xs") {
       @include fonts(500, 28px, 38px);

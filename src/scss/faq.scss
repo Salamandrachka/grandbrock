@@ -7,12 +7,7 @@
   // .section-faq__wrapper
 
   &__wrapper {
-    background: rgba(24, 20, 20, 0.987);
-    border-radius: 40px;
-    padding: 5px 15px;
-    @include breakpoint-mf("xs") {
-      padding: 5px 50px;
-    }
+
   }
 
   // .section-faq__block
@@ -37,10 +32,10 @@
   // .section-faq__question
 
   &__question {
+    color: #fff;
     position: relative;
     text-align: left;
     width: 100%;
-    // padding: 1.5em 0;
     font-weight: 400;
     border: none;
     background: none;
@@ -49,14 +44,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding-bottom: 22px;
     padding-top: 20px;
 
-    &::after {
-      content: "\002B";
-      font-size: 2rem;
-      position: absolute;
-      right: 1rem;
+    h3 {
+      @include fonts(400, 18.5px, 25px);
+            @include breakpoint-mf("md") {
+@include fonts(400, 20px, 25px);
+      }
+      
     }
   }
 
@@ -67,22 +64,32 @@
     visibility: hidden;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  }
-
-  &__answer.open {
-    opacity: 1;
-    visibility: visible;
-    max-height: 9em;
-    // padding-top: 15px;
-    //  position: relative;
-    // top: 10px;
+    color: rgb(202, 202, 202);
+    transition: max-height 0.9s ease, opacity 0.3s ease, visibility 0.3s ease;
+    
+    p {
+@include fonts(400, 17px, 25px);
+      padding-top: 1rem;
+      @include breakpoint-mf("md") {
+      @include fonts(400, 18px, 25px);
+      }
+    }
   }
 }
 #question-last {
   border: 0;
 }
 
-.section-faq__question.active::after {
-  content: "\2212";
+.section-faq__block.active .section-faq__answer {
+  opacity: 1;
+  visibility: visible;
+  max-height: 9em;
+}
+
+.section-faq__block.active i {
+  transform: rotate(180deg);
+}
+
+i {
+  transition: transform 0.5s ease-in;
 }
