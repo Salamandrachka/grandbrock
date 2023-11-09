@@ -14,9 +14,7 @@
 }
 
 body {
-  // font-family: 'Undounded-Regular';
   font-family: "Poppins", sans-serif;
-  // background-color: #131313;
   background-color: #222222;
 }
 
@@ -26,19 +24,20 @@ body {
   flex-direction: column;
 }
 
-main {
-  flex: 1 1 auto;
-}
+// main {
+//   flex: 1 1 auto;
+// }
 
 .container {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-right: 10px;
   padding-left: 10px;
+
   @include breakpoint-mf("md") {
     padding-right: 15px;
     padding-left: 15px;
   }
-  @include breakpoint-mf("xl") {
+  @include breakpoint-mf("ma") {
     padding-bottom: 70px;
   }
 }
@@ -48,8 +47,8 @@ main {
   max-width: 1400px;
 }
 
-.title {
-      font-family: "FixelText-Black";
+.main-page-title {
+  font-family: "FixelText-Black";
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
@@ -58,18 +57,82 @@ main {
     padding-bottom: 70px;
   }
   h1 {
-    color: #fff;
-    @include fonts(400, 20px, 23px);
+    color: $white;
+    @include fonts(900, 25px, 38px);
 
-    @include breakpoint-mf("xl") {
-      @include fonts(400, 32px, 38px);
+    @include breakpoint-mf("ma") {
+      @include fonts(900, 30px, 38px);
     }
+  }
+}
+.gradient-title {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: "FixelText-Black";
+  @include fonts(900, 30px, 38px);
+  text-align: center;
+  @include breakpoint-mf("ma") {
+    @include fonts(900, 40px, 38px);
+    padding-bottom: 60px;
+    padding-top: 70px;
+  }
+  span {
+    background-color: $blue;
+    background-image: linear-gradient(
+      45deg,
+      $yellow,
+      #ffb623,
+      #3061ebfa,
+      $blue
+    );
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+.gradient-subtitle {
+    padding-bottom: 40px;
+    padding-top: 50px;
+  font-family: "FixelText-Black";
+  @include fonts(900, 30px, 38px);
+  span {
+    background-color: $blue;
+    background-image: linear-gradient(
+      45deg,
+      $yellow,
+      #ffb623,
+      #3061ebfa,
+      $blue
+    );
+
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  @include breakpoint-mf("ma") {
+    padding-bottom: 50px;
+    padding-top: 70px;
   }
 }
 
 b {
   font-weight: 800;
-  color: #fff;
+  color: $white;
 }
 
 .flex-end {
@@ -78,10 +141,9 @@ b {
   justify-content: flex-end;
 }
 
-
 /* total width */
 .body::-webkit-scrollbar {
-  background-color: #fff;
+  background-color: $white;
   width: 10px;
 }
 /* background of the scrollbar except button or resizer */
@@ -103,4 +165,3 @@ b {
 .overflow {
   min-height: 100vh;
 }
-

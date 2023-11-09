@@ -1,217 +1,36 @@
 .section-transportMethods {
-  // .section-transportMethods__block
-
-  &__block {
-  }
-
   // .section-transportMethods__title
 
   &__article {
-    // padding-bottom: 50px;
-    padding-top: 70px;
-    p {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-    }
-  }
-
-  &__title {
-    font-family: "FixelText-Black";
-    @include fonts(900, 30px, 38px);
-    text-align: center;
-    // text-transform: uppercase;
-    padding-top: 30px;
-
-    @include breakpoint-mf("ma") {
-      padding-top: 50px;
-      @include fonts(900, 40px, 38px);
-    }
-    span {
-      background-color: #3b03f8;
-      background-image: linear-gradient(
-        45deg,
-        #ffab00,
-        #ffb623,
-        #3061ebfa,
-        #3b03f8
-      );
-
-      /* Set the background size and repeat properties. */
-      background-size: 100%;
-      background-repeat: repeat;
-
-      /* Use the text as a mask for the background. */
-      /* This will show the gradient as a text color rather than element bg. */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-    }
-  }
-  // .section-parcels__subtitle
-
-  &__subtitle {
-    font-family: "FixelText-Black";
-    @include fonts(900, 30px, 38px);
-
-    span {
-      background-color: #3b03f8;
-      background-image: linear-gradient(
-        45deg,
-        #ffab00,
-        #ffb623,
-        #3061ebfa,
-        #3b03f8
-      );
-
-      /* Set the background size and repeat properties. */
-      background-size: 100%;
-      background-repeat: repeat;
-
-      /* Use the text as a mask for the background. */
-      /* This will show the gradient as a text color rather than element bg. */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-    }
+    @extend %article;
   }
 
   // .section-parcels__content
 
   &__content {
-    gap: 60px;
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    align-items: flex-start;
-
-    @include breakpoint-mf("ma") {
-      flex-direction: row;
-      padding-top: 40px;
-      align-items: center;
-    }
+    @extend %content;
   }
 
   // .section-transportMethods__list
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 20px;
-    padding-left: 15px;
-
-    &_item {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-      &::before {
-        content: "\25b6"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: #3b03f8; /* Change the color */
-        font-weight: bold; /* If you want it to be bold */
-        display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 1em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
-      }
-    }
+    @extend %non-decimal-list;
   }
 
   // .section-transportMethods__text
 
   &__text {
-    @include flex(column, space-evenly, center);
-    flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
-
-    p {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-    }
-    // .section-parcels__text_list
+    @extend %text-content-pages;
+        // .section-transportMethods__text_list
 
     &_list {
-      padding-left: 45px;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      padding-top: 20px;
-    }
-
-    // .section-parcels__text_list-item
-
-    &_list-item {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-      list-style-type: decimal;
-      color: rgba(202, 202, 202);
-      position: relative;
-      counter-increment: li;
-      min-height: 2rem;
-      list-style: none;
-
-      &::before,
-      &::after {
-        position: absolute;
-        display: flex;
-        opacity: 0.35;
-      }
-
-      &::before {
-        content: counter(li);
-        left: -2.75rem;
-        top: 0;
-        height: calc(2rem - 1px);
-        width: calc(2rem - 1px);
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1px solid currentcolor;
-      }
+      @extend %decimal-list;
     }
   }
 
   // .section-transportMethods__img
 
   &__img {
-    min-width: 100%;
-    overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-    // object-position: left center; /* Центрируем изображение по вертикали и смещаем его влево */
-
-    @include breakpoint-mf("ma") {
-      // min-width: 350px;
-      min-width: 43%;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      min-height: 350px;
-      max-height: 350px;
-      min-width: 100%;
-      object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-      object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-
-      @include breakpoint-mf("ma") {
-        min-height: 385px;
-      }
-    }
+    @extend %img-text-pages;
   }
 }

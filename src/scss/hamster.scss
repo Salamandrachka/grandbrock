@@ -12,7 +12,7 @@
     }
   }
   h1 {
-    color: #ffab00;
+    color: $yellow;
     text-transform: uppercase;
     font-family: "FixelText-Black";
     @include fonts(500, 19px, 30px);
@@ -56,7 +56,7 @@
   // .content__text-wrapper
 
   &__text-wrapper {
-    @include flex(column, space-between, flex-start);
+    @include flex(column, center, flex-start);
     gap: 72px;
     //
     // padding-top: 20px;
@@ -76,7 +76,7 @@
   // .content__text
 
   &__text {
-    color: #ffab00;
+    color: $yellow;
     text-transform: uppercase;
     font-family: "Fira Mono", monospace;
     &:nth-child(1) {
@@ -95,11 +95,11 @@
       }
       @include breakpoint-mf("my") {
         @include fonts(500, 48px, 59px);
-            padding-top: 30px;
+        padding-top: 30px;
       }
       @include breakpoint-mf("xll") {
         @include fonts(500, 60px, 67px);
-            padding-top: 70px;
+        padding-top: 70px;
       }
     }
     // &:nth-child(2) {
@@ -200,8 +200,6 @@
     transform: translateX(-100vw); /* 1000px out of 100vw */
   }
 }
-
-
 
 .wheel,
 .hamster,
@@ -596,8 +594,18 @@
 
 /*STOPS HAMSTER*/
 
-.wheel-and-hamster:hover, .wheel-and-hamster:hover .spoke, .wheel-and-hamster:hover .hamster__head , .wheel-and-hamster:hover .hamster__ear, .wheel-and-hamster:hover .hamster__body , .wheel-and-hamster:hover .hamster__limb--fr, .wheel-and-hamster:hover .hamster__limb--fl, .wheel-and-hamster:hover .hamster__limb--br, .wheel-and-hamster:hover .hamster__limb--bl, .wheel-and-hamster:hover .hamster__tail, .wheel-and-hamster:hover .hamster {
+.wheel-and-hamster:hover,
+.wheel-and-hamster:hover .spoke,
+.wheel-and-hamster:hover .hamster__head,
+.wheel-and-hamster:hover .hamster__ear,
+.wheel-and-hamster:hover .hamster__body,
+.wheel-and-hamster:hover .hamster__limb--fr,
+.wheel-and-hamster:hover .hamster__limb--fl,
+.wheel-and-hamster:hover .hamster__limb--br,
+.wheel-and-hamster:hover .hamster__limb--bl,
+.wheel-and-hamster:hover .hamster__tail,
+.wheel-and-hamster:hover .hamster {
   animation-play-state: paused;
 }
 
-//////////////////////// 
+////////////////////////

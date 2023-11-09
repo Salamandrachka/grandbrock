@@ -168,12 +168,8 @@ body {
   flex-direction: column;
 }
 
-main {
-  flex: 1 1 auto;
-}
-
 .container {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -183,7 +179,7 @@ main {
     padding-left: 15px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 840px) {
   .container {
     padding-bottom: 70px;
   }
@@ -194,29 +190,89 @@ main {
   max-width: 1400px;
 }
 
-.title {
+.main-page-title {
   font-family: "FixelText-Black";
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
 }
 @media (min-width: 1200px) {
-  .title {
+  .main-page-title {
     padding-top: 70px;
     padding-bottom: 70px;
   }
 }
-.title h1 {
+.main-page-title h1 {
   color: #fff;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 38px;
 }
-@media (min-width: 1200px) {
-  .title h1 {
-    font-weight: 400;
-    font-size: 32px;
+@media (min-width: 840px) {
+  .main-page-title h1 {
+    font-weight: 900;
+    font-size: 30px;
     line-height: 38px;
+  }
+}
+
+.gradient-title {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+}
+@media (min-width: 840px) {
+  .gradient-title {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 38px;
+    padding-bottom: 60px;
+    padding-top: 70px;
+  }
+}
+.gradient-title span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.gradient-subtitle {
+  padding-bottom: 40px;
+  padding-top: 50px;
+  font-family: "FixelText-Black";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+.gradient-subtitle span {
+  background-color: #3b03f8;
+  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+@media (min-width: 840px) {
+  .gradient-subtitle {
+    padding-bottom: 50px;
+    padding-top: 70px;
   }
 }
 
@@ -255,6 +311,154 @@ b {
 
 .overflow {
   min-height: 100vh;
+}
+
+.section-diplomaticCargo__content, .section-commercialCargo__content, .section-transportMethods__content, .section-internationalTransportation__content, .section-animals__content, .section-personalStuff__content, .section-parcels__content, .section-about__content {
+  gap: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media (min-width: 840px) {
+  .section-diplomaticCargo__content, .section-commercialCargo__content, .section-transportMethods__content, .section-internationalTransportation__content, .section-animals__content, .section-personalStuff__content, .section-parcels__content, .section-about__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px;
+  }
+}
+
+.section-diplomaticCargo__article p, .section-commercialCargo__article p, .section-transportMethods__article p, .section-animals__article p, .section-payments__article p, .section-personalStuff__article p, .section-parcels__article p, .section-about__article p {
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: #cacaca;
+}
+@media (min-width: 568px) {
+  .section-diplomaticCargo__article p, .section-commercialCargo__article p, .section-transportMethods__article p, .section-animals__article p, .section-payments__article p, .section-personalStuff__article p, .section-parcels__article p, .section-about__article p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+
+.section-commercialCargo__text_list, .section-transportMethods__text_list, .section-animals__text_list, .section-personalStuff__text_list, .section-parcels__text_list, .section-about__text_list {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-commercialCargo__text_list li, .section-transportMethods__text_list li, .section-animals__text_list li, .section-personalStuff__text_list li, .section-parcels__text_list li, .section-about__text_list li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: #cacaca;
+  list-style-type: decimal;
+  color: #cacaca;
+  position: relative;
+  counter-increment: li;
+  min-height: 2rem;
+  list-style: none;
+}
+@media (min-width: 568px) {
+  .section-commercialCargo__text_list li, .section-transportMethods__text_list li, .section-animals__text_list li, .section-personalStuff__text_list li, .section-parcels__text_list li, .section-about__text_list li {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-commercialCargo__text_list li::before, .section-transportMethods__text_list li::before, .section-animals__text_list li::before, .section-personalStuff__text_list li::before, .section-parcels__text_list li::before, .section-about__text_list li::before, .section-commercialCargo__text_list li::after, .section-transportMethods__text_list li::after, .section-animals__text_list li::after, .section-personalStuff__text_list li::after, .section-parcels__text_list li::after, .section-about__text_list li::after {
+  position: absolute;
+  display: flex;
+  opacity: 0.35;
+}
+.section-commercialCargo__text_list li::before, .section-transportMethods__text_list li::before, .section-animals__text_list li::before, .section-personalStuff__text_list li::before, .section-parcels__text_list li::before, .section-about__text_list li::before {
+  content: counter(li);
+  left: -2.75rem;
+  top: 0;
+  height: calc(2rem - 1px);
+  width: calc(2rem - 1px);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
+}
+
+.section-transportMethods__list, .section-internationalTransportation__text_list, .section-personalStuff__list, .section-parcels__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+}
+.section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-personalStuff__list li, .section-parcels__list li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: #cacaca;
+}
+@media (min-width: 568px) {
+  .section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-personalStuff__list li, .section-parcels__list li {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+.section-transportMethods__list li::before, .section-internationalTransportation__text_list li::before, .section-personalStuff__list li::before, .section-parcels__list li::before {
+  content: "➤";
+  color: #3b03f8; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.section-commercialCargo__img, .section-transportMethods__img, .section-internationalTransportation__img, .section-animals__img, .section-personalStuff__img, .section-parcels__img, .section-about__img {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+}
+@media (min-width: 840px) {
+  .section-commercialCargo__img, .section-transportMethods__img, .section-internationalTransportation__img, .section-animals__img, .section-personalStuff__img, .section-parcels__img, .section-about__img {
+    min-width: 43%;
+  }
+}
+.section-commercialCargo__img img, .section-transportMethods__img img, .section-internationalTransportation__img img, .section-animals__img img, .section-personalStuff__img img, .section-parcels__img img, .section-about__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  min-height: 350px;
+  max-height: 350px;
+  min-width: 100%;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+}
+@media (min-width: 840px) {
+  .section-commercialCargo__img img, .section-transportMethods__img img, .section-internationalTransportation__img img, .section-animals__img img, .section-personalStuff__img img, .section-parcels__img img, .section-about__img img {
+    min-height: 385px;
+  }
+}
+
+.section-transportMethods__text, .section-internationalTransportation__text, .section-parcels__text, .section-about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-transportMethods__text p, .section-internationalTransportation__text p, .section-parcels__text p, .section-about__text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31px;
+  color: #cacaca;
+}
+@media (min-width: 568px) {
+  .section-transportMethods__text p, .section-internationalTransportation__text p, .section-parcels__text p, .section-about__text p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+  }
 }
 
 /*COMPONENTS*/
@@ -437,6 +641,7 @@ b {
 }
 .nav-dropdown-sub__item {
   margin-bottom: 10px;
+  position: relative;
 }
 .nav-dropdown-sub__link {
   color: #797a7a;
@@ -565,6 +770,7 @@ b {
   flex-direction: column;
   gap: 20px;
   padding-top: 10px;
+  padding-left: 24px;
 }
 @media (min-width: 568px) {
   .mobile-dropdown__list {
@@ -586,6 +792,9 @@ b {
 
 .mobile-dropdown-sub__list {
   margin-top: 15px;
+}
+.mobile-dropdown-sub__item {
+  position: relative;
 }
 .mobile-dropdown-sub__link {
   color: #797a7a;
@@ -655,13 +864,13 @@ b {
   font-family: inherit;
   font-size: inherit;
   position: relative;
-  letter-spacing: 0.05rem;
-  font-weight: 700;
-  font-size: 17px;
   border-radius: 500px;
   overflow: hidden;
   background: #3b03f8;
   color: ghostwhite;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 25px;
 }
 .nav-mobile__button_consult span {
   position: relative;
@@ -688,187 +897,49 @@ b {
   transform: translate3d(100%, 0, 0);
 }
 
-.section-about__title {
-  font-family: "FixelText-Black";
+.menu-arrow {
+  font-size: 22px;
   font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  padding-top: 30px;
+  position: absolute;
+  left: -40px; /* или другое значение, чтобы скрыть стрелочку влево */
+  top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease; /* Добавляем плавное появление */
 }
-@media (min-width: 840px) {
-  .section-about__title {
-    padding-top: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 38px;
-  }
+
+.nav-dropdown-sub__item:hover .menu-arrow {
+  left: -32px; /* или другое значение, чтобы показать стрелочку */
+  opacity: 1;
+  visibility: visible;
 }
-.section-about__title span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+
+.mobile-dropdown-sub__item:hover .menu-arrow {
+  left: -27px; /* или другое значение, чтобы показать стрелочку */
+  opacity: 1;
+  visibility: visible;
 }
-.section-about__article {
-  padding-top: 30px;
-}
-.section-about__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-about__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-@media (min-width: 1024px) {
-  .section-about__article {
-    padding-top: 70px;
-  }
-}
-.section-about__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-@media (min-width: 840px) {
-  .section-about__content {
-    flex-direction: row;
-    padding-top: 40px;
-  }
-}
-.section-about__block {
-  gap: 30px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-@media (min-width: 840px) {
-  .section-about__block {
-    padding-top: 40px;
-  }
-}
+
 .section-about__text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
 }
-.section-about__text p {
-  font-weight: 400;
-  font-size: 16px;
+.section-about__text h3 {
+  font-weight: 600;
+  font-size: 25px;
   line-height: 31px;
-  color: rgb(202, 202, 202);
+  color: #fff;
+  padding-bottom: 20px;
 }
-@media (min-width: 568px) {
-  .section-about__text p {
-    font-weight: 400;
-    font-size: 17px;
+@media (min-width: 840px) {
+  .section-about__text h3 {
+    font-weight: 600;
+    font-size: 35px;
     line-height: 31px;
   }
 }
-.section-about__text_list {
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-about__text_list-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-  list-style-type: decimal;
-  position: relative;
-  counter-increment: li;
-  min-height: 2rem;
-  list-style: none;
-}
-@media (min-width: 568px) {
-  .section-about__text_list-item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-about__text_list-item::before, .section-about__text_list-item::after {
-  position: absolute;
-  display: flex;
-  opacity: 0.35;
-}
-.section-about__text_list-item::before {
-  content: counter(li);
-  left: -2.75rem;
-  top: 0;
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid currentcolor;
-}
-.section-about__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-about__img {
-    min-width: 43%;
-  }
-}
-.section-about__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-about__img img {
-    min-height: 385px;
-  }
-}
-.section-about__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-about__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-
 .section-reviews {
   padding-bottom: 50px;
 }
@@ -926,7 +997,7 @@ b {
   font-weight: 400;
   font-size: 16px;
   line-height: 29px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
   padding-bottom: 0;
 }
 @media (min-width: 568px) {
@@ -1004,9 +1075,9 @@ b {
 }
 .section-whywe__text {
   text-align: center;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
 }
 @media (min-width: 768px) {
@@ -1037,7 +1108,7 @@ b {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
   line-height: 30px;
 }
 .section-faq__block:nth-child(1) {
@@ -1056,7 +1127,7 @@ b {
   border: none;
   background: none;
   outline: none;
-  border-bottom: 1px solid #414141;
+  border-bottom: 1px solid #bf8c25;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1080,14 +1151,15 @@ b {
   visibility: hidden;
   max-height: 0;
   overflow: hidden;
-  color: rgb(202, 202, 202);
-  transition: max-height 0.9s ease, opacity 0.3s ease, visibility 0.3s ease;
+  color: #cacaca;
+  transition: max-height 1.4s ease, opacity 0.6s ease, visibility 0.6s ease;
 }
 .section-faq__answer p {
   font-weight: 400;
   font-size: 17px;
   line-height: 25px;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .section-faq__answer p {
@@ -1104,14 +1176,14 @@ b {
 .section-faq__block.active .section-faq__answer {
   opacity: 1;
   visibility: visible;
-  max-height: 9em;
+  max-height: 100em;
 }
 
 .section-faq__block.active i {
   transform: rotate(180deg);
 }
 
-i {
+.section-faq__block i {
   transition: transform 0.5s ease-in;
 }
 
@@ -1461,6 +1533,18 @@ i {
     grid-area: 2/3/3/4;
   }
 }
+.section-service__sub-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 12px;
+}
+@media (min-width: 568px) {
+  .section-service__sub-block {
+    gap: 20px;
+  }
+}
 .section-service__img {
   display: flex;
   justify-content: center;
@@ -1572,7 +1656,7 @@ i {
 .content__text-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 72px;
 }
@@ -2026,7 +2110,17 @@ i {
   }
 }
 /*STOPS HAMSTER*/
-.wheel-and-hamster:hover, .wheel-and-hamster:hover .spoke, .wheel-and-hamster:hover .hamster__head, .wheel-and-hamster:hover .hamster__ear, .wheel-and-hamster:hover .hamster__body, .wheel-and-hamster:hover .hamster__limb--fr, .wheel-and-hamster:hover .hamster__limb--fl, .wheel-and-hamster:hover .hamster__limb--br, .wheel-and-hamster:hover .hamster__limb--bl, .wheel-and-hamster:hover .hamster__tail, .wheel-and-hamster:hover .hamster {
+.wheel-and-hamster:hover,
+.wheel-and-hamster:hover .spoke,
+.wheel-and-hamster:hover .hamster__head,
+.wheel-and-hamster:hover .hamster__ear,
+.wheel-and-hamster:hover .hamster__body,
+.wheel-and-hamster:hover .hamster__limb--fr,
+.wheel-and-hamster:hover .hamster__limb--fl,
+.wheel-and-hamster:hover .hamster__limb--br,
+.wheel-and-hamster:hover .hamster__limb--bl,
+.wheel-and-hamster:hover .hamster__tail,
+.wheel-and-hamster:hover .hamster {
   animation-play-state: paused;
 }
 
@@ -2282,11 +2376,17 @@ svg:hover + .btn-phone__number {
 .section-cargoForm__block:nth-child(2) {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   grid-area: 1/1/2/2;
 }
 @media (min-width: 840px) {
   .section-cargoForm__block:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
     margin: 0;
     gap: 30px;
     grid-area: 1/2/2/3;
@@ -2345,7 +2445,7 @@ svg:hover + .btn-phone__number {
   font-weight: 600;
   font-size: 17px;
   line-height: 25px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 @media (min-width: 840px) {
   .section-cargoForm__subtitle {
@@ -2396,7 +2496,7 @@ svg:hover + .btn-phone__number {
   border: none;
   border-bottom: 1px solid #414141;
   background: transparent;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
   color-scheme: dark;
   padding-bottom: 5px;
   font-weight: 400;
@@ -2438,6 +2538,8 @@ svg:hover + .btn-phone__number {
 }
 
 #date-input {
+  padding-top: 8px;
+  color: #717171;
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
@@ -2538,7 +2640,7 @@ svg:hover + .btn-phone__number {
   font-weight: 600;
   font-size: 17px;
   line-height: 25px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 @media (min-width: 840px) {
   .section-genericForm__subtitle {
@@ -2595,7 +2697,7 @@ svg:hover + .btn-phone__number {
   border: none;
   border-bottom: 1px solid #414141;
   background: transparent;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
   color-scheme: dark;
   padding-bottom: 5px;
   font-weight: 400;
@@ -3051,193 +3153,17 @@ svg:hover + .btn-phone__number {
 }
 
 /*PARCELS PAGE*/
-.section-parcels__header img {
-  width: 100vw;
-  height: 50vh;
-}
-@media (min-width: 1200px) {
-  .section-parcels__header img {
-    height: 80vh;
-  }
-}
-.section-parcels__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 20px;
-  padding-left: 15px;
-}
-.section-parcels__list_item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-parcels__list_item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-parcels__list_item::before {
-  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #3b03f8; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.section-parcels__article {
-  padding-top: 70px;
-}
-.section-parcels__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-parcels__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-parcels__title {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  padding-top: 30px;
-}
-@media (min-width: 840px) {
-  .section-parcels__title {
-    padding-top: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 38px;
-  }
-}
-.section-parcels__title span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-parcels__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-parcels__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-parcels__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  align-items: flex-start;
-}
-@media (min-width: 840px) {
-  .section-parcels__content {
-    flex-direction: row;
-    padding-top: 40px;
-    align-items: center;
-  }
-}
 .section-parcels__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
 }
-.section-parcels__text p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-parcels__text p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-parcels__text_list {
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-parcels__text_list-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-  list-style-type: decimal;
-  color: rgb(202, 202, 202);
-  position: relative;
-  counter-increment: li;
-  min-height: 2rem;
-  list-style: none;
-}
-@media (min-width: 568px) {
-  .section-parcels__text_list-item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-parcels__text_list-item::before, .section-parcels__text_list-item::after {
-  position: absolute;
-  display: flex;
-  opacity: 0.35;
-}
-.section-parcels__text_list-item::before {
-  content: counter(li);
-  left: -2.75rem;
-  top: 0;
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid currentcolor;
-}
 .section-parcels__example {
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 .section-parcels__example h3 {
   font-weight: 600;
   font-size: 20px;
   line-height: 2.5em;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 .section-parcels__example_box {
   font-weight: 600;
@@ -3253,104 +3179,18 @@ svg:hover + .btn-phone__number {
     line-height: 2em;
   }
 }
-.section-parcels__border {
-  width: 1px; /* Ширина полосы */
-  background-color: #fff; /* Цвет полосы */
-  flex: 0 0 auto; /* Убираем возможность полосе увеличивать свою ширину */
-  height: 100%;
-}
-.section-parcels__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-parcels__img {
-    min-width: 43%;
-  }
-}
-.section-parcels__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-parcels__img img {
-    min-height: 385px;
-  }
-}
-
+/*PERSONAL STUFF*/
 /*PAYMENTS PAGE*/
-.section-payments__paraghraf p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-payments__paraghraf p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-payments__article {
-  padding-top: 30px;
-}
-.section-payments__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-payments__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-@media (min-width: 1024px) {
-  .section-payments__article {
-    padding-top: 70px;
-  }
-}
-.section-payments__subtitle {
-  font-family: "FixelText-Black";
-  padding-bottom: 20px;
-  padding-top: 20px;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-@media (min-width: 568px) {
-  .section-payments__subtitle {
-    padding-bottom: 30px;
-    padding-top: 30px;
-  }
-}
-.section-payments__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+.section-payments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .section-payments__item {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 @media (min-width: 568px) {
   .section-payments__item {
@@ -3373,7 +3213,6 @@ svg:hover + .btn-phone__number {
   }
 }
 .section-payments__table {
-  margin-top: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
@@ -3410,89 +3249,6 @@ svg:hover + .btn-phone__number {
 }
 
 /*ANIMALS PAGE*/
-.section-animals__title {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  padding-top: 30px;
-}
-@media (min-width: 840px) {
-  .section-animals__title {
-    padding-top: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 38px;
-  }
-}
-.section-animals__title span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-animals__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-animals__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-animals__article {
-  padding-top: 30px;
-}
-.section-animals__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-animals__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-@media (min-width: 1024px) {
-  .section-animals__article {
-    padding-top: 70px;
-  }
-}
-.section-animals__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-}
-@media (min-width: 840px) {
-  .section-animals__content {
-    flex-direction: row;
-    padding-top: 40px;
-  }
-}
 .section-animals__text {
   display: flex;
   flex-direction: column;
@@ -3503,7 +3259,7 @@ svg:hover + .btn-phone__number {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 @media (min-width: 568px) {
   .section-animals__text p {
@@ -3513,446 +3269,70 @@ svg:hover + .btn-phone__number {
   }
 }
 .section-animals__text_list {
-  padding-left: 45px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-animals__text_list-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-  list-style-type: decimal;
-  position: relative;
-  counter-increment: li;
-  min-height: 2rem;
-  list-style: none;
-}
-@media (min-width: 568px) {
-  .section-animals__text_list-item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-animals__text_list-item::before, .section-animals__text_list-item::after {
-  position: absolute;
-  display: flex;
-  opacity: 0.35;
-}
-.section-animals__text_list-item::before {
-  content: counter(li);
-  left: -2.75rem;
-  top: 0;
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid currentcolor;
-}
-.section-animals__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+  padding-bottom: 40px;
 }
 @media (min-width: 840px) {
-  .section-animals__img {
-    min-width: 43%;
+  .section-animals__text_list {
+    padding-bottom: 50px;
   }
 }
-.section-animals__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-animals__img img {
-    min-height: 385px;
-  }
-}
-
 #border {
   border-top: 1px solid #5d5d5d;
-  padding-top: 20px;
+  padding-top: 40px;
+}
+@media (min-width: 840px) {
+  #border {
+    padding-top: 50px;
+  }
 }
 
 /*International Transportation PAGE*/
-.section-transportation__header img {
-  width: 100%;
-  height: 80vh;
-}
-.section-transportation__title-wrapper {
+.section-internationalTransportation__block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.section-transportation__title {
-  font-weight: 500;
-  font-size: 5vw;
-  line-height: 38px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: #d0cdcd;
-}
-@media (min-width: 568px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 4.5vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1024px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 4vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 3.6vw;
-    line-height: 38px;
-  }
-}
-@media (min-width: 1400px) {
-  .section-transportation__title {
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 38px;
-  }
-}
-.section-transportation__item {
-  counter-increment: li;
-  min-height: 2rem;
-  padding-top: 0.5rem;
-  list-style: none;
-}
-.section-transportation__item::before, .section-transportation__item::after {
-  position: absolute;
-  display: flex;
-}
-.section-transportation__item::before {
-  content: counter(li);
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid #ffab00;
-  color: #fff;
-}
-@media (min-width: 768px) {
-  .section-transportation__item {
-    padding-top: 2.5rem;
-  }
-}
-.section-transportation__block {
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-.section-transportation__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-transportation__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportation__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-@media (min-width: 840px) {
-  .section-transportation__content {
-    flex-direction: row;
-    padding-top: 40px;
-  }
-}
-.section-transportation__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.section-transportation__text p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportation__text p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportation__text_list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
-}
-.section-transportation__text_list-item span {
-  color: #fff;
-}
-.section-transportation__text_list-item::before {
-  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #3b03f8; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.section-transportation__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportation__img {
-    min-width: 43%;
-  }
-}
-.section-transportation__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportation__img img {
-    min-height: 385px;
-  }
-}
-
 /*Transportation Methods PAGE*/
-.section-transportMethods__article {
-  padding-top: 70px;
-}
-.section-transportMethods__article p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportMethods__article p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__title {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-  text-align: center;
-  padding-top: 30px;
-}
-@media (min-width: 840px) {
-  .section-transportMethods__title {
-    padding-top: 50px;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 38px;
-  }
-}
-.section-transportMethods__title span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportMethods__subtitle {
-  font-family: "FixelText-Black";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 38px;
-}
-.section-transportMethods__subtitle span {
-  background-color: #3b03f8;
-  background-image: linear-gradient(45deg, #ffab00, #ffb623, rgba(48, 97, 235, 0.9803921569), #3b03f8);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-}
-.section-transportMethods__content {
-  gap: 60px;
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  align-items: flex-start;
-}
-@media (min-width: 840px) {
-  .section-transportMethods__content {
-    flex-direction: row;
-    padding-top: 40px;
-    align-items: center;
-  }
-}
-.section-transportMethods__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 20px;
-  padding-left: 15px;
-}
-.section-transportMethods__list_item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 31px;
-  color: rgb(202, 202, 202);
-}
-@media (min-width: 568px) {
-  .section-transportMethods__list_item {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 31px;
-  }
-}
-.section-transportMethods__list_item::before {
-  content: "▶"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #3b03f8; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.section-transportMethods__text {
+/*Transportation Methods PAGE*/
+.section-commercialCargo__text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
 }
-.section-transportMethods__text p {
+.section-commercialCargo__text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
-  color: rgb(202, 202, 202);
+  color: #cacaca;
 }
 @media (min-width: 568px) {
-  .section-transportMethods__text p {
+  .section-commercialCargo__text p {
     font-weight: 400;
     font-size: 17px;
     line-height: 31px;
   }
 }
-.section-transportMethods__text_list {
-  padding-left: 45px;
+/*Transportation Methods PAGE*/
+.section-diplomaticCargo__text {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
 }
-.section-transportMethods__text_list-item {
+.section-diplomaticCargo__text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
-  color: rgb(202, 202, 202);
-  list-style-type: decimal;
-  color: rgb(202, 202, 202);
-  position: relative;
-  counter-increment: li;
-  min-height: 2rem;
-  list-style: none;
+  color: #cacaca;
 }
 @media (min-width: 568px) {
-  .section-transportMethods__text_list-item {
+  .section-diplomaticCargo__text p {
     font-weight: 400;
     font-size: 17px;
     line-height: 31px;
   }
 }
-.section-transportMethods__text_list-item::before, .section-transportMethods__text_list-item::after {
-  position: absolute;
-  display: flex;
-  opacity: 0.35;
-}
-.section-transportMethods__text_list-item::before {
-  content: counter(li);
-  left: -2.75rem;
-  top: 0;
-  height: calc(2rem - 1px);
-  width: calc(2rem - 1px);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid currentcolor;
-}
-.section-transportMethods__img {
-  min-width: 100%;
-  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportMethods__img {
-    min-width: 43%;
-  }
-}
-.section-transportMethods__img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  min-height: 350px;
-  max-height: 350px;
-  min-width: 100%;
-  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-  object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-}
-@media (min-width: 840px) {
-  .section-transportMethods__img img {
-    min-height: 385px;
-  }
-}
-
-/*Transportation Methods PAGE*/
-/*Styles*/
-/*Transportation Methods PAGE*/
-/*STYLES*/

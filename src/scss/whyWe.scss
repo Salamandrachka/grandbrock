@@ -41,8 +41,8 @@
 
   &__text {
     text-align: center;
-    color: rgb(202, 202, 202);
-    @include fonts(400, 14px, 20px);
+    color: $text;
+    @include fonts(400, 15px, 20px);
     @include breakpoint-mf("md") {
       @include fonts(400, 16px, 20px);
     }

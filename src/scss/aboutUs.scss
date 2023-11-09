@@ -1,297 +1,42 @@
-// .section-about {
-
-//   // .section__about-wrapper
-
-//   &__wrapper {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: repeat(2, 1fr);
-//     gap: 40px;
-//   }
-
-//   // .section__about-block
-
-//   &__block {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     gap: 40px;
-
-//     @include breakpoint-mf("md") {
-//       grid-template-columns: repeat(2, 1fr);
-//       grid-template-rows: 1fr;
-//       justify-items: center;
-
-//       &:nth-child(1) {
-//         grid-area: 1 / 1 / 2 / 2;
-//       }
-//       &:nth-child(2) {
-//         grid-area: 2 / 1 / 3 / 2;
-//       }
-//     }
-//   }
-
-//   // .section__about-block-img
-
-//   &__img {
-//     display: flex;
-//     align-items: center;
-//     flex-direction: column;
-
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       border-radius: 40px;
-//       @include breakpoint-mf("xs") {
-//         width: 100%;
-//       }
-//     }
-//     &:nth-child(1) {
-//       @include breakpoint-mf("md") {
-//       }
-//     }
-//     &:nth-child(2) {
-//       grid-area: 1 / 1 / 2 / 2;
-//       @include breakpoint-mf("md") {
-//       }
-//     }
-//   }
-
-//   // .section__about-block-text
-
-//   &__text {
-//     @include flex(column, center, center);
-//     color: $secondary;
-//     @include fonts(400, 16px, 24px);
-//     @include breakpoint-mf("sm") {
-//       @include fonts(400, 18px, 25px);
-//     }
-//     @include breakpoint-mf("my") {
-//       @include fonts(400, 20px, 30px);
-//     }
-//     @include breakpoint-mf("xl") {
-//       @include fonts(400, 20px, 37px);
-//     }
-//     //for 2
-//     &:nth-child(1) {
-//       @include breakpoint-mf("md") {
-//         grid-area: 1 / 2 / 2 / 3;
-//       }
-//     }
-//     //for 1
-//     &:nth-child(2) {
-//       grid-area: 2 / 1 / 3 / 2;
-//       @include breakpoint-mf("md") {
-//         grid-area: 1 / 1 / 2 / 2;
-//       }
-//     }
-//   }
-// }
 .section-about {
-  // .section-about__block
-
-  &__block {
-  }
-
-  // .section-about__title
-
-  &__title {
-    font-family: "FixelText-Black";
-    @include fonts(900, 30px, 38px);
-    text-align: center;
-    // text-transform: uppercase;
-    padding-top: 30px;
-
-    @include breakpoint-mf("ma") {
-      padding-top: 50px;
-      @include fonts(900, 40px, 38px);
-    }
-    span {
-      background-color: #3b03f8;
-      background-image: linear-gradient(
-        45deg,
-        #ffab00,
-        #ffb623,
-        #3061ebfa,
-        #3b03f8
-      );
-
-      /* Set the background size and repeat properties. */
-      background-size: 100%;
-      background-repeat: repeat;
-
-      /* Use the text as a mask for the background. */
-      /* This will show the gradient as a text color rather than element bg. */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-    }
-  }
-
   // .section-about__article
 
   &__article {
-    padding-top: 30px;
-    p {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-    }
-    @include breakpoint-mf("my") {
-      padding-top: 70px;
-    }
+    @extend %article;
   }
 
   // .section-about__content
 
   &__content {
-    gap: 60px;
-    padding-top: 20px;
-    display: flex;
-    // align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-    @include breakpoint-mf("ma") {
-      flex-direction: row;
-      padding-top: 40px;
-    }
-  }
-   // .section-about__block
-
-  &__block {
-    gap: 30px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-    @include breakpoint-mf("ma") {
-      padding-top: 40px;
-    }
+    @extend %content;
   }
 
   // .section-about__text
 
   &__text {
-    @include flex(column, space-evenly, center);
-    // flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
+    @extend %text-content-pages;
+    @include flex(column, space-evenly, start);
+    
+    h3 {
+      @include fonts(600, 25px, 31px);
+      color: $white;
+      padding-bottom: 20px;
 
-    p {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
+      @include breakpoint-mf("ma") {
+        @include fonts(600, 35px, 31px);
       }
     }
+
     // .section-animals__text_list
 
     &_list {
-      padding-left: 45px;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      padding-top: 20px;
-    }
-
-    // .section-animals__text_list-item
-
-    &_list-item {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-
-      list-style-type: decimal;
-      position: relative;
-      counter-increment: li;
-      min-height: 2rem;
-      list-style: none;
-
-      &::before,
-      &::after {
-        position: absolute;
-        display: flex;
-        opacity: 0.35;
-      }
-
-      &::before {
-        content: counter(li);
-        left: -2.75rem;
-        top: 0;
-        height: calc(2rem - 1px);
-        width: calc(2rem - 1px);
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1px solid currentcolor;
-      }
+      @extend %decimal-list;
     }
   }
 
   // .section-about__img
 
   &__img {
-    min-width: 100%;
-    overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-    // object-position: left center; /* Центрируем изображение по вертикали и смещаем его влево */
-
-    @include breakpoint-mf("ma") {
-      min-width: 43%;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      min-height: 350px;
-      max-height: 350px;
-      min-width: 100%;
-      object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-      object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-
-      @include breakpoint-mf("ma") {
-        min-height: 385px;
-      }
-    }
-  }
-  // .section-about__subtitle
-
-  &__subtitle {
-    font-family: "FixelText-Black";
-    @include fonts(900, 30px, 38px);
-
-    span {
-      background-color: #3b03f8;
-      background-image: linear-gradient(
-        45deg,
-        #ffab00,
-        #ffb623,
-        #3061ebfa,
-        #3b03f8
-      );
-
-      /* Set the background size and repeat properties. */
-      background-size: 100%;
-      background-repeat: repeat;
-
-      /* Use the text as a mask for the background. */
-      /* This will show the gradient as a text color rather than element bg. */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-      //   @include breakpoint-mf("md") {
-      //     @include fonts(900, 50px, 38px);
-      //   }
-    }
+    @extend %img-text-pages;
   }
 }

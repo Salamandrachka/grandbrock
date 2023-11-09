@@ -19,7 +19,7 @@
     width: 100%;
     margin: 0 auto;
     @include flex(row, space-between, center);
-    color: #fff;
+    color: $white;
     height: 90px;
   }
 }
@@ -41,7 +41,7 @@
 
 .nav-menu {
   display: none;
- 
+
   @include breakpoint-mf("my") {
     display: flex;
     width: 350px;
@@ -57,7 +57,7 @@
   // .nav-menu__link
 
   &__link {
-    color: #fff;
+    color: $white;
     position: relative;
     z-index: 3;
     @include fonts(400, 19px, 25px);
@@ -94,7 +94,7 @@
       font-size: 17px;
       border-radius: 500px;
       overflow: hidden;
-      background: #3b03f8;
+      background: $blue;
       color: ghostwhite;
 
       span {
@@ -115,7 +115,7 @@
 
       &::before {
         content: "";
-        background: #ffab00;
+        background: $yellow;
         width: 120%;
         left: -10%;
         transform: skew(30deg);
@@ -189,7 +189,7 @@
   // .nav-dropdown__link
 
   &__link {
-    color: #fff;
+    color: $white;
     @include fonts(500, 18px, 22px);
   }
 }
@@ -204,12 +204,14 @@
 
   &__item {
     margin-bottom: 10px;
+    //
+    position: relative;
   }
 
   // .nav-dropdown-sub__link
 
   &__link {
-    color: $primaryLight;
+    color: $headerLink;  
     @include fonts(500, 17px, 32px);
   }
 }
@@ -259,7 +261,7 @@
   left: 50%;
   border-radius: 4px;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: $white;
   transition: all 0.3s ease-in-out;
 }
 
@@ -314,14 +316,14 @@
 
   &__item {
     @include fonts(400, 30px, 25px);
-    color: #fff;
+    color: $white;
   }
 
   // .nav-mobile__link
 
   &__link {
     @include fonts(400, 30px, 25px);
-    color: #fff;
+    color: $white;
 
     // &:nth-child(1) {
     //   gap: 8px;
@@ -357,6 +359,7 @@
     flex-direction: column;
     gap: 20px;
     padding-top: 10px;
+    padding-left: 24px;
 
     @include breakpoint-mf("xs") {
       display: grid;
@@ -375,7 +378,7 @@
   // .mobile-dropdown__link
 
   &__link {
-    color: #fff;
+    color: $white;
     @include fonts(500, 15px, 22px);
   }
 }
@@ -389,13 +392,13 @@
   // .mobile-dropdown-sub__item
 
   &__item {
-    // margin-bottom: 8px;
+    position: relative;
   }
 
   // .mobile-dropdown-sub__link
 
   &__link {
-    color: $primaryLight;
+    color: $headerLink;
     @include fonts(500, 16px, 32px);
   }
 }
@@ -414,13 +417,13 @@
   visibility: hidden;
   height: 0;
   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
-    400ms visibility ease-in-out;
+  400ms visibility ease-in-out;
 }
 
 ////////////////
 
 // /* Начальное состояние */
-.nav-menu__link .fa-angle-up,
+.nav-menu__link .fa-angle-up, 
 .poslygu__dropdwn .fa-angle-up {
   display: none;
 }
@@ -470,13 +473,11 @@
       font-family: inherit;
       font-size: inherit;
       position: relative;
-      letter-spacing: 0.05rem;
-      font-weight: 700;
-      font-size: 17px;
       border-radius: 500px;
       overflow: hidden;
-      background: #3b03f8;
+      background: $blue;
       color: ghostwhite;
+      @include fonts(400, 19px, 25px);
 
       span {
         position: relative;
@@ -496,7 +497,7 @@
 
       &::before {
         content: "";
-        background: #ffab00;
+        background: $yellow;
         width: 120%;
         left: -10%;
         transform: skew(30deg);
@@ -508,4 +509,32 @@
       }
     }
   }
+}
+
+
+
+.menu-arrow {
+  font-size: 22px;
+  font-weight: 900;
+  position: absolute;
+  left: -40px; /* или другое значение, чтобы скрыть стрелочку влево */
+  top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease; /* Добавляем плавное появление */
+}
+
+.nav-dropdown-sub__item:hover .menu-arrow {
+  left: -32px; /* или другое значение, чтобы показать стрелочку */
+  opacity: 1;
+  visibility: visible;
+}
+// .nav-dropdown-sub__item:hover .nav-dropdown-sub__link {
+//   padding-left: 35px; /* или другое значение, чтобы сдвинуть элемент вправо */
+// }
+
+.mobile-dropdown-sub__item:hover .menu-arrow {
+  left: -27px; /* или другое значение, чтобы показать стрелочку */
+  opacity: 1;
+  visibility: visible;
 }

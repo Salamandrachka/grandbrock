@@ -12,7 +12,7 @@
   height: 42px;
   border-radius: 50%;
   margin: 0 5px;
-  background-color: #fff;
+  background-color: $white;
   box-shadow: 0px 0px 4px #00000027;
   transition: 0.3s;
   @include breakpoint-mf("ma") {
@@ -214,7 +214,7 @@
   // .footer__service-list-item-link
 
   &__service-list-item-link {
-    color: $primaryLight;
+    color: $headerLink;
   }
 
   // .footer__service-sub-list
@@ -230,14 +230,14 @@
   }
 
   // .footer__service-sub-list-link
-
+  
   &__service-sub-list-link {
-    color: #fff;
+    color: $white;
   }
 
   // .footer__copyright
 
   &__copyright {
-    color: #fff;
+    color: $white;
   }
 }

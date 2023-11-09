@@ -67,13 +67,13 @@
     }
 
     span {
-      background-color: #3b03f8;
+      background-color: $blue;
       background-image: linear-gradient(
         45deg,
-        #ffab00,
+        $yellow,
         #ffb623,
         #3061ebfa,
-        #3b03f8
+        $blue
       );
 
       /* Set the background size and repeat properties. */
@@ -92,7 +92,7 @@
   &__subtitle {
     text-align: center;
     @include fonts(600, 17px, 25px);
-    color: rgb(202, 202, 202);
+    color: $text;
     @include breakpoint-mf("ma") {
       text-align: end;
     }
@@ -107,14 +107,7 @@
     margin: 0 auto;
     max-width: 600px;
     background: linear-gradient(#222222, #222222) padding-box,
-      linear-gradient(
-          145deg,
-          transparent 35%,
-          #3b03f8,
-          #1b38ac,
-          #5f4a04,
-          #ffab00
-        )
+      linear-gradient(145deg, transparent 35%, $blue, #1b38ac, #5f4a04, $yellow)
         border-box;
     border: 2px solid transparent;
     padding: 32px 30px;
@@ -151,7 +144,7 @@
     border: none;
     border-bottom: 1px solid #414141;
     background: transparent;
-    color: rgb(202, 202, 202);
+    color: $text;
     color-scheme: dark;
     padding-bottom: 5px;
     @include fonts(400, 16px, 25px);
@@ -179,8 +172,8 @@
     border-radius: 6px;
 
     &:hover {
-      background-color: #fff;
-      border-color: #fff;
+      background-color: $white;
+      border-color: $white;
     }
   }
 }

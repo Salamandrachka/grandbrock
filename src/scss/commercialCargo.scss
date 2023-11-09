@@ -1,1 +1,40 @@
-/*Styles*/
+.section-commercialCargo {
+  // .section-commercialCargos__title
+
+  &__article {
+    @extend %article;
+  }
+
+  // .section-parcels__content
+
+  &__content {
+    @extend %content;
+  }
+
+  // .section-commercialCargos__text
+
+  &__text {
+    @include flex(column, space-evenly, center);
+    flex: 1; /* Расширяем .section-parcels__text на всю высоту .section-parcels__content */
+
+    p {
+      @include fonts(400, 16px, 31px);
+      color: $text;
+
+      @include breakpoint-mf("xs") {
+        @include fonts(400, 17px, 31px);
+      }
+    }
+    // .section-parcels__text_list
+
+    &_list {
+      @extend %decimal-list;
+    }
+  }
+
+  // .section-commercialCargos__img
+
+  &__img {
+    @extend %img-text-pages;
+  }
+}

@@ -2,6 +2,7 @@
 @import "./constants.scss";
 @import "./mixins.scss";
 @import "./global.scss";
+@import "./extensions.scss";
 
 /*COMPONENTS*/
 @import "./header.scss";
@@ -22,6 +23,9 @@
 
 /*PARCELS PAGE*/
 @import "./parcels.scss";
+
+/*PERSONAL STUFF*/
+@import "./personalStuff.scss";
 
 /*PAYMENTS PAGE*/
 @import "./payments.scss";

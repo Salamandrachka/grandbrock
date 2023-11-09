@@ -1,210 +1,27 @@
-.section-transportation {
-  // .section-transportation__wrapper
+.section-internationalTransportation {
+  // .section-internationalTransportation __block
 
-  &__header {
-    img {
-      width: 100%;
-      height: 80vh;
-    }
-  }
-
-  &__wrapper {
-  }
-
-  // .section-transportation__title-wrapepr
-
-  &__title-wrapper {
-    // grid-area: 1 / 1 / 2 / 3;
-
+  &__block {
     @include flex(column, center, center);
   }
 
-  // .section-transportation__title
-
-  &__title {
-    @include fonts(500, 5vw, 38px);
-    //3.6 for xl
-    @include flex(row, center, center);
-    color: #d0cdcd;
-    @include breakpoint-mf("xs") {
-      @include fonts(500, 4.5vw, 38px);
-    }
-    @include breakpoint-mf("my") {
-      @include fonts(500, 4vw, 38px);
-    }
-    @include breakpoint-mf("xl") {
-      @include fonts(500, 3.6vw, 38px);
-    }
-    @include breakpoint-mf("xll") {
-      @include fonts(500, 42px, 38px);
-    }
-  }
-  // .section-transportation__links
-
-  &__links {
-  }
-
-  // .section-transportation__list
-
-  &__list {
-  }
-
-  // .section-transportation__item
-
-  &__item {
-    // position: relative;
-    counter-increment: li;
-    min-height: 2rem;
-    padding-top: 0.5rem;
-    list-style: none;
-
-    &::before,
-    &::after {
-      position: absolute;
-      display: flex;
-      //   opacity: 0.35;
-    }
-
-    &::before {
-      content: counter(li);
-      //   left: -2.75rem;
-      //   top: 0;
-      height: calc(2rem - 1px);
-      width: calc(2rem - 1px);
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-
-      border: 1px solid #ffab00;
-      color: #fff;
-    }
-    @include breakpoint-mf("md") {
-      padding-top: 2.5rem;
-    }
-  }
-
-  // .section-transportation__block
-
-  &__block {
-    padding: 80px 0;
-
-    // background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-  }
-  // .section-transportation__subtitle
-
-  &__subtitle {
-    // font-family: "Rubik", sans-serif;
-     font-family: 'FixelText-Black'; 
-    @include fonts(900, 30px, 38px);
-    span {
-      background-color: #3b03f8;
-      background-image: linear-gradient(
-        45deg,
-        #ffab00,
-        #ffb623,
-        #3061ebfa,
-        #3b03f8
-      );
-
-      /* Set the background size and repeat properties. */
-      background-size: 100%;
-      background-repeat: repeat;
-
-      /* Use the text as a mask for the background. */
-      /* This will show the gradient as a text color rather than element bg. */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-
-    }
-
-  }
-
-
-  // .section-transportation__article
+  // .section-internationalTransportation __article
 
   &__content {
-    gap: 60px;
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    @include breakpoint-mf("ma") {
-      flex-direction: row;
-      padding-top: 40px;
-    }
+    @extend %content;
   }
 
-  // .section-transportation__img
+  // .section-internationalTransportation __img
 
   &__text {
-
-    @include flex(column, space-evenly, center);
-
-    p {
-      @include fonts(400, 16px, 31px);
-      color: rgba(202, 202, 202);
-
-      @include breakpoint-mf("xs") {
-        @include fonts(400, 17px, 31px);
-      }
-    }
+    @extend %text-content-pages;
 
     &_list {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      padding-top: 20px;
-    }
-
-    &_list-item {
-      span {
-        color: #fff;
-      }
-      &::before {
-        content: "\25b6"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-        color: #3b03f8; /* Change the color */
-        font-weight: bold; /* If you want it to be bold */
-        display: inline-block; /* Needed to add space between the bullet and the text */
-        width: 1em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
-      }
+      @extend %non-decimal-list;
     }
   }
 
   &__img {
-    min-width: 100%;
-    overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
-    // object-position: left center; /* Центрируем изображение по вертикали и смещаем его влево */
-
-    @include breakpoint-mf("ma") {
-      // min-width: 350px;
-      min-width: 43%;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 30px;
-      min-height: 350px;
-      max-height: 350px;
-      min-width: 100%;
-      object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
-      object-position: right; /* Позиционируем изображение на правой стороне контейнера */
-
-      @include breakpoint-mf("ma") {
-        min-height: 385px;
-      }
-    }
+    @extend %img-text-pages;
   }
 }
-// .reveal-text {
-// }
-
-// #aviaperevezennia {
-//         object-position: left; /* Позиционируем изображение на правой стороне контейнера */
-// }

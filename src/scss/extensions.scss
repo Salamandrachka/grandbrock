@@ -1,0 +1,119 @@
+%content {
+  gap: 30px;
+  height: 100%;
+  @include flex(column, flex-start, flex-start);
+
+  @include breakpoint-mf("ma") {
+    @include flex(row, flex-start, center);
+    gap: 60px;
+  }
+}
+%article {
+  p {
+    padding-bottom: 20px;
+    @include fonts(400, 16px, 31px);
+    color: $text;
+
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 31px);
+    }
+  }
+}
+%decimal-list {
+  padding-left: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  li {
+    @include fonts(400, 16px, 31px);
+    color: $text;
+
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 31px);
+    }
+    list-style-type: decimal;
+    color: $text;
+    position: relative;
+    counter-increment: li;
+    min-height: 2rem;
+    list-style: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: flex;
+      opacity: 0.35;
+    }
+
+    &::before {
+      content: counter(li);
+      left: -2.75rem;
+      top: 0;
+      height: calc(2rem - 1px);
+      width: calc(2rem - 1px);
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid currentcolor;
+    }
+  }
+}
+%non-decimal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 15px;
+  li {
+    @include fonts(400, 16px, 31px);
+    color: $text;
+
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 31px);
+    }
+    &::before {
+      //   content: "\25b6"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      content: "\27A4";
+      color: $blue; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1.1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+  }
+}
+%img-text-pages {
+  min-width: 100%;
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+  // object-position: left center; /* Центрируем изображение по вертикали и смещаем его влево */
+
+  @include breakpoint-mf("ma") {
+    // min-width: 350px;
+    min-width: 43%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    min-height: 350px;
+    max-height: 350px;
+    min-width: 100%;
+    object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю площадь контейнера без искажений */
+    object-position: right; /* Позиционируем изображение на правой стороне контейнера */
+
+    @include breakpoint-mf("ma") {
+      min-height: 385px;
+    }
+  }
+}
+%text-content-pages {
+  @include flex(column, space-evenly, center);
+  p {
+    @include fonts(400, 16px, 31px);
+    color: $text;
+
+    @include breakpoint-mf("xs") {
+      @include fonts(400, 17px, 34px);
+    }
+  }
+}

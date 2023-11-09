@@ -1,1 +1,35 @@
-/*not done*/
+.section-personalStuff {
+  // .section-personalStuff__list
+
+  &__list {
+    @extend %non-decimal-list;
+  }
+
+  // .section-personalStuff__article
+
+  &__article {
+    @extend %article;
+  }
+
+  // .section-personalStuff__content
+
+  &__content {
+    @extend %content;
+  }
+
+  // .section-personalStuff__text
+
+  &__text {
+    // .section-personalStuff__text_list
+
+    &_list {
+      @extend %decimal-list;
+    }
+  }
+
+  // .section-personalStuff__img
+
+  &__img {
+    @extend %img-text-pages;
+  }
+}
