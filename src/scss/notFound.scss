@@ -1,0 +1,46 @@
+.section-notFound {
+  // .section-notFound__title
+
+  height: 100vh;
+  @include flex(column, center, center);
+  gap: 60px;
+
+  &__error {
+    font-family: "FixelText-Black";
+    @include fonts(400, 160px, 31px);
+    color: $text;
+    @include breakpoint-mf("sa") {
+      @include fonts(400, 260px, 31px);
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(400, 360px, 31px);
+    }
+  }
+  &__title {
+    text-align: center;
+    font-family: "FixelText-Black";
+    @include fonts(400, 20px, 31px);
+    color: $text;
+    @include breakpoint-mf("sa") {
+      @include fonts(400, 30px, 31px);
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(400, 40px, 31px);
+    }
+  }
+
+  // .section-notFound__subtitle
+
+  &__subtitle {
+    font-family: "FixelText-Black";
+    @include fonts(400, 15px, 31px);
+    color: $text;
+    text-decoration: underline;
+    @include breakpoint-mf("sa") {
+      @include fonts(400, 20px, 31px);
+    }
+    @include breakpoint-mf("my") {
+      @include fonts(400, 25px, 31px);
+    }
+  }
+}

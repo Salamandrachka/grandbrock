@@ -1,5 +1,4 @@
 <section class="section-hamster">
-
   <div class="section-hamster__wrapper">
     <div class="content__wrapper">
       <div class="content__text-wrapper">
@@ -8,15 +7,15 @@
           <h1 id="ta">та</h1>
           <h1>експедитор</h1>
         </div>
-                <!-- <div class="content__text">
+        <!-- <div class="content__text">
           <h1>та&nbsp;експедитор</h1>
         </div> -->
         <!-- <div class="content__text">
           <h3>Працюємо&nbsp;на&nbsp;таких&nbsp;митницях</h3>
         </div> -->
-        <div class="content__text">
+        <!-- <div class="content__text">
           <h3>Розмитнемо&nbsp;навіть&nbsp;хом'яка</h3>
-        </div>
+        </div> -->
       </div>
       <div class="content__img">
         <img src="@img/map-small.png" alt="" />
@@ -25,17 +24,19 @@
     </div>
   </div>
 
-<!-- <div class="section-hamster__header">
+  <!-- <div class="section-hamster__header">
   <h1>Митний&nbsp;брокер&nbsp;та&nbsp;експедитор</h1>
    <img src="@img/map.png" alt="" />
 </div> -->
 
-<!-- <div class="bubble bubble-bottom-left" >Розмитнемо навіть хом'яка</div> -->
+  <!-- <div class="bubble bubble-bottom-left" >Розмитнемо навіть хом'яка</div> -->
   <div class="hamster__wrapper">
     <div
       aria-label="Orange and tan hamster running in a metal wheel"
       role="img"
       class="wheel-and-hamster"
+      onmouseover="showText(event)"
+      onmouseout="hideText()"
     >
       <div class="wheel"></div>
       <div class="hamster">
@@ -52,9 +53,11 @@
           <div class="hamster__tail"></div>
         </div>
       </div>
+
+      <div class="bubble bubble-bottom-left hover-text" contenteditable="false">
+        Розмитнемо&nbsp;навіть&nbsp;хом'яка
+      </div>
       <div class="spoke"></div>
     </div>
   </div>
 </section>
-
-

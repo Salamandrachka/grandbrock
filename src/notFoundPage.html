@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animals</title>
+    <title>404</title>
     <link rel="stylesheet" href="./dist/css/style.min.css" />
     <link
       rel="stylesheet"
@@ -16,16 +16,13 @@
   </head>
   <body class="body">
     <div class="overflow">
-      @@include('html/header.html', {})
-
-      <main>
-        @@include('html/animals.html', {}) @@include('html/genericForm.html',
-        {})@@include('html/scrollBtn.html', {}) @@include('html/fixedBtn.html', {})
-      </main>
-
-      @@include('html/footer.html', {})
+    @@include('html/header.html', {})
+    <main>
+      @@include('html/notFound.html', {}) 
+      @@include('html/fixedBtn.html', {})
+    </main>
+    @@include('html/footer.html', {})
     </div>
-
     <script src="./dist/js/app.min.js"></script>
   </body>
 </html>

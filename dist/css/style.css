@@ -136,7 +136,12 @@ a {
 }
 
 button {
-  border: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 input, textarea {
@@ -145,6 +150,11 @@ input, textarea {
 }
 
 /* ===== Scrollbar CSS ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
+}
+
 @font-face {
   font-family: "Undounded-Regular"; /* Имя шрифта */
   src: url(../../dist/files/Unbounded-Regular.woff2);
@@ -388,26 +398,26 @@ b {
   border: 1px solid currentcolor;
 }
 
-.section-transportMethods__list, .section-internationalTransportation__text_list, .section-personalStuff__list, .section-parcels__list {
+.section-transportMethods__list, .section-internationalTransportation__text_list, .section-parcels__list, .section-about__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 15px;
 }
-.section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-personalStuff__list li, .section-parcels__list li {
+.section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-parcels__list li, .section-about__list li {
   font-weight: 400;
   font-size: 16px;
   line-height: 31px;
   color: #cacaca;
 }
 @media (min-width: 568px) {
-  .section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-personalStuff__list li, .section-parcels__list li {
+  .section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-parcels__list li, .section-about__list li {
     font-weight: 400;
     font-size: 17px;
     line-height: 31px;
   }
 }
-.section-transportMethods__list li::before, .section-internationalTransportation__text_list li::before, .section-personalStuff__list li::before, .section-parcels__list li::before {
+.section-transportMethods__list li::before, .section-internationalTransportation__text_list li::before, .section-parcels__list li::before, .section-about__list li::before {
   content: "➤";
   color: #3b03f8; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
@@ -511,20 +521,18 @@ b {
 @media (min-width: 1024px) {
   .nav-menu {
     display: flex;
-    width: 350px;
-    justify-content: space-around;
+    gap: 20px;
   }
 }
 .nav-menu__item {
   height: 20px;
-  width: 85px;
 }
 .nav-menu__link {
   color: #fff;
   position: relative;
   z-index: 3;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 25px;
 }
 .nav-menu__link:nth-child(1) {
@@ -546,6 +554,9 @@ b {
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 17px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
   border-radius: 500px;
   overflow: hidden;
   background: #3b03f8;
@@ -868,8 +879,9 @@ b {
   overflow: hidden;
   background: #3b03f8;
   color: ghostwhite;
-  font-weight: 400;
-  font-size: 19px;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 20px;
   line-height: 25px;
 }
 .nav-mobile__button_consult span {
@@ -1405,10 +1417,9 @@ b {
 }
 
 .section-service__wrapper {
-  max-width: 1300px;
   display: grid;
   justify-items: center;
-  grid-column-gap: 2em;
+  grid-column-gap: 1em;
   grid-row-gap: 1em;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -1437,7 +1448,6 @@ b {
   flex-direction: column;
   justify-content: center;
   border-radius: 40px;
-  width: 100%;
   padding: 0.5em;
 }
 @media (min-width: 568px) {
@@ -1452,6 +1462,7 @@ b {
 }
 @media (min-width: 840px) {
   .section-service__block {
+    width: 100%;
     height: 300px;
   }
 }
@@ -2122,6 +2133,65 @@ b {
 .wheel-and-hamster:hover .hamster__tail,
 .wheel-and-hamster:hover .hamster {
   animation-play-state: paused;
+}
+
+.hover-text {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.wheel-and-hamster:hover .hover-text {
+  opacity: 1;
+}
+
+.bubble {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 25px;
+  width: 168px;
+  background: #fff;
+  border-radius: 40px;
+  padding: 6px;
+  text-align: center;
+  color: #000;
+}
+@media (min-width: 1024px) {
+  .bubble {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    width: 250px;
+    border-radius: 40px;
+    padding: 22px;
+  }
+}
+
+.bubble-bottom-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 14px solid #fff;
+  border-right: 12px solid transparent;
+  border-top: 17px solid #fff;
+  border-bottom: 20px solid transparent;
+  right: 30px;
+  bottom: -24px;
+}
+@media (min-width: 1024px) {
+  .bubble-bottom-left:before {
+    border-left: 24px solid #fff;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+  }
 }
 
 .btn-phone__circle {
@@ -3335,4 +3405,96 @@ svg:hover + .btn-phone__number {
     font-size: 17px;
     line-height: 31px;
   }
+}
+
+/*Not Found PAGE*/
+.section-notFound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.section-notFound__error {
+  font-family: "FixelText-Black";
+  font-weight: 400;
+  font-size: 160px;
+  line-height: 31px;
+  color: #cacaca;
+}
+@media (min-width: 700px) {
+  .section-notFound__error {
+    font-weight: 400;
+    font-size: 260px;
+    line-height: 31px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-notFound__error {
+    font-weight: 400;
+    font-size: 360px;
+    line-height: 31px;
+  }
+}
+.section-notFound__title {
+  text-align: center;
+  font-family: "FixelText-Black";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  color: #cacaca;
+}
+@media (min-width: 700px) {
+  .section-notFound__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 31px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-notFound__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 31px;
+  }
+}
+.section-notFound__subtitle {
+  font-family: "FixelText-Black";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 31px;
+  color: #cacaca;
+  text-decoration: underline;
+}
+@media (min-width: 700px) {
+  .section-notFound__subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-notFound__subtitle {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+  }
+}
+
+/*scroll*/
+.scroll-up {
+  color: #fff;
+}
+.scroll-up span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  padding-right: 10px;
+}
+
+#scroll-up-btn::before {
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid currentcolor;
 }

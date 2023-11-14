@@ -1,6 +1,9 @@
 .section-about {
+  // .section-about__list
+  &__list {
+    @extend %non-decimal-list;
+  }
   // .section-about__article
-
   &__article {
     @extend %article;
   }
@@ -16,7 +19,7 @@
   &__text {
     @extend %text-content-pages;
     @include flex(column, space-evenly, start);
-    
+
     h3 {
       @include fonts(600, 25px, 31px);
       color: $white;

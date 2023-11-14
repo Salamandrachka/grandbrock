@@ -210,7 +210,7 @@
           <a href="./aboutUsPage.html" class="nav-menu__link">Про нас</a>
         </li>
         <li class="nav-menu__item">
-          <a href="#" class="nav-menu__link">Calculator</a>
+          <a href="./notFoundPage.html" class="nav-menu__link">Митний&nbsp;калькулятор</a>
         </li>
       </ul>
     </nav>
@@ -409,7 +409,7 @@
         <a class="nav-mobile__link" href="./aboutUsPage.html">Про нас</a>
       </li>
       <li class="nav-mobile__item">
-        <a class="nav-mobile__link" href="#">Услуги</a>
+        <a class="nav-mobile__link" href="./notFoundPage.html">Митний&nbsp;калькулятор</a>
       </li>
     </ul>
 
@@ -423,7 +423,6 @@
 
     <main>
       <section class="section-hamster">
-
   <div class="section-hamster__wrapper">
     <div class="content__wrapper">
       <div class="content__text-wrapper">
@@ -432,15 +431,15 @@
           <h1 id="ta">та</h1>
           <h1>експедитор</h1>
         </div>
-                <!-- <div class="content__text">
+        <!-- <div class="content__text">
           <h1>та&nbsp;експедитор</h1>
         </div> -->
         <!-- <div class="content__text">
           <h3>Працюємо&nbsp;на&nbsp;таких&nbsp;митницях</h3>
         </div> -->
-        <div class="content__text">
+        <!-- <div class="content__text">
           <h3>Розмитнемо&nbsp;навіть&nbsp;хом'яка</h3>
-        </div>
+        </div> -->
       </div>
       <div class="content__img">
         <img src="./dist/img/map-small.png" alt="" />
@@ -449,17 +448,19 @@
     </div>
   </div>
 
-<!-- <div class="section-hamster__header">
+  <!-- <div class="section-hamster__header">
   <h1>Митний&nbsp;брокер&nbsp;та&nbsp;експедитор</h1>
    <img src="./dist/img/map.png" alt="" />
 </div> -->
 
-<!-- <div class="bubble bubble-bottom-left" >Розмитнемо навіть хом'яка</div> -->
+  <!-- <div class="bubble bubble-bottom-left" >Розмитнемо навіть хом'яка</div> -->
   <div class="hamster__wrapper">
     <div
       aria-label="Orange and tan hamster running in a metal wheel"
       role="img"
       class="wheel-and-hamster"
+      onmouseover="showText(event)"
+      onmouseout="hideText()"
     >
       <div class="wheel"></div>
       <div class="hamster">
@@ -476,12 +477,14 @@
           <div class="hamster__tail"></div>
         </div>
       </div>
+
+      <div class="bubble bubble-bottom-left hover-text" contenteditable="false">
+        Розмитнемо&nbsp;навіть&nbsp;хом'яка
+      </div>
       <div class="spoke"></div>
     </div>
   </div>
 </section>
-
-
  
       <section class="section-service container">
   <div class="section-service__title main-page-title">
@@ -491,10 +494,9 @@
     
     <div class="section-service__block reveal-service">
       <a href="./commercialCargoPage.html">
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
-            <img src="./dist/img/komerzini-vantagi.png" alt="icon1" />
+         <img src="./dist/img/container-truck.png" alt="icon1" />
           </div>
           <p class="section-service__text">
             Митне оформлення комерційних вантажів
@@ -505,7 +507,6 @@
 
     <div class="section-service__block reveal-service">
       <a href="./transportationMethodsPage.html">
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
              <img src="./dist/img/car.png" alt="icon1" />
@@ -519,7 +520,6 @@
 
     <div class="section-service__block reveal-service">
       <a href="./internationalTransportationPage.html" >
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
            
@@ -532,7 +532,6 @@
 
     <div class="section-service__block reveal-service">
       <a href="./personalStuffPage.html">
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
             <img src="./dist/img/project.png" alt="icon1" />
@@ -546,7 +545,6 @@
 
     <div class="section-service__block reveal-service">
       <a href="./diplomaticCargoPage.html">
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
            <img src="./dist/img/parcels-service.png" alt="icon1" />
@@ -561,7 +559,6 @@
 
     <div class="section-service__block reveal-service">
       <a href="./parcelsPage.html">
-        <!-- <div class="section-service__block reveal-service"> -->
         <div class="section-service__sub-block">
           <div class="section-service__img">
              <img src="./dist/img/legal.png" alt="icon1" />
@@ -577,7 +574,7 @@
 
       
       
-      <section class="section-whywe container">
+      <section class="section-whywe container ">
   <div class="section-whywe__title main-page-title">
     <h1>Чому ми?</h1>
   </div>
@@ -594,12 +591,11 @@
       <div class="section-whywe__img">
         <img src="./dist/img/businessman.png" alt="icon1" />
       </div>
-      <p class="section-whywe__text">Досвід роботи з 2014</p>
+      <p class="section-whywe__text">Досвід роботи з 2014p.</p>
     </div>
 
     <div class="section-whywe__block">
       <div class="section-whywe__img">
-        <!-- <img src="./dist/img/handshake.png" alt="icon1" /> -->
         <img src="./dist/img/dollar.png" alt="icon1" />
       </div>
       <p class="section-whywe__text">Максимально вигідні тарифи</p>
@@ -800,6 +796,9 @@
   </div>
 </section>
 
+      <div class="scroll-up container wrapper">
+    <button><span>Повернутися наверх</span> <i class="fa fa-angle-up" id="scroll-up-btn"></i> </button>
+</div>
       <div class="btn-phone__wrapper">
   <div type="button" class="btn-phone__circle">
     <svg
