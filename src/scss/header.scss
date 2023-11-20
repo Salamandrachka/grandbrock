@@ -5,6 +5,13 @@
 .header {
   // .header__wrapper
 
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // z-index: 4;
+  // height: 98%;
+  // width: 95%;
+
   padding-right: 10px;
   padding-left: 10px;
   margin-bottom: 18px;
@@ -13,7 +20,12 @@
     padding-right: 15px;
     padding-left: 15px;
   }
-
+  // @include breakpoint-mf("my") {
+  //   width: 98%;
+  // }
+  // @include breakpoint-mf("xxl") {
+  //   width: 100%;
+  // }
   &__wrapper {
     max-width: 1400px;
     width: 100%;
@@ -21,6 +33,7 @@
     @include flex(row, space-between, center);
     color: $white;
     height: 90px;
+    // backdrop-filter: blur(20px);
   }
 }
 
@@ -210,7 +223,7 @@
   // .nav-dropdown-sub__link
 
   &__link {
-    color: $headerLink;  
+    color: $headerLink;
     @include fonts(500, 17px, 32px);
   }
 }
@@ -416,13 +429,13 @@
   visibility: hidden;
   height: 0;
   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
-  400ms visibility ease-in-out;
+    400ms visibility ease-in-out;
 }
 
 ////////////////
 
 // /* Начальное состояние */
-.nav-menu__link .fa-angle-up, 
+.nav-menu__link .fa-angle-up,
 .poslygu__dropdwn .fa-angle-up {
   display: none;
 }
@@ -510,8 +523,6 @@
     }
   }
 }
-
-
 
 .menu-arrow {
   font-size: 22px;
