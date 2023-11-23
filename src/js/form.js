@@ -1,46 +1,85 @@
-// // document.addEventListener('DOMContentLoaded', function () {
-// //     const form = document.querySelector(".form");
 
-// //     form.addEventListener('submit', formSend);
+/*TEST */
+// $(document).ready(function () {
+//   $("#form").validate();
+//   $(".form__btn").on("click", function () {
+//     console.log($("#form").valid());
+//   });
+// });
+/**/
 
-// //     async function formSend(e) {
-// //         e.preventDefault();
+$(document).ready(function () {
 
-// //         let error = formValidate(form);
-// //     }
+$(".phone").inputmask("+(999) 999-9999");
 
-// //     function formValidate(form) {
-// //         let error= 0;
-// //         let formReq = document.querySelector('.req')
+  $(".form-validate").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+      },
+      phone: {
+        number: true,
+        minlength: 10,
+        maxlength: 10,
+      },
+      email: {
+        email: true,
+        required: true,
+        minlength: 3,
+      },
+      message: {
+        required: true,
+        minlength: 3,
+      },
+      message2: {
+        required: true,
+        minlength: 3,
+      },
+      message3: {
+        required: true,
+        minlength: 3,
+      },
+      date: {
+        required: true,
+      },
+    },
 
-// //         for (let index = 0; index < formReq.clientHeight; index++) {
-// //             const input = formReq[index];
-// //             formRemoveError(input);
+    messages: {
+      name: {
+        required: "Будьласка введіть своє ім'я",
+        minlength: "Мінімальна довжина 2 букви",
+      },
+      phone: "Будьласка введіть свій номер телефону",
+      email: {
+        required: "Будьласка введіть свою пошту",
+        email: "Будьласка введіть валідну пошту",
+        minlength: "Мінімальна довжина 3 символи",
+      },
+      message: {
+        required: "Будьласка опишіть свою ситуацію",
+        minlength: "Мінімальна довжина 3 символи",
+      },
+      message2: {
+        required: "Будьласка опишіть свою ситуацію",
+        minlength: "Мінімальна довжина 3 символи",
+      },
+      message3: {
+        required: "Будьласка опишіть свою ситуацію",
+        minlength: "Мінімальна довжина 3 символи",
+      },
+      date: {
+        required: "Будьласка вкажіть дату завантаження",
+      },
+    },
 
-// //             if (input.classList.contains('email')) {
-// //                 if (emailTest(input)) {
-// //                     formAddError(input);
-// //                     error ++;
-// //                 }
-// //             }
-// //         }
-// //     }
+    submitHandler: function (form) {
+      form.submit();
+    },
+  });
 
-// // function formAddError(input) {
-// //     input.parentElement.classList.add('_error');
-// //     input.classList.add("_error");
-// // }
-// // function formRemoveError(input) {
-// //   input.parentElement.classList.remove("_error");
-// //   input.classList.remove("_error");
-// // }
-
-// // //////TEST EMAIL
-
-// // function emailTest(input) {
-// //     return !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/.test(input.value);
-// // }
-
-// // });
-
-
+//   $("#form").validate();
+//   $(".form__btn").on("click", function () {
+//     console.log($("#form").valid());
+//   });
+});

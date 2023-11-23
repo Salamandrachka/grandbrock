@@ -1,44 +1,56 @@
 <section class="section-contacts container">
   <div class="section-contacts__wrapper">
     <div class="section-contacts__block">
-      <div class="form__wrapper">
-        <form class="form" action="#">
-          <h1 class="form__title">Contact us</h1>
-          <div class="form__block">
-            <label class="form__label">Ім'я</label>
-           <input class="form__input" type="text" name="" required="" id="username" />
-          </div>
-          <div class="form__block">
-            <label class="form__label">Номер телефону</label>
-           <input class="form__input" type="phone" name="" required="" id="phone" />
-          </div>
+      <div class="contact-form__wrapper">
+        <form class="contact-form form-validate" action="#" >
+          <h1 class="contact-form__title">Залишити Заявку</h1>
 
-          <!-- <div class="form__block">
-           < <input class="form__input" type="email" name="" required="" id="email" />
-            <label class="form__label">Пошта</label>
-          </div> -->
-
-          <div class="form__block">
-            <label class="form__label">Пошта</label>
-           <input class="form__input" type="email" name="" required="" id="email" />
-            
+          <div class="contact-form__block">
+            <label for="name" class="contact-form__label">Ім'я</label>
+            <input
+              class="contact-form__input form-control"
+              name="name"
+              required
+              
+            />
           </div>
 
-          <div class="form__block">
-            <label class="form__label">Короткий опис</label>
+          <div class="contact-form__block">
+            <label class="contact-form__label">Номер телефону</label>
+            <input
+              class="contact-form__input form-control phone"
+              type="phone"
+              name="phone"
+              required
+              
+            />
+          </div>
+
+          <div class="contact-form__block">
+            <label class="contact-form__label">Пошта</label>
+            <input
+              class="contact-form__input form-control"
+              type="email"
+              name="email"
+              required
+              
+            />
+          </div>
+
+          <div class="contact-form__block">
+            <label class="contact-form__label">Короткий опис</label>
             <textarea
-              class="form__input"
+              class="contact-form__input form-control"
               type="text"
-              name=""
+              name="message"
               id=""
               cols="40"
               rows="4"
-              required=""
+              required
             ></textarea>
-            
           </div>
 
-          <button class="form__btn" type="submit">Відправити</button>
+          <button class="contact-form__btn" type="submit">Відправити</button>
         </form>
       </div>
     </div>
@@ -47,7 +59,9 @@
       <div class="info-social__wrapper">
         <h1 class="info-social__title">
           <span class="info-social__span"
-            >Отримайте<span id="free-consult_yellow">&nbsp;БЕЗКОШТОВНУ</span></span
+            >Отримайте<span id="free-consult_yellow"
+              >&nbsp;БЕЗКОШТОВНУ</span
+            ></span
           ><br /><span class="info-social__span flex-end"
             >консультацію&nbsp; прямо зараз!</span
           >

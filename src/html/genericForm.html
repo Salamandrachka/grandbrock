@@ -2,14 +2,14 @@
   <div class="section-genericForm__wrapper ">
     <div class="section-genericForm__block">
       <div class="genericForm__container">
-        <form class="genericForm__form" action="#">
+        <form class="genericForm__form form-validate" action="#">
           <div class="genericForm__block">
             <label class="genericForm__label"
               >Опис вантажу</label
             >
             <textarea
               class="genericForm__input"
-              name=""
+              name="message"
               id=""
               rows="2"
               required
@@ -21,28 +21,25 @@
             <input
               class="genericForm__input"
               type="text"
-              name=""
+              name="name"
               required
               id="username"
             />
           </div>
           <div class="genericForm__block">
             <label class="genericForm__label">Пошта</label>
-            <input class="genericForm__input" type="email" name="" id="email" />
+            <input class="genericForm__input" type="email" name="email"/>
           </div>
           <div class="genericForm__block">
-            <label class="genericForm__label">Номер телефону</label>
+            <label class="genericForm__label ">Номер телефону</label>
             <input
-              class="genericForm__input"
+              class="genericForm__input phone"
               type="phone"
-              name=""
+              nname="phone"
               required
-              id="phone"
             />
           </div>
-          <!-- <div class="genericForm__btn"> -->
           <button class="genericForm__btn" type="submit">Відправити</button>
-          <!-- </div> -->
         </form>
       </div>
     </div>
