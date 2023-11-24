@@ -1,7 +1,3 @@
-// import smoothscroll from "smoothscroll-polyfill";
-
-// // kick off the polyfill!
-// smoothscroll.polyfill();
 // if no Webkit browser
 (function(){
   let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
