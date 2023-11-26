@@ -174,7 +174,8 @@
 }
 
 .cargoForm__input:focus {
-  border-color: #bf8c25;
+  // border-color: #FFCC00;
+    border-color: $yellow;
 }
 
 #date-input {

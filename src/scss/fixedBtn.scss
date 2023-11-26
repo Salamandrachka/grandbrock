@@ -1,8 +1,458 @@
+// .btn-phone__circle {
+//   background: #64bcff;
+//   border: 2px solid #64bcff;
+//   border-radius: 50%;
+//   box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3);
+//   height: 68px;
+//   text-align: center;
+//   width: 68px;
+//   position: fixed;
+//   bottom: 3%;
+//   right: 15px;
+//   z-index: 1000;
+//   transition: 0.3s;
+//   -webkit-animation: email-an linear 1s infinite;
+//   animation: email-an linear 1s infinite;
+//   cursor: pointer;
+// }
+
+// .btn-phone__circle:hover svg {
+//   color: #38a3fd;
+//   font-size: 40px;
+//   transition: 0.3s;
+// }
+
+// .btn-phone__circle svg {
+//   color: $white;
+//   font-size: 29px;
+//   transition: 0.3s;
+//   line-height: 66px;
+//   height: 65px;
+//   width: 27px;
+// }
+
+// .btn-phone__circle svg {
+//   -webkit-animation: opsimple 3s infinite;
+//   animation: opsimple 3s infinite;
+// }
+
+// @-webkit-keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
+//   }
+// }
+
+// @keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
+//       0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
+//   }
+// }
+
+// @keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @-webkit-keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .btn-phone {
+//   // .btn-phone__wrapper
+
+//   &__wrapper {
+//   }
+
+//   // .btn-phone__circle
+
+//   &__circle {
+//   }
+
+//   // .btn-phone__number
+
+//   &__number {
+//     @include fonts(500, 17px, 22px);
+//     position: fixed;
+//     bottom: 4%;
+//     background-color: #64bcff;
+//     padding: 11px 13px;
+//     border-radius: 10px;
+//     right: 125px; /* Начальное положение */
+//     color: $white !important;
+//     z-index: 999;
+//     opacity: 0; /* Начальная прозрачность */
+//     transform: translateX(70%); /* Смещение за пределы экрана */
+//     transition: opacity 0.3s ease, transform 0.3s ease; /* Анимации */
+//   }
+// }
+
+// .btn-phone__circle:hover + .btn-phone__number {
+//   opacity: 1; /* Прозрачность становится 1 */
+//   transform: translateX(0); /* Возвращаем на место */
+// }
+
+// svg:hover + .btn-phone__number {
+//   opacity: 1; /* Прозрачность становится 1 */
+//   transform: translateX(0); /* Возвращаем на место */
+// }
+
+// *[x-apple-data-detectors],  /* iOS */
+//     .x-gmail-data-detectors,    /* Gmail */
+//     .x-gmail-data-detectors * {
+//   border-bottom: 0 !important;
+//   cursor: default !important;
+//   color: inherit !important;
+//   text-decoration: none !important;
+//   font-size: inherit !important;
+//   font-family: inherit !important;
+//   font-weight: inherit !important;
+//   line-height: inherit !important;
+// }
+
+//////////////
+
+// .btn-phone__circle {
+//   background: #FFCC00;
+//   border: 2px solid #FFCC00;
+//   border-radius: 50%;
+//   box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3);
+//   height: 68px;
+//   text-align: center;
+//   width: 68px;
+//   position: fixed;
+//   bottom: 3%;
+//   right: 15px;
+//   z-index: 1000;
+//   transition: 0.3s;
+//   -webkit-animation: email-an linear 1s infinite;
+//   animation: email-an linear 1s infinite;
+//   cursor: pointer;
+// }
+
+// .btn-phone__circle:hover svg {
+//   color: #FFCC00;
+//   font-size: 40px;
+//   transition: 0.3s;
+// }
+
+// .btn-phone__circle svg {
+//   color: #FFCC00;
+//   font-size: 29px;
+//   transition: 0.3s;
+//   line-height: 66px;
+//   height: 65px;
+//   width: 27px;
+// }
+
+// .btn-phone__circle svg {
+//   -webkit-animation: opsimple 3s infinite;
+//   animation: opsimple 3s infinite;
+// }
+
+// @-webkit-keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 0 rgba(255, 204, 0, 0.2), 0 0 0 0 rgba(255, 204, 0, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 15px rgba(255, 204, 0, 0.2), 0 0 0 0 rgba(255, 204, 0, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 30px rgba(255, 204, 0, 0), 0 0 0 26.7px rgba(255, 204, 0, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 30px rgba(255, 204, 0, 0), 0 0 0 40px rgba(255, 204, 0, 0);
+//   }
+// }
+
+// @keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 0 rgba(255, 204, 0, 0.2), 0 0 0 0 rgba(255, 204, 0, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 15px rgba(255, 204, 0, 0.2), 0 0 0 0 rgba(255, 204, 0, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 30px rgba(255, 204, 0, 0), 0 0 0 26.7px rgba(255, 204, 0, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(255, 204, 0, 0.3),
+//       0 0 0 30px rgba(255, 204, 0, 0), 0 0 0 40px rgba(255, 204, 0, 0);
+//   }
+// }
+
+// @keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @-webkit-keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .btn-phone {
+//   // .btn-phone__wrapper
+
+//   &__wrapper {
+//   }
+
+//   // .btn-phone__circle
+
+//   &__circle {
+//   }
+
+//   // .btn-phone__number
+
+//   &__number {
+//     @include fonts(500, 17px, 22px);
+//     position: fixed;
+//     bottom: 4%;
+//     background-color: #FFCC00; /* Change this line */
+//     padding: 11px 13px;
+//     border-radius: 10px;
+//     right: 125px;
+//     color: $white !important;
+//     z-index: 999;
+//     opacity: 0;
+//     transform: translateX(70%);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+//   }
+// }
+
+// .btn-phone__circle:hover + .btn-phone__number {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+
+// svg:hover + .btn-phone__number {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+
+// .btn-phone__circle {
+//   background: #1a1a1a;
+//   border: 2px solid #1a1a1a;
+//   border-radius: 50%;
+//   box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3);
+//   height: 68px;
+//   text-align: center;
+//   width: 68px;
+//   position: fixed;
+//   bottom: 3%;
+//   right: 15px;
+//   z-index: 1000;
+//   transition: 0.3s;
+//   -webkit-animation: email-an linear 1s infinite;
+//   animation: email-an linear 1s infinite;
+//   cursor: pointer;
+// }
+
+// .btn-phone__circle:hover svg {
+//   color: #38a3fd;
+//   font-size: 40px;
+//   transition: 0.3s;
+// }
+
+// .btn-phone__circle svg {
+//   color: #fff;
+//   font-size: 29px;
+//   transition: 0.3s;
+//   line-height: 66px;
+//   height: 65px;
+//   width: 27px;
+//   -webkit-animation: opsimple 3s infinite;
+//   animation: opsimple 3s infinite;
+// }
+
+// @-webkit-keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 0 rgba(26, 26, 26, 0.2), 0 0 0 0 rgba(26, 26, 26, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 15px rgba(26, 26, 26, 0.2), 0 0 0 0 rgba(26, 26, 26, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 30px rgba(26, 26, 26, 0), 0 0 0 26.7px rgba(26, 26, 26, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 30px rgba(26, 26, 26, 0), 0 0 0 40px rgba(26, 26, 26, 0);
+//   }
+// }
+
+// @keyframes email-an {
+//   0% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 0 rgba(26, 26, 26, 0.2), 0 0 0 0 rgba(26, 26, 26, 0.2);
+//   }
+//   40% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 15px rgba(26, 26, 26, 0.2), 0 0 0 0 rgba(26, 26, 26, 0.2);
+//   }
+//   80% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 30px rgba(26, 26, 26, 0), 0 0 0 26.7px rgba(26, 26, 26, 0.067);
+//   }
+//   100% {
+//     box-shadow: 0 8px 10px rgba(26, 26, 26, 0.3),
+//       0 0 0 30px rgba(26, 26, 26, 0), 0 0 0 40px rgba(26, 26, 26, 0);
+//   }
+// }
+
+// @keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @-webkit-keyframes opsimple {
+//   0% {
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 1;
+//   }
+//   80% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// .btn-phone__number {
+//   @include fonts(500, 17px, 22px);
+//   position: fixed;
+//   bottom: 4%;
+//   background-color: #1a1a1a;
+//   padding: 11px 13px;
+//   border-radius: 10px;
+//   right: 125px;
+//   color: #fff !important;
+//   z-index: 999;
+//   opacity: 0;
+//   transform: translateX(70%);
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+// }
+
+// .btn-phone__circle:hover + .btn-phone__number {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+
+// svg:hover + .btn-phone__number {
+//   opacity: 1;
+//   transform: translateX(0);
+// }
+
+// *[x-apple-data-detectors],
+// .x-gmail-data-detectors,
+// .x-gmail-data-detectors * {
+//   border-bottom: 0 !important;
+//   cursor: default !important;
+//   color: inherit !important;
+//   text-decoration: none !important;
+//   font-size: inherit !important;
+//   font-family: inherit !important;
+//   font-weight: inherit !important;
+//   line-height: inherit !important;
+// }
+
+//////////////////
+.btn-phone__wrapper {
+}
+
 .btn-phone__circle {
-  background: #64bcff;
-  border: 2px solid #64bcff;
+  background: #000; /* Изменили цвет на #000 (черный) */
+  border: 2px solid #000;
   border-radius: 50%;
-  box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   height: 68px;
   text-align: center;
   width: 68px;
@@ -11,9 +461,8 @@
   right: 15px;
   z-index: 1000;
   transition: 0.3s;
-  -webkit-animation: email-an linear 1s infinite;
-  animation: email-an linear 1s infinite;
   cursor: pointer;
+  animation: email-an 1s infinite; /* Добавили анимацию email-an */
 }
 
 .btn-phone__circle:hover svg {
@@ -23,54 +472,57 @@
 }
 
 .btn-phone__circle svg {
-  color: $white;
+  fill: #3b03f8;
   font-size: 29px;
   transition: 0.3s;
   line-height: 66px;
   height: 65px;
   width: 27px;
+  animation: opsimple 3s infinite; /* Добавили анимацию opsimple */
 }
 
-.btn-phone__circle svg {
-  -webkit-animation: opsimple 3s infinite;
-  animation: opsimple 3s infinite;
+.btn-phone__number {
+  @include fonts(500, 17px, 22px);
+  position: fixed;
+  bottom: 4%;
+  background-color: #000; /* Изменили цвет фона на #000 (черный) */
+  padding: 11px 13px;
+  border-radius: 10px;
+  right: 125px;
+  // color: #fff !important;
+  color: #3b03f8 !important;
+  z-index: 999;
+  opacity: 0;
+  transform: translateX(70%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@-webkit-keyframes email-an {
-  0% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
-  }
-  40% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
-  }
-  80% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
-  }
-  100% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
-  }
+.btn-phone__circle:hover + .btn-phone__number {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+svg:hover + .btn-phone__number {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @keyframes email-an {
   0% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.2),
+      0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   40% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 15px rgba(0, 0, 0, 0.2),
+      0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   80% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 30px rgba(0, 0, 0, 0),
+      0 0 0 26.7px rgba(0, 0, 0, 0.067);
   }
   100% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3),
-      0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 30px rgba(0, 0, 0, 0),
+      0 0 0 40px rgba(0, 0, 0, 0);
   }
 }
 
@@ -87,71 +539,4 @@
   100% {
     opacity: 0;
   }
-}
-
-@-webkit-keyframes opsimple {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.btn-phone {
-  // .btn-phone__wrapper
-
-  &__wrapper {
-  }
-
-  // .btn-phone__circle
-
-  &__circle {
-  }
-
-  // .btn-phone__number
-
-  &__number {
-    @include fonts(500, 17px, 22px);
-    position: fixed;
-    bottom: 4%;
-    background-color: #64bcff;
-    padding: 11px 13px;
-    border-radius: 10px;
-    right: 125px; /* Начальное положение */
-    color: $white !important;
-    z-index: 999;
-    opacity: 0; /* Начальная прозрачность */
-    transform: translateX(70%); /* Смещение за пределы экрана */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Анимации */
-  }
-}
-
-.btn-phone__circle:hover + .btn-phone__number {
-  opacity: 1; /* Прозрачность становится 1 */
-  transform: translateX(0); /* Возвращаем на место */
-}
-
-svg:hover + .btn-phone__number {
-  opacity: 1; /* Прозрачность становится 1 */
-  transform: translateX(0); /* Возвращаем на место */
-}
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors * {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
 }

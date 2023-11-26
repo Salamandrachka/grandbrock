@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <title>GrandBrok</title>
     <link
       rel="stylesheet"
@@ -27,8 +28,6 @@
       @@include('html/header.html', {})
       <main>
         @@include('html/hamster.html', {}) @@include('html/ourService.html', {})
-        <!-- @@include('html/gallery.html', {}) -->
-        <!-- @@include('html/aboutUs.html', {})  -->
         @@include('html/whywe.html', {}) @@include('html/faq.html', {})
         @@include('html/reviews.html', {}) @@include('html/scrollBtn.html', {})
         @@include('html/fixedBtn.html', {})
@@ -59,7 +58,6 @@
 
     <script>
       var swiper = new Swiper(".section-reviews__slider", {
-        // effect: "fade",
         spaceBetween: 30,
         slidesPerView: 1,
         freemode: true,
@@ -72,29 +70,16 @@
           clickable: true,
         },
         breakpoints: {
-          // when window width is >= 500px
           360: {
-            // width: 337,
-            // width: '99%',
             slidesPerView: 1,
           },
-          // // // when window width is >= 640px
-          // 690: {
-          //   // width: '100%',
-          //   slidesPerView: 1.5,
-          // },
           545: {
-            // width: '100%',
             slidesPerView: 1.5,
           },
-          // when window width is >= 768px
           1000: {
-            // width: 768,
             slidesPerView: 2,
           },
-          //when window width is >= 980px
           1400: {
-            // width: 768,
             slidesPerView: 3,
           },
         },

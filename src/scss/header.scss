@@ -9,12 +9,10 @@
   left: 0;
   right: 0;
   z-index: 4;
+  transition: all 0.2s ease-in-out;
+  height: auto;
+  background-color: transparent;
 
-  // width: 99%;
-      transition: all 0.2s ease-in-out;
-    height: auto;
-    background-color:transparent;  
-    
   padding-right: 10px;
   padding-left: 10px;
   margin-bottom: 18px;
@@ -24,32 +22,23 @@
     padding-left: 15px;
   }
 
-  ///
-  // @include breakpoint-mf("my") {
-  //   width: 98%;
-  // }
-  // @include breakpoint-mf("xxl") {
-  //   width: 100%;
-  // }
-
-  ///
   &__wrapper {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     @include flex(row, space-between, center);
     color: $white;
-    height: 90px;
-    // backdrop-filter: blur(20px);
+    height: 118px;
   }
 }
 
+/*ATTACHED HEADER*/
 
-.active-header {
-    background: #09040c;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+.attached-header {
+  background: #09040c;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
@@ -60,7 +49,7 @@
     width: 100px;
     height: 58px;
     @include breakpoint-mf("ma") {
-      margin-top: 25px;
+      margin-top: 14px;
       width: 140px;
       height: 73px;
     }
@@ -102,7 +91,6 @@
 
     &_consult {
       display: none;
-      // @include breakpoint-mf("ma") {
       @include breakpoint-mf("my") {
         display: inline-block;
       }
@@ -161,7 +149,6 @@
   visibility: hidden;
   z-index: 2;
   overflow: hidden;
-  // transition: 550ms height ease-in-out;
   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
     400ms visibility ease-in-out;
   background-color: rgb(0, 0, 0);
@@ -174,7 +161,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 105px;
+    top: 118px;
     left: -100vw;
     right: -100vw;
     height: 1px;
@@ -197,7 +184,6 @@
 
   &__item {
     cursor: pointer;
-    // padding: 60px 40px 70px;
     padding: 30px 40px 0px;
 
     &:nth-child(1) {
@@ -244,31 +230,9 @@
   }
 }
 
-/////////////
-
-// .nav-menu__item:hover .nav-dropdown {
-//   opacity: 1;
-//   visibility: visible;
-//   height: 93%;
-//   // height: 100%;
-//   // transition: 550ms height ease-in-out;
-//   transition: 550ms height ease-in-out, 550ms opacity ease-in-out,
-//     550ms visibility ease-in-out;
-// }
-
-// .nav-menu__item:not(:hover) .nav-dropdown {
-//   opacity: 0;
-//   visibility: hidden;
-//   height: 0;
-//   // transition: 550ms height ease-in-out;
-//   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
-//     400ms visibility ease-in-out;
-// }
-
 .active-menu {
   opacity: 1;
   visibility: visible;
-  // height: 93%;
   height: 90vh;
   transition: 550ms height ease-in-out, 550ms opacity ease-in-out,
     550ms visibility ease-in-out;
@@ -445,26 +409,6 @@
     550ms visibility ease-in-out;
 }
 
-///////
-
-// .nav-mobile__item:hover .mobile-dropdown__wrapper {
-//   opacity: 1;
-//   visibility: visible;
-//   height: 100%;
-//   // height: auto; /* Убираем жестко заданную высоту */
-//   transition: 550ms height ease-in-out, 550ms opacity ease-in-out,
-//     550ms visibility ease-in-out;
-// }
-
-// .nav-mobile__item:not(:hover) .mobile-dropdown__wrapper {
-//   opacity: 0;
-//   visibility: hidden;
-//   height: 0;
-//   transition: 550ms height ease-in-out, 400ms opacity ease-in-out,
-//     400ms visibility ease-in-out;
-// }
-
-////////////////
 
 // /* Начальное состояние */
 .nav-menu__link .fa-angle-up,
@@ -499,6 +443,9 @@
   display: flex;
   align-items: flex-start;
 }
+
+
+////
 
 .nav-mobile {
   // .nav-mobile__button
@@ -568,17 +515,13 @@
 }
 
 .nav-dropdown-sub__item:hover .menu-arrow {
-  left: -32px; /* или другое значение, чтобы показать стрелочку */
+  left: -32px;
   opacity: 1;
   visibility: visible;
 }
 
-// .nav-dropdown-sub__item:hover .nav-dropdown-sub__link {
-//   padding-left: 35px; /* или другое значение, чтобы сдвинуть элемент вправо */
-// }
-
 .mobile-dropdown-sub__item:hover .menu-arrow {
-  left: -27px; /* или другое значение, чтобы показать стрелочку */
+  left: -27px;
   opacity: 1;
   visibility: visible;
 }

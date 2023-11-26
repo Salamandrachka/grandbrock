@@ -304,7 +304,7 @@ b {
 
 /* background of the scrollbar except button or resizer */
 .body::-webkit-scrollbar-track {
-  background-color: #222222;
+  background-color: #191818;
 }
 
 /* scrollbar itself */
@@ -506,10 +506,11 @@ main {
   justify-content: space-between;
   align-items: center;
   color: #fff;
-  height: 90px;
+  height: 118px;
 }
 
-.active-header {
+/*ATTACHED HEADER*/
+.attached-header {
   background: #09040c;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
@@ -526,7 +527,7 @@ main {
 }
 @media (min-width: 840px) {
   .logo__img {
-    margin-top: 25px;
+    margin-top: 14px;
     width: 140px;
     height: 73px;
   }
@@ -625,7 +626,7 @@ main {
 .nav-dropdown::before {
   content: "";
   position: absolute;
-  top: 105px;
+  top: 118px;
   left: -100vw;
   right: -100vw;
   height: 1px;
@@ -924,13 +925,13 @@ main {
 }
 
 .nav-dropdown-sub__item:hover .menu-arrow {
-  left: -32px; /* или другое значение, чтобы показать стрелочку */
+  left: -32px;
   opacity: 1;
   visibility: visible;
 }
 
 .mobile-dropdown-sub__item:hover .menu-arrow {
-  left: -27px; /* или другое значение, чтобы показать стрелочку */
+  left: -27px;
   opacity: 1;
   visibility: visible;
 }
@@ -1142,7 +1143,7 @@ main {
   border: none;
   background: none;
   outline: none;
-  border-bottom: 1px solid #bf8c25;
+  border-bottom: 1px solid #5d5d5d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2130,6 +2131,7 @@ main {
   animation-play-state: paused;
 }
 
+/*HOVER TEXT*/
 .hover-text {
   position: absolute;
   top: -45px;
@@ -2190,10 +2192,10 @@ main {
 }
 
 .btn-phone__circle {
-  background: #64bcff;
-  border: 2px solid #64bcff;
+  background: #000; /* Изменили цвет на #000 (черный) */
+  border: 2px solid #000;
   border-radius: 50%;
-  box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   height: 68px;
   text-align: center;
   width: 68px;
@@ -2202,9 +2204,8 @@ main {
   right: 15px;
   z-index: 1000;
   transition: 0.3s;
-  -webkit-animation: email-an linear 1s infinite;
-  animation: email-an linear 1s infinite;
   cursor: pointer;
+  animation: email-an 1s infinite; /* Добавили анимацию email-an */
 }
 
 .btn-phone__circle:hover svg {
@@ -2214,45 +2215,54 @@ main {
 }
 
 .btn-phone__circle svg {
-  color: #fff;
+  fill: #3b03f8;
   font-size: 29px;
   transition: 0.3s;
   line-height: 66px;
   height: 65px;
   width: 27px;
+  animation: opsimple 3s infinite; /* Добавили анимацию opsimple */
 }
 
-.btn-phone__circle svg {
-  -webkit-animation: opsimple 3s infinite;
-  animation: opsimple 3s infinite;
+.btn-phone__number {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  position: fixed;
+  bottom: 4%;
+  background-color: #000; /* Изменили цвет фона на #000 (черный) */
+  padding: 11px 13px;
+  border-radius: 10px;
+  right: 125px;
+  color: #3b03f8 !important;
+  z-index: 999;
+  opacity: 0;
+  transform: translateX(70%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@-webkit-keyframes email-an {
-  0% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
-  }
-  40% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
-  }
-  80% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
-  }
-  100% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
-  }
+.btn-phone__circle:hover + .btn-phone__number {
+  opacity: 1;
+  transform: translateX(0);
 }
+
+svg:hover + .btn-phone__number {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @keyframes email-an {
   0% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 0 rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   40% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 15px rgba(100, 188, 255, 0.2), 0 0 0 0 rgba(100, 188, 255, 0.2);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 15px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
   80% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 26.7px rgba(100, 188, 255, 0.067);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 30px rgba(0, 0, 0, 0), 0 0 0 26.7px rgba(0, 0, 0, 0.067);
   }
   100% {
-    box-shadow: 0 8px 10px rgba(100, 188, 255, 0.3), 0 0 0 30px rgba(100, 188, 255, 0), 0 0 0 40px rgba(100, 188, 255, 0);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3), 0 0 0 30px rgba(0, 0, 0, 0), 0 0 0 40px rgba(0, 0, 0, 0);
   }
 }
 @keyframes opsimple {
@@ -2269,60 +2279,6 @@ main {
     opacity: 0;
   }
 }
-@-webkit-keyframes opsimple {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.btn-phone__number {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 22px;
-  position: fixed;
-  bottom: 4%;
-  background-color: #64bcff;
-  padding: 11px 13px;
-  border-radius: 10px;
-  right: 125px; /* Начальное положение */
-  color: #fff !important;
-  z-index: 999;
-  opacity: 0; /* Начальная прозрачность */
-  transform: translateX(70%); /* Смещение за пределы экрана */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Анимации */
-}
-
-.btn-phone__circle:hover + .btn-phone__number {
-  opacity: 1; /* Прозрачность становится 1 */
-  transform: translateX(0); /* Возвращаем на место */
-}
-
-svg:hover + .btn-phone__number {
-  opacity: 1; /* Прозрачность становится 1 */
-  transform: translateX(0); /* Возвращаем на место */
-}
-
-*[x-apple-data-detectors],
-.x-gmail-data-detectors,
-.x-gmail-data-detectors * {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
-
 .section-gallery__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2599,7 +2555,7 @@ svg:hover + .btn-phone__number {
 }
 
 .cargoForm__input:focus {
-  border-color: #bf8c25;
+  border-color: #FFCC00;
 }
 
 #date-input {
@@ -2799,7 +2755,7 @@ svg:hover + .btn-phone__number {
 }
 
 .genericForm__input:focus {
-  border-color: #bf8c25;
+  border-color: #FFCC00;
 }
 
 #date-input {

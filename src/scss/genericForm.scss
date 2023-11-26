@@ -179,7 +179,7 @@
 }
 
 .genericForm__input:focus {
-  border-color: #bf8c25;
+  border-color: $yellow;
 }
 
 #date-input {
@@ -190,4 +190,3 @@
     @include fonts(400, 17px, 25px);
   }
 }
-

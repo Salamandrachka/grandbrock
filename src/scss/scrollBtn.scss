@@ -1,9 +1,9 @@
 .scroll-up {
   color: #fff;
-span {
+  span {
     @include fonts(500, 20px, 31px);
     padding-right: 10px;
-}
+  }
 }
 
 #scroll-up-btn {

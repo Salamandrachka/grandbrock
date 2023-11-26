@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customs Payments</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title>GrandBrok</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./dist/css/style.min.css" />
     <link
       rel="stylesheet"
@@ -13,14 +18,20 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="body">
     <div class="overflow">
       <header class="header">
   <div class="header__wrapper">
     <a class="logo" href="./home.html"
-      ><img class="logo__img" src="./dist/img/grandbrok.png" alt=""
-    /></a>
+      >
+      <!-- <img class="logo__img" src="./dist/img/grandbrok.png" alt=""/> -->
+      <img class="logo__img" src="./dist/img/svg-logo.svg" alt=""/>
+  </a>
     <!-- <a class="logo" href="./home.html">
       <img class="logo__img" src="./dist/img/logo.svg" alt=""/>
   </a> -->
@@ -126,8 +137,10 @@
                 </ul>
               </li>
               <li class="nav-dropdown__item">
-                <a href="./MovementOfPersonalBelongingsOfIndividuals
-.html" class="nav-dropdown__link"
+                <a
+                  href="./MovementOfPersonalBelongingsOfIndividuals
+.html"
+                  class="nav-dropdown__link"
                   >Переміщення особистих речей фізичними особами
                 </a>
                 <ul class="nav-dropdown-sub__list">
@@ -289,6 +302,10 @@
   <div class="nav-mobile__wrapper">
     <ul class="nav-mobile__list">
       <li class="nav-mobile__item">
+        <!-- <a class="nav-mobile__link" href="#">
+          <span class="poslygu__dropdwn">Послуги</span
+          ><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i
+        ></a> -->
         <span class="poslygu__dropdwn"
           >Послуги<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i
         ></span>
@@ -387,8 +404,10 @@
               </ul>
             </li>
             <li class="mobile-dropdown__item">
-              <a href="./MovementOfPersonalBelongingsOfIndividuals
-.html" class="mobile-dropdown__link"
+              <a
+                href="./MovementOfPersonalBelongingsOfIndividuals
+.html"
+                class="mobile-dropdown__link"
                 >Переміщення особистих речей фізичними особами
               </a>
               <ul class="mobile-dropdown-sub__list">
@@ -544,222 +563,364 @@
   </div>
 </header>
 
-
       <main>
-        <section class="section-payments">
-  <div class="section-payments__block container wrapper">
-          <h1 class="section-animals__title gradient-title ">
-        <span>Реквізити єдиного депозитного рахунку для оплати митних платежів</span>
-      </h1>
-    
-    <div class="section-payments__article">
-      <p>
-        Для стягнення митних платежів за товари які переміщуються через митну
-        територію України, митні органи резервують на своєму рахунку для
-        подальшого списування грошові кошти платника, для зарахування коштів
-        попередньої оплати за здійснення митного оформлення. Для розрахунку
-        митних платежів можете скористатися калькулятором розрахунку митних
-        платежів, для більш точного розрахунку суми митних платежів та отримання
-        консультації надішліть заявку нашим фахівцям. Починаючи з 01.01.2020
-        року зарахування коштів авансових платежів (передоплати) підприємствами
-        здійснюється виключно на новий депозитний рахунок 3557, відкритий у
-        Державній казначейській службі України на ім’я Державної митної служби
-        України.
-      </p>
+        <section class="section-hamster">
+  <div class="section-hamster__wrapper">
+    <div class="content__wrapper">
+      <div class="content__text-wrapper">
+        <div class="content__text">
+          <h1>Митний&nbsp;брокер</h1>
+          <h1 id="ta">та</h1>
+          <h1>експедитор</h1>
+        </div>
+      </div>
+      <div class="content__img">
+        <!-- <img src="./dist/img/map-small.png" alt="" /> -->
+        <img src="./dist/img/map-withoutNames.png" alt="" />
+        <!-- <img src="./dist/img/map-withNames.png" alt="" /> -->
+        <img src="./dist/img/map-withNames.png" alt="" />
+      </div>
     </div>
-    <div class="section-payments__article" id="listOfPaymentsForYuruduchnuhOsibTaFOP">
+  </div>
+  <div class="hamster__wrapper">
+    <div
+      aria-label="Orange and tan hamster running in a metal wheel"
+      role="img"
+      class="wheel-and-hamster"
+    >
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
+        </div>
+      </div>
 
-      <h2 class="section-payments__subtitle gradient-subtitle ">
-        <span> Єдиний рахунок для юридичних осіб та ФОП:</span>
-      </h2>
-
-      <ul class="section-payments__list">
-        <li class="section-payments__item">
-          <span>IBAN:</span>&nbsp;UA988999980355789000001101079
-        </li>
-        <li class="section-payments__item">
-          <span>Банк отримувача: </span>&nbsp;ДКСУ (Держказначейство)
-        </li>
-        <li class="section-payments__item">
-          <span>МФО банку:</span>&nbsp;899998
-        </li>
-        <li class="section-payments__item">
-          <span>Отримувач:</span>&nbsp; Державна митна служба України
-        </li>
-        <li class="section-payments__item">
-          <span>ЄДРПОУ:</span>&nbsp;43115923
-        </li>
-        <li class="section-payments__item">
-          <span>Призначення платежу:</span>&nbsp;попередня оплата (доплата) за митне оформлення
-        </li>
-      </ul>
-    </div>
-    <div class="section-payments__article" id="customsBillsForIndividuals">
-            <h2 class="section-payments__subtitle gradient-subtitle ">
-        <span> Рахунки митниць для громадян (фізичних осіб)</span>
-      </h2>
-      <table class="section-payments__table">
-        <tr class="section-payments__columns">
-          <th class="section-payments__headlines">Код</th>
-          <th class="section-payments__headlines">Код ЄДРПОУ</th>
-          <th class="section-payments__headlines">IBAN</th>
-          <th class="section-payments__headlines">Назва</th>
-        </tr class="section-payments__columns">
-         <tr class="section-payments__columns">
-    <td>UA100000</td>
-    <td>43997555</td>
-    <td>UA518999980355789089803466700</td>
-    <td>Київська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA101000</td>
-    <td>44005610</td>
-    <td>UA038999980355719089802466726</td>
-    <td>Житомирська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA102000</td>
-    <td>43985581</td>
-    <td>UA278999980355719000001107700</td>
-    <td>Чернігівська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA110000</td>
-    <td>43971371</td>
-    <td>UA708999980355799000001160932</td>
-    <td>Дніпровська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA112000</td>
-    <td>44005647</td>
-    <td>UA258999980355769000001183127</td>
-    <td>Запорізька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA204000</td>
-    <td>43958370</td>
-    <td>UA968999980355729000001160957</td>
-    <td>Рівненська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA205000</td>
-    <td>43958385</td>
-    <td>UA918999980355769045401160491</td>
-    <td>Волинська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA206000</td>
-    <td>43971364</td>
-    <td>UA428999980355719045401470393</td>
-    <td>Івано-Франківська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA209000</td>
-    <td>43971343</td>
-    <td>UA668999980355729045403160947</td>
-    <td>Львівська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA305000</td>
-    <td>43985560</td>
-    <td>UA298999980355749045401158630</td>
-    <td>Закарпатська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA400000</td>
-    <td>43997560</td>
-    <td>UA248999980355729898002470612</td>
-    <td>Хмельницька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA401000</td>
-    <td>43997544</td>
-    <td>UA278999980355749089803470587</td>
-    <td>Вінницька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA403000</td>
-    <td>43985576</td>
-    <td>UA918999980355779045401470391</td>
-    <td>Тернопільська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA408000</td>
-    <td>43971359</td>
-    <td>UA328999980355719045402159370</td>
-    <td>Чернівецька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA500000</td>
-    <td>44005631</td>
-    <td>UA548999980355709045402159377</td>
-    <td>Одеська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA504000</td>
-    <td>44017652</td>
-    <td>UA658999980355749045401466733</td>
-    <td>Миколаївська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA508000</td>
-    <td>43946385</td>
-    <td>UA788999980355794540243946385</td>
-    <td>Митниця в Херсонській області, Автономній Республіці Крим і м. Севастополі</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA700000</td>
-    <td>44029605</td>
-    <td>UA108999980355749000002466737</td>
-    <td>Донецька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA702000</td>
-    <td>44030626</td>
-    <td>UA278999980355749000003160951</td>
-    <td>Луганська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA805000</td>
-    <td>44017631</td>
-    <td>UA478999980355779454000468395</td>
-    <td>Сумська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA806000</td>
-    <td>43997576</td>
-    <td>UA658999980355769000001117902</td>
-    <td>Полтавська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA807000</td>
-    <td>44017626</td>
-    <td>UA968999980355779045403111250</td>
-    <td>Харківська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA901000</td>
-    <td>44005668</td>
-    <td>UA428999980355709000003466776</td>
-    <td>Кропивницька митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA902000</td>
-    <td>44005652</td>
-    <td>UA378999980355729000001468248</td>
-    <td>Черкаська митниця</td>
-  </tr>
-  <tr class="section-payments__columns">
-    <td>UA903000</td>
-    <td>44029610</td>
-    <td>UA608999980355769089801466719</td>
-    <td>Енергетична митниця</td>
-  </tr>
-      </table>
+      <div class="bubble bubble-bottom-left hover-text" contenteditable="false">
+        Розмитнемо&nbsp;навіть&nbsp;хом'яка
+      </div>
+      <div class="spoke"></div>
     </div>
   </div>
 </section>
-<div class="scroll-up container wrapper">
+ <section class="section-service container">
+  <div class="section-service__title main-page-title">
+    <h1>Основні напрямки діяльності</h1>
+  </div>
+  <div class="section-service__wrapper wrapper">
+    <div class="section-service__block reveal-service">
+      <a href="./CustomsСlearanceOfCommercialCargo.html">
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/container-truck.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">
+            Митне оформлення комерційних вантажів
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-service__block reveal-service">
+      <a href="./CustomsClearanceOfVehicles.html">
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/car.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">
+            Митне оформлення транспортних засобів
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-service__block reveal-service">
+      <a href="./InternationalCargoTransportation.html">
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/air-freight.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">Міжнародні вантажні перевезення</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-service__block reveal-service">
+      <a
+        href="./MovementOfPersonalBelongingsOfIndividuals
+.html"
+      >
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/project.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">
+            Переміщення особистих речей фізичними особами
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-service__block reveal-service">
+      <a
+        href="./CustomsСlearanceOfDiplomaticCargoAndInternationalOrganizations.html"
+      >
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/parcels-service.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">Розмитнення посилок</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="section-service__block reveal-service">
+      <a
+        href="./CustomsClearanceOfParcels
+.html"
+      >
+        <div class="section-service__sub-block">
+          <div class="section-service__img">
+            <img src="./dist/img/legal.png" alt="icon1" />
+          </div>
+          <p class="section-service__text">
+            Митне оформлення дипломатичних вантажів та MO
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+        <section class="section-whywe container ">
+  <div class="section-whywe__title main-page-title">
+    <h1>Чому ми?</h1>
+  </div>
+
+  <div class="section-whywe__wrapper wrapper">
+    <div class="section-whywe__block">
+      <div class="section-whywe__img">
+        <img src="./dist/img/working.png" alt="icon1" />
+      </div>
+      <p class="section-whywe__text">Повний супровід 24/7</p>
+    </div>
+
+    <div class="section-whywe__block">
+      <div class="section-whywe__img">
+        <img src="./dist/img/businessman.png" alt="icon1" />
+      </div>
+      <p class="section-whywe__text">Досвід роботи з 2014p.</p>
+    </div>
+
+    <div class="section-whywe__block">
+      <div class="section-whywe__img">
+        <img src="./dist/img/dollar.png" alt="icon1" />
+      </div>
+      <p class="section-whywe__text">Максимально вигідні тарифи</p>
+    </div>
+
+  </div>
+</section>
+   
+ <section class="section-faq container">
+  <div class="section-faq__title main-page-title">
+    <h1>Поширені запитання</h1>
+  </div>
+
+  <div class="section-faq__wrapper wrapper">
+    <div class="section-faq__block">
+      <div class="section-faq__question">
+        <h3>Скільки коштує розмитнення електромобіля?</h3>
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="section-faq__answer">
+        <p>
+          За розмитнення електромобіля стягується:
+          <br />
+          ПДВ – 0%<br />
+          Мито – 0%<br />
+          Акциз – 1 євро за 1 кВт/год.<br />
+          Ви заплатите лише за послуги митного брокера та акциз.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-faq__block">
+      <div class="section-faq__question">
+        <h3>Скільки часу займає розмитнення?</h3>
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="section-faq__answer">
+        <p>
+          У середньому розмитнення з митним брокером Grand Brok складає 2години
+        </p>
+      </div>
+    </div>
+
+    <div class="section-faq__block">
+      <div class="section-faq__question">
+        <h3>Скільки коштують послуги митного брокера?</h3>
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="section-faq__answer">
+        <p>
+          Вартість наших послуг варіюється від 3000 грн. Все залежить від того,
+          що вам потрібно. Щоб отримати актуальну інформацію, зв’яжіться з нами.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-faq__block">
+      <div class="section-faq__question">
+        <h3>Які потрібні документи для розмитнення авто?</h3>
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="section-faq__answer">
+        <p>
+          Для того щоб пройти митне оформлення авто вам необхідно мати при собі
+          наступний пакет документів:<br />
+          - Інвойс, рахунок фактура або купча<br />
+          - Паспорт громадянина України<br />
+          - Ідентифікаційний код<br />
+          - Свідоцтво про реєстрацію або техпаспорт<br />
+          - Документ про зняття з обліку в країні експорту
+        </p>
+      </div>
+    </div>
+
+    <div class="section-faq__block">
+      <div class="section-faq__question">
+        <h3>Чи є знижки для військових або інвалідів?</h3>
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="section-faq__answer">
+        <p>На даний час знижок на розмитнення авто не існує.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="section-reviews">
+  <div class="section-reviews__title main-page-title">
+    <h1>Що про нас кажуть</h1>
+  </div>
+
+  <div class="swiper section-reviews__slider wrapper">
+    <div class="swiper-wrapper section-reviews__wrapper">
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Анастасія Багацька</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Замовляла машину з США . Все було доставлено вчасно. Дуже сподобався
+            консультант Олександр . Дякую
+          </div>
+          <div class="section-reviews__block-date">Sep 30, 2021</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Татьяна Подорожко</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Працюємо з Олександром , не перший рік. Дуже задоволені якістю
+            роботи , приємний і кваліфікований брокер . Все дуже швидко і
+            якісно. Розмитнюємо регулярно вантажні , легкові та причепи . Завжди
+            допоможе та порадить , як краще розмитнити !
+          </div>
+          <div class="section-reviews__block-date">Dec 7, 2018</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Анна Жужулова</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Користувалась послугами цього брокера, розмитнювали більше 4 авто,
+            роботою задоволена повністю, Олександр суперова людина! Працювати
+            разом одне задоволення!
+          </div>
+          <div class="section-reviews__block-date">Jan 25, 2022</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Олег Хотюк</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Дуже хороший брокер! Робить свою роботу роботу на найвищому рівні!
+            Все швидко та якісно, велике Вам дякую Олександр!
+          </div>
+          <div class="section-reviews__block-date">Apr 20, 2020</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Андрей Довгодько</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Відмінний митний брокер, співробітники - люди слова та справи, все
+            оформлено швидко та без проблем!
+          </div>
+          <div class="section-reviews__block-date">Aug 5, 2018</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Ирина Ермолина</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Велике дякую Олександру! Відмінний фахівець! Все зробив чітко,
+            швидко та якісно! Дякую!
+          </div>
+          <div class="section-reviews__block-date">Mar 11, 2019</div>
+        </div>
+      </div>
+
+      <div class="swiper-slide section-reviews__block">
+        <div class="section-reviews__block-shadow">
+          <div class="section-reviews__block-person">
+            <img src="./dist/img/car1.jpg" alt="buy car" />
+            <span>Андрій Мельник</span>
+          </div>
+          <div class="section-reviews__block-text">
+            Дуже кваліфіковане обслуговування, швидко та якісно за прийнятні
+            гроші
+          </div>
+          <div class="section-reviews__block-date">Jun 11, 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+ <div class="scroll-up container wrapper">
     <button><span>Повернутися наверх</span> <i class="fa fa-angle-up" id="scroll-up-btn"></i> </button>
 </div>
         <div class="btn-phone__wrapper">
@@ -809,146 +970,18 @@
 </div>
 
       </main>
-
       <footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__content">
             <div class="footer__logo-wrapper">
               <a href="./home.html">
-                <img class="footer__logo-img" src="./dist/img/grandbrok.png" alt="">
+                <img  class="footer__logo-img"  src="./dist/img/svg-logo.svg" alt=""/>
               </a>
-
             </div>
-            <!-- <div class="footer__service-wrapper">
-          <ul class="footer__service-list">
-                        <li class="footer__service-list-item">
-              <a href="" class="footer__service-list-item-link"
-                >Розмитнення посилок</a
-              >
-              <ul class="footer__service-sub-list">
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок DHL</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок FEDEX</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок UPS</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок EMS</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок із США</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення посилок з Китаю</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="footer__service-list-item">
-              <a href="" class="footer__service-list-item-link"
-                >Розмитнення авто</a
-              >
-              <ul class="footer__service-sub-list">
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення вантажівок</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення авто з Кореї</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення авто з США</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення авто з Європи</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення авто з Грузії</a
-                  >
-                </li>
-              </ul>
-            </li>
-                        <li class="footer__service-list-item">
-              <a href="./vantagePage.html" class="footer__service-list-item-link"
-                >Митне оформлення</a
-              >
-              <ul class="footer__service-sub-list">
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Митне оформлення вантажів</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Акредитація на митниці</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Оформлення інпуту</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Оформлення експорту</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="footer__service-list-item">
-              <a href="" class="footer__service-list-item-link"
-                >Розмитнення особистих речей</a
-              >
-              <ul class="footer__service-sub-list">
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення речей</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення взуття</a
-                  >
-                </li>
-                <li class="footer__service-sub-list-item">
-                  <a href="" class="footer__service-sub-list-link"
-                    >Розмитнення меблів</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-
-          </ul>
-            </div> -->
         </div>
         <div class="footer__content">
-
             <div class="social-buttons">
-              
-  <a href="#" class="social-button github">
+\  <a href="#" class="social-button github">
     <svg fill="$whitefff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="$whitefff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M29.919 6.163l-4.225 19.925c-0.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-0.344 0.344-0.631 0.631-1.294 0.631l0.463-6.556 11.931-10.781c0.519-0.462-0.113-0.719-0.806-0.256l-14.75 9.288-6.35-1.988c-1.381-0.431-1.406-1.381 0.288-2.044l24.837-9.569c1.15-0.431 2.156 0.256 1.781 2.013z"></path> </g></svg>      
   </a>
       <a href="#" class="social-button linkedin">
@@ -1049,8 +1082,56 @@
     </div>
 </footer>
     </div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     <script src="./dist/js/app.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".bg-slider", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".section-reviews__slider", {
+        spaceBetween: 30,
+        slidesPerView: 1,
+        freemode: true,
+        loop: true,
+        centeredSlides: true,
+        grabCursor: true,
+        speed: 500,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          360: {
+            slidesPerView: 1,
+          },
+          545: {
+            slidesPerView: 1.5,
+          },
+          1000: {
+            slidesPerView: 2,
+          },
+          1400: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

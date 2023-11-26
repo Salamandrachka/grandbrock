@@ -1,16 +1,5 @@
-
-/*TEST */
-// $(document).ready(function () {
-//   $("#form").validate();
-//   $(".form__btn").on("click", function () {
-//     console.log($("#form").valid());
-//   });
-// });
-/**/
-
 $(document).ready(function () {
-
-$(".phone").inputmask("+(999) 999-9999");
+  $(".phone").inputmask("+(999) 999-9999");
 
   $(".form-validate").validate({
     rules: {
@@ -72,14 +61,8 @@ $(".phone").inputmask("+(999) 999-9999");
         required: "Будьласка вкажіть дату завантаження",
       },
     },
-
     submitHandler: function (form) {
       form.submit();
     },
   });
-
-//   $("#form").validate();
-//   $(".form__btn").on("click", function () {
-//     console.log($("#form").valid());
-//   });
 });
