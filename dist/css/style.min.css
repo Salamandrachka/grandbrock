@@ -640,7 +640,7 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-row-gap: 10px;
 }
 .nav-dropdown__item {
   cursor: pointer;
@@ -669,14 +669,14 @@ main {
   margin-top: 25px;
 }
 .nav-dropdown-sub__item {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   position: relative;
 }
 .nav-dropdown-sub__link {
   color: #797a7a;
   font-weight: 500;
   font-size: 17px;
-  line-height: 32px;
+  line-height: 21px;
 }
 
 .active-menu {
