@@ -20,7 +20,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
     svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/scss/style.scss`,
-    html: `${srcFolder}/*.html`, // путь к добавленному файлу home.html // хочу получать только те html файлыб что находятся непосредственно в папке src
+    html: `${srcFolder}/*.html`, // путь к добавленному файлу index.html // хочу получать только те html файлыб что находятся непосредственно в папке src
     files: `${srcFolder}/files/**/*.*`, // путь к файлам которые хочу скопировать
   },
   watch: {
