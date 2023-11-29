@@ -67,6 +67,8 @@
 
   &__item {
     height: 20px;
+    // font-family: "CaviarDreams";
+    font-family: "ComicRelief";
   }
 
   // .nav-menu__link
@@ -100,7 +102,7 @@
       border: none;
       padding: 15px 13px;
       margin: 0;
-      font-family: inherit;
+      font-family: "ComicRelief";
       font-size: inherit;
       position: relative;
       letter-spacing: 0.05rem;
@@ -110,7 +112,8 @@
       border-radius: 500px;
       overflow: hidden;
       background: $blue;
-      color: ghostwhite;
+      // color: ghostwhite;
+      color: #000;
 
       span {
         position: relative;
@@ -136,9 +139,13 @@
         transform: skew(30deg);
         transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
       }
+      &:hover {
+      color: ghostwhite;
 
+      }
       &:hover::before {
         transform: translate3d(100%, 0, 0);
+
       }
     }
   }
@@ -358,7 +365,6 @@
     gap: 20px;
     padding-top: 10px;
     padding-left: 24px;
-
     @include breakpoint-mf("xs") {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -410,31 +416,43 @@
 }
 
 // /* Начальное состояние */
-.nav-menu__link .fa-angle-up,
-.poslygu__dropdwn .fa-angle-up {
+// .nav-menu__link .fa-angle-up,
+// .poslygu__dropdwn .fa-angle-up {
+//   display: none;
+// }
+
+// /* Когда курсор наведен на пункт меню */
+// .nav-menu__item:hover .nav-menu__link .fa-angle-down,
+// .nav-mobile__item:hover .poslygu__dropdwn .fa-angle-down {
+//   display: none;
+// }
+
+// .nav-menu__item:hover .nav-menu__link .fa-angle-up,
+// .nav-mobile__item:hover .poslygu__dropdwn .fa-angle-up {
+//   display: inline;
+// }
+
+// /* Когда курсор не наведен на пункт меню */
+// .nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down,
+// .nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down {
+//   display: inline;
+// }
+
+// .nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up,
+// .nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up {
+//   display: none;
+// }
+.nav-menu__link .fa-angle-up {
   display: none;
 }
 
 /* Когда курсор наведен на пункт меню */
-.nav-menu__item:hover .nav-menu__link .fa-angle-down,
-.nav-mobile__item:hover .poslygu__dropdwn .fa-angle-down {
+.nav-menu__item:hover .nav-menu__link .fa-angle-down{
   display: none;
 }
 
-.nav-menu__item:hover .nav-menu__link .fa-angle-up,
-.nav-mobile__item:hover .poslygu__dropdwn .fa-angle-up {
+.nav-menu__item:hover .nav-menu__link .fa-angle-up{
   display: inline;
-}
-
-/* Когда курсор не наведен на пункт меню */
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down,
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down {
-  display: inline;
-}
-
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up,
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up {
-  display: none;
 }
 
 .poslygu__dropdwn {
@@ -442,8 +460,7 @@
   display: flex;
   align-items: flex-start;
 }
-
-////
+/////
 
 .nav-mobile {
   // .nav-mobile__button
@@ -459,13 +476,13 @@
       border: none;
       padding: 15px 13px;
       margin: 0;
-      font-family: inherit;
+      font-family: "ComicRelief";
       font-size: inherit;
       position: relative;
       border-radius: 500px;
       overflow: hidden;
       background: $blue;
-      color: ghostwhite;
+      color: #000;
       letter-spacing: 0.05rem;
       @include fonts(700, 20px, 25px);
 
@@ -493,7 +510,10 @@
         transform: skew(30deg);
         transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
       }
+      &:hover {
+      color: ghostwhite;
 
+      }
       &:hover::before {
         transform: translate3d(100%, 0, 0);
       }
@@ -502,11 +522,12 @@
 }
 
 .menu-arrow {
-  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
   font-weight: 900;
   position: absolute;
   left: -40px; /* или другое значение, чтобы скрыть стрелочку влево */
-  top: 5px;
+  top: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease; /* Добавляем плавное появление */

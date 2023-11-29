@@ -1,5 +1,22 @@
 $(document).ready(function () {
   $(".phone").inputmask("+(999) 999-9999");
+  // Add a custom method for phone number validation
+  // $.validator.addMethod(
+  //   "phoneUS",
+  //   function (phone_number, element) {
+  //     phone_number = phone_number.replace(/\s+/g, "");
+  //     return (
+  //       this.optional(element) ||
+  //       (phone_number.length > 9 &&
+  //         phone_number.match(/^\+(?:[0-9] ?){6,14}[0-9]$/))
+  //     );
+  //   },
+  //   "Please specify a valid phone number"
+  // );
+  // $.validator.addMethod("phoneUS", function (phone_number, element) {
+  //     phone_number = phone_number.replace(/\D/g, ""); // Remove non-numeric characters
+  //     return this.optional(element) || phone_number.length >= 10;
+  // }, "Please enter a valid phone number");
 
   $(".form-validate").validate({
     rules: {
@@ -8,7 +25,9 @@ $(document).ready(function () {
         minlength: 2,
       },
       phone: {
+        required: true,
         number: true,
+        // phoneUS: true,
         minlength: 10,
         maxlength: 10,
       },
@@ -39,7 +58,10 @@ $(document).ready(function () {
         required: "Будьласка введіть своє ім'я",
         minlength: "Мінімальна довжина 2 букви",
       },
-      phone: "Будьласка введіть свій номер телефону",
+      phone: {
+        required: "Будьласка введіть свій номер телефону",
+        // phoneUS: "Please enter a valid phone number",
+      },
       email: {
         required: "Будьласка введіть свою пошту",
         email: "Будьласка введіть валідну пошту",

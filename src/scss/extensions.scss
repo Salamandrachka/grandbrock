@@ -11,11 +11,11 @@
 %article {
   p {
     padding-bottom: 20px;
-    @include fonts(400, 16px, 31px);
+    @include fonts(400, 17px, 31px);
     color: $text;
 
     @include breakpoint-mf("xs") {
-      @include fonts(400, 17px, 31px);
+      @include fonts(400, 18px, 31px);
     }
   }
 }
@@ -25,11 +25,11 @@
   flex-direction: column;
   gap: 20px;
   li {
-    @include fonts(400, 16px, 31px);
+    @include fonts(400, 17px, 31px);
     color: $text;
 
     @include breakpoint-mf("xs") {
-      @include fonts(400, 17px, 31px);
+      @include fonts(400, 18px, 31px);
     }
     list-style-type: decimal;
     color: $text;
@@ -64,11 +64,11 @@
   gap: 10px;
   padding-left: 15px;
   li {
-    @include fonts(400, 16px, 31px);
+    @include fonts(400, 17px, 31px);
     color: $text;
 
     @include breakpoint-mf("xs") {
-      @include fonts(400, 17px, 31px);
+      @include fonts(400, 18px, 31px);
     }
     &::before {
       //   content: "\25b6"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -109,7 +109,7 @@
 %text-content-pages {
   @include flex(column, space-evenly, center);
   p {
-    @include fonts(400, 16px, 31px);
+    @include fonts(400, 17px, 31px);
     color: $text;
 
     @include breakpoint-mf("xs") {

@@ -44,7 +44,7 @@
   fill: #3b5998;
 }
 
-.github {
+.telegram {
   background-color: #37aee2;
 }
 
@@ -52,25 +52,25 @@
   background-color: #25d366;
 }
 
-.github svg {
+.telegram svg {
   width: 25px;
   height: 25px;
   fill: #f2f2f2;
 }
 
-.github:hover svg {
+.telegram:hover svg {
   fill: #37aee2;
 }
 
-.linkedin {
+.viber {
   background-color: #9069ae;
 }
 
-.linkedin svg {
+.viber svg {
   fill: #f2f2f2;
 }
 
-.linkedin:hover svg {
+.viber:hover svg {
   fill: #9069ae;
 }
 
@@ -230,7 +230,7 @@
   }
 
   // .footer__service-sub-list-link
-  
+
   &__service-sub-list-link {
     color: $white;
   }

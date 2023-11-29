@@ -2,19 +2,31 @@
   font-family: "Undounded-Regular"; /* Имя шрифта */
   src: url(../../dist/files/Unbounded-Regular.woff2);
 }
-
 @font-face {
   font-family: "NeutralFace"; /* Имя шрифта */
   src: url(../../dist/files/NeutralFace.otf);
 }
-
 @font-face {
   font-family: "FixelText-Black"; /* Имя шрифта */
   src: url(../../dist/files/FixelText-Black.ttf);
 }
+// @font-face {
+//   font-family: "CaviarDreams"; /* Имя шрифта */
+//   src: url(../../dist/files/CaviarDreams.ttf);
+// }
+// @font-face {
+//   font-family: "Caviar_Dreams_Bold"; /* Имя шрифта */
+//   src: url(../../dist/files/Caviar_Dreams_Bold.ttf);
+// }
+@font-face {
+  font-family: "ComicRelief"; /* Имя шрифта */
+  src: url(../../dist/files/ComicRelief.ttf);
+}
+
 
 body {
-  font-family: "Poppins", sans-serif;
+  // font-family: "Poppins", sans-serif;
+  font-family: "ComicRelief";
   background-color: #222222;
 }
 
@@ -98,6 +110,7 @@ body {
     padding-bottom: 40px;
     padding-top: 50px;
   font-family: "FixelText-Black";
+  // font-family: "Mikodacs"; 
   @include fonts(900, 30px, 38px);
   span {
     background-color: $blue;

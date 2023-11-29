@@ -1,5 +1,7 @@
 .scroll-up {
-  color: #fff;
+  color: $white;
+  // font-family: "CaviarDreams";
+  font-family: "ComicRelief";
   span {
     @include fonts(500, 20px, 31px);
     padding-right: 10px;

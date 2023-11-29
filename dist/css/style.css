@@ -166,8 +166,12 @@ html {
   font-family: "FixelText-Black"; /* Имя шрифта */
   src: url(../../dist/files/FixelText-Black.ttf);
 }
+@font-face {
+  font-family: "ComicRelief"; /* Имя шрифта */
+  src: url(../../dist/files/ComicRelief.ttf);
+}
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "ComicRelief";
   background-color: #222222;
 }
 
@@ -347,14 +351,14 @@ main {
 .section-diplomaticCargo__article p, .section-commercialCargo__article p, .section-transportMethods__article p, .section-animals__article p, .section-payments__article p, .section-personalStuff__article p, .section-parcels__article p, .section-about__article p {
   padding-bottom: 20px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 31px;
   color: #cacaca;
 }
 @media (min-width: 568px) {
   .section-diplomaticCargo__article p, .section-commercialCargo__article p, .section-transportMethods__article p, .section-animals__article p, .section-payments__article p, .section-personalStuff__article p, .section-parcels__article p, .section-about__article p {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 31px;
   }
 }
@@ -367,7 +371,7 @@ main {
 }
 .section-commercialCargo__text_list li, .section-transportMethods__text_list li, .section-animals__text_list li, .section-personalStuff__text_list li, .section-parcels__text_list li, .section-about__text_list li {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 31px;
   color: #cacaca;
   list-style-type: decimal;
@@ -380,7 +384,7 @@ main {
 @media (min-width: 568px) {
   .section-commercialCargo__text_list li, .section-transportMethods__text_list li, .section-animals__text_list li, .section-personalStuff__text_list li, .section-parcels__text_list li, .section-about__text_list li {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 31px;
   }
 }
@@ -409,14 +413,14 @@ main {
 }
 .section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-parcels__list li, .section-about__list li {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 31px;
   color: #cacaca;
 }
 @media (min-width: 568px) {
   .section-transportMethods__list li, .section-internationalTransportation__text_list li, .section-parcels__list li, .section-about__list li {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 31px;
   }
 }
@@ -462,7 +466,7 @@ main {
 }
 .section-transportMethods__text p, .section-internationalTransportation__text p, .section-parcels__text p, .section-about__text p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 31px;
   color: #cacaca;
 }
@@ -544,6 +548,7 @@ main {
 }
 .nav-menu__item {
   height: 20px;
+  font-family: "ComicRelief";
 }
 .nav-menu__link {
   color: #fff;
@@ -566,7 +571,7 @@ main {
   border: none;
   padding: 15px 13px;
   margin: 0;
-  font-family: inherit;
+  font-family: "ComicRelief";
   font-size: inherit;
   position: relative;
   letter-spacing: 0.05rem;
@@ -578,7 +583,7 @@ main {
   border-radius: 500px;
   overflow: hidden;
   background: #3b03f8;
-  color: ghostwhite;
+  color: #000;
 }
 @media (min-width: 1024px) {
   .nav-menu__button_consult {
@@ -605,6 +610,9 @@ main {
   left: -10%;
   transform: skew(30deg);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.nav-menu__button_consult:hover {
+  color: ghostwhite;
 }
 .nav-menu__button_consult:hover::before {
   transform: translate3d(100%, 0, 0);
@@ -832,31 +840,17 @@ main {
   transition: 550ms height ease-in-out, 550ms opacity ease-in-out, 550ms visibility ease-in-out;
 }
 
-.nav-menu__link .fa-angle-up,
-.poslygu__dropdwn .fa-angle-up {
+.nav-menu__link .fa-angle-up {
   display: none;
 }
 
 /* Когда курсор наведен на пункт меню */
-.nav-menu__item:hover .nav-menu__link .fa-angle-down,
-.nav-mobile__item:hover .poslygu__dropdwn .fa-angle-down {
+.nav-menu__item:hover .nav-menu__link .fa-angle-down {
   display: none;
 }
 
-.nav-menu__item:hover .nav-menu__link .fa-angle-up,
-.nav-mobile__item:hover .poslygu__dropdwn .fa-angle-up {
+.nav-menu__item:hover .nav-menu__link .fa-angle-up {
   display: inline;
-}
-
-/* Когда курсор не наведен на пункт меню */
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down,
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-down {
-  display: inline;
-}
-
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up,
-.nav-mobile__item:not(:hover) .poslygu__dropdwn .fa-angle-up {
-  display: none;
 }
 
 .poslygu__dropdwn {
@@ -876,13 +870,13 @@ main {
   border: none;
   padding: 15px 13px;
   margin: 0;
-  font-family: inherit;
+  font-family: "ComicRelief";
   font-size: inherit;
   position: relative;
   border-radius: 500px;
   overflow: hidden;
   background: #3b03f8;
-  color: ghostwhite;
+  color: #000;
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 20px;
@@ -909,16 +903,20 @@ main {
   transform: skew(30deg);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
+.nav-mobile__button_consult:hover {
+  color: ghostwhite;
+}
 .nav-mobile__button_consult:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 
 .menu-arrow {
-  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
   font-weight: 900;
   position: absolute;
   left: -40px; /* или другое значение, чтобы скрыть стрелочку влево */
-  top: 5px;
+  top: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease; /* Добавляем плавное появление */
@@ -1251,7 +1249,7 @@ main {
   fill: #3b5998;
 }
 
-.github {
+.telegram {
   background-color: #37aee2;
 }
 
@@ -1259,25 +1257,25 @@ main {
   background-color: #25d366;
 }
 
-.github svg {
+.telegram svg {
   width: 25px;
   height: 25px;
   fill: #f2f2f2;
 }
 
-.github:hover svg {
+.telegram:hover svg {
   fill: #37aee2;
 }
 
-.linkedin {
+.viber {
   background-color: #9069ae;
 }
 
-.linkedin svg {
+.viber svg {
   fill: #f2f2f2;
 }
 
-.linkedin:hover svg {
+.viber:hover svg {
   fill: #9069ae;
 }
 
@@ -3404,6 +3402,7 @@ input:focus.error, textarea:focus.error {
 /*scroll*/
 .scroll-up {
   color: #fff;
+  font-family: "ComicRelief";
 }
 .scroll-up span {
   font-weight: 500;
