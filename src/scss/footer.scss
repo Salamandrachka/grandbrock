@@ -164,7 +164,7 @@
   &__logo-img {
     width: 100px;
     height: 58px;
-    @include breakpoint-mf("ma") {
+    @include breakpoint-mf("my") {
       width: 140px;
       height: 73px;
     }

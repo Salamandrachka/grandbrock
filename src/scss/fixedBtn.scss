@@ -26,7 +26,7 @@
 }
 
 .btn-phone__circle svg {
-  fill: #3b03f8;
+  fill: $blue;
   font-size: 29px;
   transition: 0.3s;
   line-height: 66px;
@@ -43,8 +43,7 @@
   padding: 11px 13px;
   border-radius: 10px;
   right: 125px;
-  // color: #fff !important;
-  color: #3b03f8 !important;
+  color: $blue !important;
   z-index: 999;
   opacity: 0;
   transform: translateX(70%);
