@@ -9,8 +9,7 @@
   // .section-payments__list
 
   &__list {
-    display: flex;
-    flex-direction: column;
+ @include flex(column, center, flex-start);
     gap: 10px;
   }
 

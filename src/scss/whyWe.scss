@@ -3,25 +3,25 @@
 
   &__wrapper {
     gap: 10px;
-    display: flex;
-    justify-content: space-around;
+    @include flex(row, space-around, center);
   }
 
   // .section-whywe__block
 
   &__block {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+      @include flex(column, flex-start, center);
     gap: 10px;
   }
 
   // .section-whywe__img
 
   &__img {
-    display: flex;
-    justify-content: center;
     transition: all 0.4s;
+    picture {
+      display: flex;
+      justify-content: center;
+    }
+    
     img {
       padding: 1em;
       width: 50%;

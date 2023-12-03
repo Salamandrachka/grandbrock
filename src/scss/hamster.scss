@@ -3,6 +3,7 @@
 
   padding-top: 40px;
   overflow: hidden;
+
   &__wrapper {
     padding-right: 10px;
     padding-left: 10px;
@@ -11,26 +12,6 @@
       padding-left: 15px;
     }
   }
-  h1 {
-    color: $yellow;
-    text-transform: uppercase;
-    font-family: "FixelText-Black";
-    @include fonts(500, 19px, 30px);
-    @include breakpoint-mf("xs") {
-      @include fonts(500, 28px, 38px);
-      gap: 10px;
-    }
-    @include breakpoint-mf("md") {
-      @include fonts(500, 37px, 38px);
-    }
-    @include breakpoint-mf("my") {
-      @include fonts(500, 48px, 59px);
-    }
-    @include breakpoint-mf("xll") {
-      @include fonts(500, 60px, 67px);
-    }
-  }
-
   &__header {
     img {
       width: 100%;
@@ -58,19 +39,6 @@
   &__text-wrapper {
     @include flex(column, center, flex-start);
     gap: 72px;
-    //
-    // padding-top: 20px;
-    // @include breakpoint-mf("xs") {
-    //   padding-top: 60px;
-    // }
-    // @include breakpoint-mf("md") {
-    //   gap: 100px;
-    // }
-    // @include breakpoint-mf("my") {
-    //   padding-top: 100px;
-    //   gap: 60px;
-    // }
-    //
   }
 
   // .content__text
@@ -78,14 +46,13 @@
   &__text {
     color: $yellow;
     text-transform: uppercase;
-    font-family: "Fira Mono", monospace;
+    font-family: "FixelText-Black";
     &:nth-child(1) {
-      //
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      //
-      @include fonts(500, 19px, 30px);
+      @include flex(column, center, center);
+      @include fonts(500, 17px, 30px);
+      @include breakpoint-mf("xxs") {
+        @include fonts(500, 18px, 30px);
+      }
       @include breakpoint-mf("xs") {
         @include fonts(500, 28px, 38px);
         gap: 10px;
@@ -102,15 +69,7 @@
         padding-top: 70px;
       }
     }
-    // &:nth-child(2) {
-    //   display: none;
 
-    //   @include breakpoint-mf("my") {
-    //     display: block;
-    //     padding-top: 60px;
-    //     @include fonts(500, 30px, 38px);
-    //   }
-    // }
     &:nth-child(2) {
       @include fonts(500, 13px, 38px);
       @include breakpoint-mf("xs") {
@@ -129,15 +88,16 @@
     @include flex(column, normal, flex-end);
 
     img {
-      width: 100%;
       &:nth-child(1) {
         display: block;
+        width: 93%;
         @include breakpoint-mf("sm") {
           display: none;
         }
       }
       &:nth-child(2) {
         display: none;
+        width: 100%;
         @include breakpoint-mf("sm") {
           display: block;
         }
@@ -536,7 +496,6 @@
   37.5%,
   62.5%,
   87.5% {
-
     transform: rotate(43deg);
   }
 }

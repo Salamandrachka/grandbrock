@@ -7,8 +7,7 @@
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
+ @include flex(column, center, stretch);
   gap: 13px;
 
   &__wrapper {
@@ -55,10 +54,7 @@
     }
   }
   &__btn {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    align-self: flex-start;
+    @include flex(row, center, flex-start);
     font-family: inherit;
     color: #717171;
     font-weight: 600;
@@ -93,7 +89,6 @@
     @include breakpoint-mf("sm") {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      // grid-template-rows: 570px;
       justify-content: center;
     }
   }
@@ -306,7 +301,6 @@
   // .info-social__buttons
 
   &__buttons {
-    // @include flex(column, space-evenly, normal);
     @include flex(column, space-between, flex-start);
     height: 310px;
     padding-top: 50px;
@@ -329,9 +323,6 @@
   // .info-social__button
 
   &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     @include flex(column, center, center);
     width: 42px;
     height: 42px;
@@ -344,7 +335,6 @@
     }
 
     &:hover {
-      // background-color: #f2f2f2;
       box-shadow: 0px 0px 6px 3px #00000027;
     }
   }

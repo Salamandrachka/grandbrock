@@ -12,10 +12,9 @@
   transition: all 0.2s ease-in-out;
   height: auto;
   background-color: transparent;
-
   padding-right: 10px;
   padding-left: 10px;
-  margin-bottom: 18px;
+
 
   @include breakpoint-mf("md") {
     padding-right: 15px;
@@ -31,7 +30,7 @@
     height: 75px;
 
     @include breakpoint-mf("my") {
-      height: 118px;
+      height: 105px;
     }
   }
 }
@@ -53,7 +52,6 @@
     width: 100px;
     height: 58px;
     @include breakpoint-mf("my") {
-      margin-top: 14px;
       width: 140px;
       height: 73px;
     }
@@ -71,8 +69,6 @@
 
   &__item {
     height: 20px;
-    // font-family: "CaviarDreams";
-    font-family: "ComicRelief";
   }
 
   // .nav-menu__link
@@ -85,8 +81,7 @@
 
     &:nth-child(1) {
       gap: 8px;
-      display: flex;
-      align-items: center;
+      @include flex(row, center, flex-end);
     }
   }
 
@@ -234,7 +229,7 @@
   // .nav-dropdown-sub__link
 
   &__link {
-    color: $headerLink;
+    color: $lightGray;
     @include fonts(500, 17px, 21px);
   }
 }
@@ -258,9 +253,6 @@
   z-index: 1000;
   overflow: hidden;
   display: inline-block;
-  // @include breakpoint-mf("ma") {
-  //   display: none;
-  // }
   @include breakpoint-mf("my") {
     display: none;
   }
@@ -319,8 +311,7 @@
   &__list {
     position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, flex-start);
     padding: 100px 30px;
     gap: 30px;
   }
@@ -362,8 +353,7 @@
   // .mobile-dropdown__list
 
   &__list {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, flex-start);
     gap: 20px;
     padding-top: 10px;
     padding-left: 24px;
@@ -404,7 +394,7 @@
   // .mobile-dropdown-sub__link
 
   &__link {
-    color: $headerLink;
+    color: $lightGray;
     @include fonts(500, 16px, 32px);
   }
 }
@@ -480,7 +470,6 @@
       border: none;
       padding: 15px 13px;
       margin: 0;
-      font-family: "ComicRelief";
       font-size: inherit;
       position: relative;
       border-radius: 500px;

@@ -5,9 +5,7 @@
 }
 
 .social-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(row, center, center);
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -107,7 +105,7 @@
 }
 
 .footer {
-  // background: #1b1b1b;
+
   background-color: #141414;
   padding-right: 10px;
   padding-left: 10px;
@@ -140,10 +138,7 @@
       gap: 40px;
 
       @include breakpoint-mf("sa") {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include flex(row, space-between, center);
         gap: 0;
       }
     }
@@ -214,7 +209,7 @@
   // .footer__service-list-item-link
 
   &__service-list-item-link {
-    color: $headerLink;
+    color: $lightGray;
   }
 
   // .footer__service-sub-list
@@ -238,6 +233,11 @@
   // .footer__copyright
 
   &__copyright {
-    color: $white;
+    color: $lightGray;
+    @include fonts(400, 14px, 20px);
+     @include flex(column, center, center);
+        @include breakpoint-mf("xs") {
+      @include flex(row, center, center);
+    }
   }
 }

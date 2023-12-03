@@ -23,7 +23,6 @@
   src: url(../../dist/files/ComicRelief.ttf);
 }
 
-
 body {
   // font-family: "Poppins", sans-serif;
   font-family: "ComicRelief";
@@ -66,8 +65,10 @@ body {
   }
   h1 {
     color: $white;
-    @include fonts(900, 25px, 38px);
-
+    @include fonts(900, 21px, 38px);
+    @include breakpoint-mf("xs") {
+      @include fonts(900, 25px, 38px);
+    }
     @include breakpoint-mf("ma") {
       @include fonts(900, 30px, 38px);
     }
@@ -107,10 +108,10 @@ body {
   }
 }
 .gradient-subtitle {
-    padding-bottom: 40px;
-    padding-top: 50px;
+  padding-bottom: 40px;
+  padding-top: 50px;
   font-family: "FixelText-Black";
-  // font-family: "Mikodacs"; 
+  // font-family: "Mikodacs";
   @include fonts(900, 30px, 38px);
   span {
     background-color: $blue;

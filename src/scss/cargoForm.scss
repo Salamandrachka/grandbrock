@@ -114,14 +114,12 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, stretch);
     gap: 25px;
   }
 
   &__block {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, flex-start);
     gap: 12px;
   }
 

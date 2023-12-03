@@ -12,8 +12,7 @@
   // .section-faq__block
 
   &__block {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, center, stretch);
     gap: 10px;
     color: $text;
     line-height: 30px;
@@ -40,9 +39,7 @@
     background: none;
     outline: none;
     border-bottom: 1px solid #5d5d5d;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(row, space-between, center);
 
     padding-bottom: 22px;
     padding-top: 20px;

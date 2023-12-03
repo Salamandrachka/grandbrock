@@ -15,7 +15,7 @@
     background: #1a1b21;
     height: 80%;
     border-radius: 40px;
-    display: flex;
+    @include flex(row, center, stretch);
     transition: all 0.4s;
   }
   // .section-reviews__block-date
@@ -31,8 +31,7 @@
   // .section-reviews__block-person
 
   &__block-person {
-    display: flex;
-    align-items: center;
+    @include flex(row, flex-start, center);
     gap: 2em;
     padding: 21px;
     padding-bottom: 10px;
