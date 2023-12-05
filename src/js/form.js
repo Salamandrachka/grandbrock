@@ -1,22 +1,22 @@
 $(document).ready(function () {
-  $(".phone").inputmask("+(999) 999-9999");
-  // Add a custom method for phone number validation
-  // $.validator.addMethod(
-  //   "phoneUS",
-  //   function (phone_number, element) {
-  //     phone_number = phone_number.replace(/\s+/g, "");
-  //     return (
-  //       this.optional(element) ||
-  //       (phone_number.length > 9 &&
-  //         phone_number.match(/^\+(?:[0-9] ?){6,14}[0-9]$/))
-  //     );
+  $(".phone").inputmask("+380 (99) 999 99 99");
+
+  // $(function () {
+  //   $.jMaskGlobals.translation["9"] = $.jMaskGlobals.translation["0"]; // reset 0 on 9
+  //   delete $.jMaskGlobals.translation["0"]; // delete 0 as key
+
+  //   $(".phone").mask("+380 (99) 999 99 99"); // mask
+  // });
+
+  // $(".phone").mask("+380 (99) 999 99 99", {
+  //   translation: {
+  //     9: {
+  //       pattern: /[0-9]/,
+  //     },
   //   },
-  //   "Please specify a valid phone number"
-  // );
-  // $.validator.addMethod("phoneUS", function (phone_number, element) {
-  //     phone_number = phone_number.replace(/\D/g, ""); // Remove non-numeric characters
-  //     return this.optional(element) || phone_number.length >= 10;
-  // }, "Please enter a valid phone number");
+  // });
+  // $(".phone").mask("+380 (99) 999 99 99");
+  // Добавляем кастомное правило для телефонного номера
 
   $(".form-validate").validate({
     rules: {
@@ -26,10 +26,7 @@ $(document).ready(function () {
       },
       phone: {
         required: true,
-        number: true,
-        // phoneUS: true,
-        minlength: 10,
-        maxlength: 10,
+        phoneUS: true,
       },
       email: {
         email: true,
@@ -60,7 +57,7 @@ $(document).ready(function () {
       },
       phone: {
         required: "Будьласка введіть свій номер телефону",
-        // phoneUS: "Please enter a valid phone number",
+        phoneUS: "введіть свій номер телефону",
       },
       email: {
         required: "Будьласка введіть свою пошту",

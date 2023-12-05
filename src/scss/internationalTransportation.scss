@@ -9,6 +9,9 @@
 
   &__content {
     @extend %content;
+      @include breakpoint-mf("ma") {
+    gap: 30px;
+  }
   }
 
   // .section-internationalTransportation __img

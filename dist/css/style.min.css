@@ -1097,6 +1097,8 @@ main {
 }
 .section-whywe__img {
   transition: all 0.4s;
+  display: flex;
+  justify-content: center;
 }
 .section-whywe__img picture {
   display: flex;
@@ -1496,6 +1498,7 @@ main {
   align-items: center;
   border-radius: 40px;
   padding: 0.5em;
+  min-height: 180px;
 }
 @media (min-width: 568px) {
   .section-service__block {
@@ -1579,6 +1582,10 @@ main {
   .section-service__sub-block {
     gap: 20px;
   }
+}
+.section-service__img {
+  display: flex;
+  justify-content: center;
 }
 .section-service__img picture {
   display: flex;
@@ -3210,6 +3217,11 @@ input:focus.error, textarea:focus.error {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 840px) {
+  .section-internationalTransportation__content {
+    gap: 30px;
+  }
 }
 /*Transportation Methods PAGE*/
 /*Transportation Methods PAGE*/
