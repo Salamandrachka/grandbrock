@@ -52,7 +52,7 @@
       @include fonts(500, 14px, 30px);
 
       @include breakpoint-mf("xxs") {
-        @include fonts(500, 16px, 30px);
+        @include fonts(500, 15px, 30px);
       }
       @include breakpoint-mf("xs") {
         @include fonts(500, 22px, 38px);
@@ -71,16 +71,6 @@
       }
     }
 
-    // &:nth-child(2) {
-    //   @include fonts(500, 13px, 38px);
-    //   @include breakpoint-mf("xs") {
-    //     @include fonts(500, 17px, 38px);
-    //   }
-
-    //   @include breakpoint-mf("md") {
-    //     @include fonts(500, 25px, 38px);
-    //   }
-    // }
   }
 
   // .content__img
