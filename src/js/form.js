@@ -1,22 +1,5 @@
 $(document).ready(function () {
-  $(".phone").inputmask("+380 (99) 999 99 99");
-
-  // $(function () {
-  //   $.jMaskGlobals.translation["9"] = $.jMaskGlobals.translation["0"]; // reset 0 on 9
-  //   delete $.jMaskGlobals.translation["0"]; // delete 0 as key
-
-  //   $(".phone").mask("+380 (99) 999 99 99"); // mask
-  // });
-
-  // $(".phone").mask("+380 (99) 999 99 99", {
-  //   translation: {
-  //     9: {
-  //       pattern: /[0-9]/,
-  //     },
-  //   },
-  // });
-  // $(".phone").mask("+380 (99) 999 99 99");
-  // Добавляем кастомное правило для телефонного номера
+  $(".phone").mask("+380 (99) 999 99 99");
 
   $(".form-validate").validate({
     rules: {
@@ -26,7 +9,9 @@ $(document).ready(function () {
       },
       phone: {
         required: true,
-        phoneUS: true,
+        minlength: 19,
+        maxlength: 19,
+        phoneFormat: true,
       },
       email: {
         email: true,
@@ -57,7 +42,9 @@ $(document).ready(function () {
       },
       phone: {
         required: "Будьласка введіть свій номер телефону",
-        phoneUS: "введіть свій номер телефону",
+        minlength: "Будьласка введіть повний номер телефону",
+        phoneFormat:
+          "Please enter a valid phone number in the format +380 (99) 999 99 99",
       },
       email: {
         required: "Будьласка введіть свою пошту",
@@ -80,8 +67,18 @@ $(document).ready(function () {
         required: "Будьласка вкажіть дату завантаження",
       },
     },
+
     submitHandler: function (form) {
       form.submit();
     },
   });
+
+  $.validator.addMethod(
+    "phoneFormat",
+    function (value, element) {
+      return /^(\+380 \(\d{2}\) \d{3} \d{2} \d{2})$/.test(value);
+    },
+    "Please enter a valid phone number in the format +380 (99) 999 99 99"
+  );
+  
 });

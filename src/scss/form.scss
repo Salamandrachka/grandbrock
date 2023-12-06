@@ -7,7 +7,7 @@
 }
 
 .contact-form {
- @include flex(column, center, stretch);
+  @include flex(column, center, stretch);
   gap: 13px;
 
   &__wrapper {
@@ -28,6 +28,7 @@
       @include fonts(500, 25px, 30px);
     }
   }
+
   &__block {
     display: flex;
     flex-direction: column;
@@ -79,8 +80,8 @@
 
 .section-contacts {
   // .contacts__wrapper
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &__wrapper {
     margin: 0 auto;
@@ -112,7 +113,8 @@
     }
     &:nth-child(2) {
       grid-area: 1 / 2 / 2 / 3;
-      background: rgb(35 33 33 / 99%);
+      // background: rgb(35 33 33 / 99%);
+      background: rgb(30 28 28 / 99%);
       box-sizing: border-box;
       border-radius: 40px;
       border-top-right-radius: 0;
@@ -273,7 +275,7 @@
   &__title {
     @include flex(column, normal, normal);
 
-    @include fonts(500, 15px, 25px);
+    @include fonts(500, 18px, 25px);
     color: $white;
     @include breakpoint-mf("ma") {
       @include fonts(500, 20px, 22px);
@@ -355,11 +357,22 @@
   color: #e74c3c;
 }
 
-input.error, textarea.error {
+input.error,
+textarea.error {
   color: $text;
   border-bottom: 1px solid #e74c3c;
 }
 
-input:focus.error, textarea:focus.error {
+input:focus.error,
+textarea:focus.error {
   border-color: #e74c3c;
+}
+
+
+/*MOBILE*/
+.contact-form__mobile {
+  display: block;
+      @include breakpoint-mf("my") {
+      display: none;
+    }
 }
