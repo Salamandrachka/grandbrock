@@ -46,40 +46,41 @@
   &__text {
     color: $yellow;
     text-transform: uppercase;
-    font-family: "FixelText-Black";
+    font-family: "new";
     &:nth-child(1) {
       @include flex(column, center, center);
-      @include fonts(500, 17px, 30px);
+      @include fonts(500, 14px, 30px);
+
       @include breakpoint-mf("xxs") {
-        @include fonts(500, 18px, 30px);
+        @include fonts(500, 16px, 30px);
       }
       @include breakpoint-mf("xs") {
-        @include fonts(500, 28px, 38px);
+        @include fonts(500, 22px, 38px);
         gap: 10px;
       }
       @include breakpoint-mf("md") {
-        @include fonts(500, 37px, 38px);
+        @include fonts(500, 30px, 38px);
       }
       @include breakpoint-mf("my") {
-        @include fonts(500, 48px, 59px);
+        @include fonts(500, 40px, 59px);
         padding-top: 30px;
       }
       @include breakpoint-mf("xll") {
-        @include fonts(500, 60px, 67px);
+        @include fonts(500, 55px, 67px);
         padding-top: 70px;
       }
     }
 
-    &:nth-child(2) {
-      @include fonts(500, 13px, 38px);
-      @include breakpoint-mf("xs") {
-        @include fonts(500, 17px, 38px);
-      }
+    // &:nth-child(2) {
+    //   @include fonts(500, 13px, 38px);
+    //   @include breakpoint-mf("xs") {
+    //     @include fonts(500, 17px, 38px);
+    //   }
 
-      @include breakpoint-mf("md") {
-        @include fonts(500, 25px, 38px);
-      }
-    }
+    //   @include breakpoint-mf("md") {
+    //     @include fonts(500, 25px, 38px);
+    //   }
+    // }
   }
 
   // .content__img
@@ -105,9 +106,13 @@
     }
   }
 }
-
+#mutnuj-broker {
+    @include flex(row, normal, normal);
+    gap: 17px;
+    
+}
 #ta {
-  font-size: 16px;
+  @include fonts(500, 14px, 30px);
   @include breakpoint-mf("xs") {
     @include fonts(500, 20px, 38px);
   }

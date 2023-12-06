@@ -6,7 +6,7 @@
   gap: 60px;
 
   &__error {
-    font-family: "FixelText-Black";
+    font-family: "new";
     @include fonts(400, 160px, 31px);
     color: $text;
     @include breakpoint-mf("sa") {
@@ -18,7 +18,7 @@
   }
   &__title {
     text-align: center;
-    font-family: "FixelText-Black";
+    font-family: "new";
     @include fonts(400, 20px, 31px);
     color: $text;
     @include breakpoint-mf("sa") {
@@ -32,7 +32,7 @@
   // .section-notFound__subtitle
 
   &__subtitle {
-    font-family: "FixelText-Black";
+    font-family: "new";
     @include fonts(400, 15px, 31px);
     color: $text;
     text-decoration: underline;

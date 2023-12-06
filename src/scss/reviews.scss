@@ -1,5 +1,8 @@
 .section-reviews {
-  padding-bottom: 50px;
+
+  @include breakpoint-mf("my") {
+    padding-bottom: 50px;
+  }
 
   &__slider {
     display: flex;

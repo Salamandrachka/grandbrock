@@ -167,6 +167,10 @@ html {
   src: url(../../dist/files/FixelText-Black.ttf);
 }
 @font-face {
+  font-family: "new"; /* Имя шрифта */
+  src: url(../../dist/files/Days.otf);
+}
+@font-face {
   font-family: "ComicRelief"; /* Имя шрифта */
   src: url(../../dist/files/ComicRelief.ttf);
 }
@@ -204,7 +208,7 @@ body {
 }
 
 .main-page-title {
-  font-family: "FixelText-Black";
+  font-family: "new";
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
@@ -239,7 +243,7 @@ body {
 .gradient-title {
   padding-bottom: 30px;
   padding-top: 30px;
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-weight: 900;
   font-size: 30px;
   line-height: 38px;
@@ -271,7 +275,7 @@ body {
 .gradient-subtitle {
   padding-bottom: 40px;
   padding-top: 50px;
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-weight: 900;
   font-size: 30px;
   line-height: 38px;
@@ -645,7 +649,7 @@ main {
 .nav-dropdown::before {
   content: "";
   position: absolute;
-  top: 118px;
+  top: 105px;
   left: -100vw;
   right: -100vw;
   height: 1px;
@@ -969,8 +973,10 @@ main {
     line-height: 31px;
   }
 }
-.section-reviews {
-  padding-bottom: 50px;
+@media (min-width: 1024px) {
+  .section-reviews {
+    padding-bottom: 50px;
+  }
 }
 .section-reviews__slider {
   display: flex;
@@ -1667,7 +1673,7 @@ main {
 .content__text {
   color: #ffcc00;
   text-transform: uppercase;
-  font-family: "FixelText-Black";
+  font-family: "new";
 }
 .content__text:nth-child(1) {
   display: flex;
@@ -1675,20 +1681,20 @@ main {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 14px;
   line-height: 30px;
 }
 @media (min-width: 360px) {
   .content__text:nth-child(1) {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
   }
 }
 @media (min-width: 568px) {
   .content__text:nth-child(1) {
     font-weight: 500;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 38px;
     gap: 10px;
   }
@@ -1696,14 +1702,14 @@ main {
 @media (min-width: 768px) {
   .content__text:nth-child(1) {
     font-weight: 500;
-    font-size: 37px;
+    font-size: 30px;
     line-height: 38px;
   }
 }
 @media (min-width: 1024px) {
   .content__text:nth-child(1) {
     font-weight: 500;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 59px;
     padding-top: 30px;
   }
@@ -1711,28 +1717,9 @@ main {
 @media (min-width: 1400px) {
   .content__text:nth-child(1) {
     font-weight: 500;
-    font-size: 60px;
+    font-size: 55px;
     line-height: 67px;
     padding-top: 70px;
-  }
-}
-.content__text:nth-child(2) {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 38px;
-}
-@media (min-width: 568px) {
-  .content__text:nth-child(2) {
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 38px;
-  }
-}
-@media (min-width: 768px) {
-  .content__text:nth-child(2) {
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 38px;
   }
 }
 .content__img {
@@ -1760,8 +1747,18 @@ main {
   }
 }
 
+#mutnuj-broker {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  gap: 17px;
+}
+
 #ta {
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
 }
 @media (min-width: 568px) {
   #ta {
@@ -2353,7 +2350,7 @@ svg:hover + .btn-phone__number {
   }
 }
 .section-cargoForm__title h2 {
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-size: 32px;
   font-weight: 900;
 }
@@ -2551,7 +2548,7 @@ svg:hover + .btn-phone__number {
   }
 }
 .section-genericForm__title h2 {
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-size: 32px;
   font-weight: 900;
 }
@@ -3287,7 +3284,7 @@ textarea:focus.error {
   gap: 60px;
 }
 .section-notFound__error {
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-weight: 400;
   font-size: 160px;
   line-height: 31px;
@@ -3309,7 +3306,7 @@ textarea:focus.error {
 }
 .section-notFound__title {
   text-align: center;
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-weight: 400;
   font-size: 20px;
   line-height: 31px;
@@ -3330,7 +3327,7 @@ textarea:focus.error {
   }
 }
 .section-notFound__subtitle {
-  font-family: "FixelText-Black";
+  font-family: "new";
   font-weight: 400;
   font-size: 15px;
   line-height: 31px;

@@ -47,7 +47,7 @@
     }
 
     h2 {
-      font-family: "FixelText-Black";
+      font-family: "new";
       font-size: 32px;
       font-weight: 900;
       @include breakpoint-mf("xs") {
@@ -172,7 +172,7 @@
 }
 
 .cargoForm__input:focus {
-    border-color: $yellow;
+  border-color: $yellow;
 }
 
 #date-input {
